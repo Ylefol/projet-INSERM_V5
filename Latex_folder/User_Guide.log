@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.4)  13 JAN 2020 08:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.4)  13 JAN 2020 10:56
 entering extended mode
 **./User_Guide.tex
 (User_Guide.tex
@@ -437,23 +437,23 @@ Package pdftex.def Info: Logo-Master-GPhy.png  used on input line 46.
 
 {C:/Users/yohan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./logo-CELL
 OMET-a.png> <./Logo-Master-GPhy.png>]
-<main_app_screen.png, id=81, 720.44156pt x 778.40813pt>
+<main_app_screen.png, id=81, 721.94719pt x 782.17218pt>
 File: main_app_screen.png Graphic file (type png)
 <use main_app_screen.png>
 Package pdftex.def Info: main_app_screen.png  used on input line 56.
-(pdftex.def)             Requested size: 263.34923pt x 284.53825pt.
+(pdftex.def)             Requested size: 262.62173pt x 284.52971pt.
  [2 <./main_app_screen.png>]
-<connect_DB.png, id=90, 721.94719pt x 779.16093pt>
+<connect_DB.png, id=90, 722.7pt x 782.925pt>
 File: connect_DB.png Graphic file (type png)
 <use connect_DB.png>
 Package pdftex.def Info: connect_DB.png  used on input line 70.
-(pdftex.def)             Requested size: 263.63521pt x 284.52809pt.
+(pdftex.def)             Requested size: 262.64195pt x 284.5288pt.
  [3 <./connect_DB.png>]
-<deseq2_screen.png, id=102, 720.44156pt x 778.40813pt>
+<deseq2_screen.png, id=102, 721.94719pt x 782.925pt>
 File: deseq2_screen.png Graphic file (type png)
 <use deseq2_screen.png>
 Package pdftex.def Info: deseq2_screen.png  used on input line 87.
-(pdftex.def)             Requested size: 263.34923pt x 284.53825pt.
+(pdftex.def)             Requested size: 262.36838pt x 284.5288pt.
  [4 <./deseq2_screen.png>]
 <data_format_deseq2.PNG, id=113, 476.53032pt x 74.52844pt>
 File: data_format_deseq2.PNG Graphic file (type png)
@@ -478,31 +478,31 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 135.
 
 [6]
-<gene_list_analysis.png, id=135, 721.94719pt x 779.16093pt>
+<gene_list_analysis.png, id=135, 722.7pt x 782.925pt>
 File: gene_list_analysis.png Graphic file (type png)
 <use gene_list_analysis.png>
 Package pdftex.def Info: gene_list_analysis.png  used on input line 162.
-(pdftex.def)             Requested size: 263.63521pt x 284.52809pt.
+(pdftex.def)             Requested size: 262.64195pt x 284.5288pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [7]
-<results_tab.png, id=144, 721.19438pt x 782.17218pt>
+<results_tab.png, id=144, 724.20563pt x 784.43062pt>
 File: results_tab.png Graphic file (type png)
 <use results_tab.png>
 Package pdftex.def Info: results_tab.png  used on input line 176.
-(pdftex.def)             Requested size: 262.3479pt x 284.52971pt.
+(pdftex.def)             Requested size: 262.6808pt x 284.52536pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [8 <./gene_list_analysis.png>]
-<custom_volcano_tab.png, id=152, 721.19438pt x 778.40813pt>
+<custom_volcano_tab.png, id=152, 724.95844pt x 782.925pt>
 File: custom_volcano_tab.png Graphic file (type png)
 <use custom_volcano_tab.png>
 Package pdftex.def Info: custom_volcano_tab.png  used on input line 189.
-(pdftex.def)             Requested size: 263.62442pt x 284.53825pt.
+(pdftex.def)             Requested size: 263.4627pt x 284.5288pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -521,7 +521,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 203.
  ) 
 Here is how much of TeX's memory you used:
  7059 strings out of 492452
- 107740 string characters out of 3120064
+ 107761 string characters out of 3120064
  215708 words of memory out of 3000000
  11251 multiletter control sequences out of 15000+200000
  9765 words of font info for 34 fonts, out of 3000000 for 9000
@@ -537,7 +537,7 @@ han/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb>
 <C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmsy10.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmti10.pfb>
-Output written on User_Guide.pdf (10 pages, 846747 bytes).
+Output written on User_Guide.pdf (10 pages, 838874 bytes).
 PDF statistics:
  200 PDF objects out of 1000 (max. 8388607)
  35 named destinations out of 1000 (max. 500000)
