@@ -1,0 +1,16 @@
+\BOOKMARK [1][-]{section.1}{Introduction }{}% 1
+\BOOKMARK [1][-]{section.2}{Installation}{}% 2
+\BOOKMARK [1][-]{section.3}{Connection to database}{}% 3
+\BOOKMARK [1][-]{section.4}{DESeq2 analysis}{}% 4
+\BOOKMARK [2][-]{subsection.4.1}{Tab layout }{section.4}% 5
+\BOOKMARK [2][-]{subsection.4.2}{Data format }{section.4}% 6
+\BOOKMARK [2][-]{subsection.4.3}{launching the analysis}{section.4}% 7
+\BOOKMARK [2][-]{subsection.4.4}{Results obtained}{section.4}% 8
+\BOOKMARK [3][-]{subsubsection.4.4.1}{Main results}{subsection.4.4}% 9
+\BOOKMARK [3][-]{subsubsection.4.4.2}{Figures generated}{subsection.4.4}% 10
+\BOOKMARK [3][-]{subsubsection.4.4.3}{Non-canonical gene analysis}{subsection.4.4}% 11
+\BOOKMARK [1][-]{section.5}{Gene list analysis }{}% 12
+\BOOKMARK [1][-]{section.6}{Results }{}% 13
+\BOOKMARK [1][-]{section.7}{Custom MA and Volcano plots }{}% 14
+\BOOKMARK [1][-]{section.8}{Common errors }{}% 15
+\BOOKMARK [1][-]{section.8}{References}{}% 16
