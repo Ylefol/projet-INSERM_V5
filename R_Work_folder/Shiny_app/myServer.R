@@ -101,7 +101,7 @@ myserver <- function(input, output, session) {
       #Creates a shiny alert
       shinyalert(
         title = "Working",
-        text = "Your download is beign prepared, please wait.",
+        text = "Your download is being prepared, please wait.",
         closeOnEsc = FALSE,
         closeOnClickOutside = FALSE,
         html = FALSE,
@@ -142,7 +142,7 @@ myserver <- function(input, output, session) {
       
       shinyalert(
         title = "Working",
-        text = "Your download is beign prepared, please wait.",
+        text = "Your download is being prepared, please wait.",
         closeOnEsc = FALSE,
         closeOnClickOutside = FALSE,
         html = FALSE,
@@ -230,7 +230,7 @@ myserver <- function(input, output, session) {
       #Creates a shiny alert
       shinyalert(
         title = "Working",
-        text = "Your download is beign prepared, please wait.",
+        text = "Your download is being prepared, please wait.",
         closeOnEsc = FALSE,
         closeOnClickOutside = FALSE,
         html = FALSE,
@@ -270,7 +270,7 @@ myserver <- function(input, output, session) {
     content = function(file){
       shinyalert(
         title = "Working",
-        text = "Your download is beign prepared, please wait.",
+        text = "Your download is being prepared, please wait.",
         closeOnEsc = FALSE,
         closeOnClickOutside = FALSE,
         html = FALSE,
