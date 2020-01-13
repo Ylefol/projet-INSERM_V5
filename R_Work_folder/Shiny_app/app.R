@@ -1,5 +1,12 @@
 #Package and library calls
 #############################################################################################################################################
+
+
+if(!require(devtools)){
+  install.packages("devtools")
+  library(devtools)
+}
+
 #DESeq2 is a Differential gene expression analysis based on the negative binomial distribution.
 #This package allows the users to find significant genes within two files representing different conditions (ex/ old vs young pulmonary cancer patients)
 if(!require(DESeq2)){
