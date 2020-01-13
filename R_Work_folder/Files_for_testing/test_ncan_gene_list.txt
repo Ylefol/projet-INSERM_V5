@@ -1,0 +1,6 @@
+Gene
+HK2
+GPI
+PFKM
+GADPH
+PGK1
