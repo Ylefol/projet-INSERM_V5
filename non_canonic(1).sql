@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 14, 2020 at 07:03 AM
+-- Generation Time: Jan 14, 2020 at 07:22 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `canonic` (
   `C_Pathway` varchar(1000) NOT NULL,
   `C_Loc` varchar(1000) NOT NULL,
   `num_can` int(11) NOT NULL AUTO_INCREMENT,
-  `category` varchar(50) DEFAULT NULL,
+  `C_category` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`num_can`)
 ) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4;
 
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `canonic` (
 -- Dumping data for table `canonic`
 --
 
-INSERT INTO `canonic` (`Gene_Symbol`, `Gene_Name`, `C_Pathway`, `C_Loc`, `num_can`, `category`) VALUES
+INSERT INTO `canonic` (`Gene_Symbol`, `Gene_Name`, `C_Pathway`, `C_Loc`, `num_can`, `C_category`) VALUES
 ('HK2', 'Hexokinase 2', 'Convert phosphorylate glucose to glucose 6-phosphate', 'Cytosol', 1, NULL),
 ('GPI', 'Phosphoglucose isomerase', 'Interconvert G6P to fructose 6-phosphate (F6P)', 'Cytosol', 2, NULL),
 ('PFKM', 'Phosphofructokinase', 'Phosphorylate F6P to fructose 1,6-biphosphate', 'Cytosol', 3, NULL),
@@ -78,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `ncanonic` (
   `NC_Pathway` varchar(1000) NOT NULL,
   `NC_Loc` varchar(1000) NOT NULL,
   `num_ncan` int(11) NOT NULL AUTO_INCREMENT,
-  `category` varchar(50) DEFAULT NULL,
+  `NC_category` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`num_ncan`)
 ) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4;
 
@@ -86,7 +86,7 @@ CREATE TABLE IF NOT EXISTS `ncanonic` (
 -- Dumping data for table `ncanonic`
 --
 
-INSERT INTO `ncanonic` (`Gene_Symbol`, `NC_Pathway`, `NC_Loc`, `num_ncan`, `category`) VALUES
+INSERT INTO `ncanonic` (`Gene_Symbol`, `NC_Pathway`, `NC_Loc`, `num_ncan`, `NC_category`) VALUES
 ('HK2', 'Repress the expression of genes involved in glucose repression', 'Cytosol', 1, NULL),
 ('HK2', 'Protect cells from apotosis by regulating the mitochondrial permeability transition pore and by limiting the production of reactive oxygen species', 'Mitochondria', 2, NULL),
 ('GPI', 'Act as an autocrine factor extracellulary to elicit cell migration and proliferation', 'Extracellular localization', 3, NULL),
@@ -146,7 +146,8 @@ CREATE TABLE IF NOT EXISTS `questionnaire` (
 INSERT INTO `questionnaire` (`Email`, `Type_of_Study`, `Comments`) VALUES
 ('yohan.lefol@gmail.com', 'Metabolic', 'blarg'),
 ('yohan.lefol@gmail.com', 'Metabolic', ''),
-('yohan.lefol@gmail.com', 'Metabolomic', 'zedfg');
+('yohan.lefol@gmail.com', 'Metabolomic', 'zedfg'),
+('yohan.lefol@gmail.com', 'Academic', '');
 
 -- --------------------------------------------------------
 

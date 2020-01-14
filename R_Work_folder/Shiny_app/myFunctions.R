@@ -263,8 +263,8 @@ Non_canonic_analysis <- function(DB,file_to_analyze)
   
   for (i in 1:length(sig_gene_list)){
     if (nrow(dbGetQuery(DB, paste0("SELECT * FROM Canonic WHERE Gene_Symbol = '" , sig_gene_list[i]  ,"';")))>0){
-      non_canonic_results <- rbind(non_canonic_results,dbGetQuery(DB, paste0("SELECT Gene_Symbol, Gene_Name, NC_Pathway as Non_Canonic_Pathway, NC_Loc as Non_Canonic_Location FROM ncanonic join canonic using (Gene_Symbol) WHERE Gene_Symbol = '" , sig_gene_list[i]  ,"';")))
-      canonic_results <- rbind(canonic_results,dbGetQuery(DB, paste0("SELECT Gene_Symbol, Gene_Name, C_Pathway as Canonical_Pathway, C_Loc as Canonical_Location FROM Canonic WHERE Gene_Symbol = '" , sig_gene_list[i]  ,"';")))
+      non_canonic_results <- rbind(non_canonic_results,dbGetQuery(DB, paste0("SELECT Gene_Symbol, Gene_Name, category, NC_Pathway as Non_Canonic_Pathway, NC_Loc as Non_Canonic_Location FROM ncanonic join canonic using (Gene_Symbol) WHERE Gene_Symbol = '" , sig_gene_list[i]  ,"';")))
+      canonic_results <- rbind(canonic_results,dbGetQuery(DB, paste0("SELECT Gene_Symbol, Gene_Name, category, C_Pathway as Canonical_Pathway, C_Loc as Canonical_Location FROM Canonic WHERE Gene_Symbol = '" , sig_gene_list[i]  ,"';")))
       ref_results <- rbind(ref_results,dbGetQuery(DB, paste0("SELECT Gene_Symbol, Gene_Name, ref as `References` FROM `references` join Canonic using (Gene_Symbol) WHERE Gene_Symbol = '" , sig_gene_list[i]  ,"';")))
     }
     
