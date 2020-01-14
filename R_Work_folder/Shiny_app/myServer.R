@@ -661,14 +661,14 @@ myserver <- function(input, output, session) {
   #Citation and references
   #############################################################################################################################################
   #The text isn't aligned as it had to be put this way so it would be aligned in the app
-  output$Standard_cite<-renderText("MLA: Lefol, Yohan, Alexis Dupis, Ugo Vidal, and Marie Terrie. \"CelloApp\".(2020)
-APA: Lefol, Y., Dupis, A., Vidal, U., and Terrien, M. (2020). CelloApp.
-Chicago: Lefol, Yohan, Alexis Dupis, Ugo Vidal, and Marie Terrien. \"CelloApp\". (2020)
-Harvard: Lefol, Y., Dupis,A., Vidal, U., and Terrien, M.,2020. CelloApp.
-Vancouver: Lefol Y, Dupis A, Vidal U, Terrien M. CelloApp. 2020")
+  output$Standard_cite<-renderText("MLA: Lefol, Yohan, Alexis Dupis, Ugo Vidal, and Marie Terrie. \"CelloMap\".(2020)
+APA: Lefol, Y., Dupis, A., Vidal, U., and Terrien, M. (2020). CelloMap.
+Chicago: Lefol, Yohan, Alexis Dupis, Ugo Vidal, and Marie Terrien. \"CelloMap\". (2020)
+Harvard: Lefol, Y., Dupis,A., Vidal, U., and Terrien, M.,2020. CelloMap.
+Vancouver: Lefol Y, Dupis A, Vidal U, Terrien M. CelloMap. 2020")
   
-  output$BibTex_text<-renderText("@misc{CelloApp,
-title = {CelloApp: Non-canonical gene analysis},
+  output$BibTex_text<-renderText("@misc{CelloMap,
+title = {CelloMap: Non-canonical gene analysis},
 author={Yohan Lefol, Alexis Dupis, Ugo Vidal, Marie Terrien},
 howpublished = {\\url{http://www.cellomet.com/?index}},
 year = {2020},
@@ -680,7 +680,7 @@ note = {Accessed: }
 %A Vidal, Ugo
 %A Terrien, Marie
 %C Bordeaux
-%T CelloApp
+%T CelloMap
 %D 2020
 %U http://www.cellomet.com/?index
 %I Cellomet

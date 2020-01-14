@@ -1,0 +1,2 @@
+"Gene_Symbol" "Gene_Name" "Category" "Canonical_Pathway" "Canonical_Location"
+"PDC" "Pyruvate dehydrogenase complex" NA "Convert pyruvate to acetyl-CoA" "Mitochondria"

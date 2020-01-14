@@ -1,0 +1,3 @@
+"Gene_Symbol" "Gene_Name" "Category" "Non_Canonic_Pathway" "Non_Canonic_Location"
+"PDC" "Pyruvate dehydrogenase complex" NA "Produces actelyl-CoA in the nucleus and increases histone acetylation" "Nucleus"
+"PDC" "Pyruvate dehydrogenase complex" NA "Promotes cell cycle progression by increasing acetylation of histones important for G1/S transition and activating S-phase regulator expression (pRb, E2F, cyclin A and Cdk2)" "Nucleus"
