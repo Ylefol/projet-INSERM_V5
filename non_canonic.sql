@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 14, 2020 at 07:22 AM
+-- Generation Time: Jan 14, 2020 at 07:27 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -78,7 +78,6 @@ CREATE TABLE IF NOT EXISTS `ncanonic` (
   `NC_Pathway` varchar(1000) NOT NULL,
   `NC_Loc` varchar(1000) NOT NULL,
   `num_ncan` int(11) NOT NULL AUTO_INCREMENT,
-  `NC_category` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`num_ncan`)
 ) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4;
 
@@ -86,45 +85,45 @@ CREATE TABLE IF NOT EXISTS `ncanonic` (
 -- Dumping data for table `ncanonic`
 --
 
-INSERT INTO `ncanonic` (`Gene_Symbol`, `NC_Pathway`, `NC_Loc`, `num_ncan`, `NC_category`) VALUES
-('HK2', 'Repress the expression of genes involved in glucose repression', 'Cytosol', 1, NULL),
-('HK2', 'Protect cells from apotosis by regulating the mitochondrial permeability transition pore and by limiting the production of reactive oxygen species', 'Mitochondria', 2, NULL),
-('GPI', 'Act as an autocrine factor extracellulary to elicit cell migration and proliferation', 'Extracellular localization', 3, NULL),
-('PFKM', 'Bind to transcription factor TEAD and stabilize its interaction with YAP/TAZ, and promote gene expression', 'Nucleus', 4, NULL),
-('PFKFB3', 'Promote cell cycle progression by upregulating cell cycle protein expression and downregulating cell cycle inhibitor p27', 'Nucleus', 5, NULL),
-('FBP1', 'Bind to hypoxia-inducible factors (HIFs) and inhibit their transcriptional activation of glycolytic gene expression', 'Nucleus', 6, NULL),
-('ALDOA', 'Participate in cytokinesis through its interaction with F-actin and Wiskott-Aldrich syndrome protein (WASP) family protein', 'Cytoskeleton', 7, NULL),
-('GADPH', 'Bind to colony-stimulating factor-1 (CSF-1) mRNA and stabilize its transcripts', 'Nucleus', 8, NULL),
-('GADPH', 'Function as a key component in the OCA-S complex, mediate its activation of H2B during S phase and promote cell cycle progression', 'Nucleus', 9, NULL),
-('GADPH', 'Protects telomeres against rapid shortening', 'Nucleus', 10, NULL),
-('GADPH', 'Increases DNA synthesis during S phase vie direct binding to single-stranded DNA (ssDNA) and stimulating the DNA-polymerase-alpha-primase complex', 'Nucleus', 11, NULL),
-('GADPH', 'GAPDH S-nitrosylation promotes its nuclear translocation and triggers apoptosis', 'Nucleus', 12, NULL),
-('GADPH', 'Facilitate apoptosis via including mitochondrial membrane permeabilization (MOMP) and subsequent release of cytochrome c and apoptosis-inducing factor', 'Mitochondria', 13, NULL),
-('PGK1', 'Recognizes primer and robustly stimulates DNA synthesis catalyzed by DNA polymerase alpha and epsilon', 'Nucleus', 14, NULL),
-('ENO1', 'MYC binding protein-1 (MBP-1) transcribes from the same gene as ENO1; MBP-1 binds to MYC and represses its expression by recruiting histone deacetylase (HDAC)', 'Nucleus', 15, NULL),
-('ENO1', 'Attenuate Notxh1-mediated c-Myc activation by interacting with activated Notch1 receptor, N1IC', 'Nucleus', 16, NULL),
-('PKM', 'Acts as a binding partner of Oct-4 and ehances its transcriptonal activity ', 'Nucleus', 17, NULL),
-('PKM', 'Interacts with HIF-1alpha and increases p300 recruitment to HIF target genes', 'Nucleus', 18, NULL),
-('PKM', 'Upon EGFR stimulation, PKM2 binds to beta-catenin and co-activates cyclin D1 and c-Myc', 'Nucleus', 19, NULL),
-('PKM', 'Kinase activity (controversial): PKM2 phosphorylates a variety of proteins, such as Stat3, histone H3, Bub3 and myosin light chain 2 (MLC2). PKM2 promotes G1/S transition by promoting cyclin D1 and c-Myc expression and chromosome segregation by phosphorylating spindle checkpoint protein Bub3', 'Nucleus / Cytosol', 20, NULL),
-('PKM', 'In yeast, Pyk1 (the yeast PKM2 homolog) forms the SESAME complex. SESAME interacts with Set1 methyltransferase and controls H3K4me3', 'Nucleus / Cystosol', 21, NULL),
-('LDHA', 'Forms OCA-S complex with GAPDH and regulates cell cycle progression', 'Nucleus', 22, NULL),
-('LDHA', 'Activates SIRT1 by supplementing NAD+', 'Nucleaus', 23, NULL),
-('LDHA', 'Binds to ssDNA and facilitates DNA replication by recruiting DNA polymerase alpha, delta and epsilon', 'Nucleus', 24, NULL),
-('ACO2', 'In yeast, aconitase (Aco1p) is essential for mitochondrial DNA (mtDNA) maintenance', 'Mitochondria', 25, NULL),
-('SUCLG1', 'SCS-A is associated with mtDNA maintenance', 'Mitochondria', 26, NULL),
-('FH', 'Participates in DNA damage repair in an enzymatic-activity-dependent manner', 'Nucleus', 27, NULL),
-('MDH1', 'Increases p53 stabilization and transcriptonal activity by facilitating its phosphorylation and acetylation', 'Nucleus', 28, NULL),
-('MDH2', 'Increases p53 stabilization and transcriptonal activity by facilitating its phosphorylation and acetylation', 'Nucleus', 29, NULL),
-('PDC', 'Produces actelyl-CoA in the nucleus and increases histone acetylation', 'Nucleus', 30, NULL),
-('PDC', 'Promotes cell cycle progression by increasing acetylation of histones important for G1/S transition and activating S-phase regulator expression (pRb, E2F, cyclin A and Cdk2)', 'Nucleus', 31, NULL),
-('ACLY', 'Produces acetyl-CoA and increases histone actetylation', 'Nucleus', 32, NULL),
-('ACLY', 'Upon DNA damage, nuclear ACLY promotes homologus recombination', 'Nucleus', 33, NULL),
-('ACSS2', 'Forms a complex with TFEB and increases lysosomal and autophagy gene expression by local histone acetylation', 'Nucleus', 34, NULL),
-('ACSS2', 'Provides acetyl-CoA for lysine acetyltransferase CREB-binding protein (CBP)-mediated HIF-2alpha acetylation', 'Not specified', 35, NULL),
-('ACSS2', 'Increases histone acetylation near the sites of neuronal genes and upreglates their expression in neuronal cells', 'Nucleus', 36, NULL),
-('MAT2A', 'Forms a complex with Maf and represses HMOX1 expression by increasing histone methylation and recruiting chromatin co-repressors', 'Nucleus', 37, NULL),
-('SHMT-1', 'Directs deubiquitinating complex BRISC to IFAR1 and protects it from lysosomal degradation and promotes IFNAR1 signaling', 'Cytosol', 38, NULL);
+INSERT INTO `ncanonic` (`Gene_Symbol`, `NC_Pathway`, `NC_Loc`, `num_ncan`) VALUES
+('HK2', 'Repress the expression of genes involved in glucose repression', 'Cytosol', 1),
+('HK2', 'Protect cells from apotosis by regulating the mitochondrial permeability transition pore and by limiting the production of reactive oxygen species', 'Mitochondria', 2),
+('GPI', 'Act as an autocrine factor extracellulary to elicit cell migration and proliferation', 'Extracellular localization', 3),
+('PFKM', 'Bind to transcription factor TEAD and stabilize its interaction with YAP/TAZ, and promote gene expression', 'Nucleus', 4),
+('PFKFB3', 'Promote cell cycle progression by upregulating cell cycle protein expression and downregulating cell cycle inhibitor p27', 'Nucleus', 5),
+('FBP1', 'Bind to hypoxia-inducible factors (HIFs) and inhibit their transcriptional activation of glycolytic gene expression', 'Nucleus', 6),
+('ALDOA', 'Participate in cytokinesis through its interaction with F-actin and Wiskott-Aldrich syndrome protein (WASP) family protein', 'Cytoskeleton', 7),
+('GADPH', 'Bind to colony-stimulating factor-1 (CSF-1) mRNA and stabilize its transcripts', 'Nucleus', 8),
+('GADPH', 'Function as a key component in the OCA-S complex, mediate its activation of H2B during S phase and promote cell cycle progression', 'Nucleus', 9),
+('GADPH', 'Protects telomeres against rapid shortening', 'Nucleus', 10),
+('GADPH', 'Increases DNA synthesis during S phase vie direct binding to single-stranded DNA (ssDNA) and stimulating the DNA-polymerase-alpha-primase complex', 'Nucleus', 11),
+('GADPH', 'GAPDH S-nitrosylation promotes its nuclear translocation and triggers apoptosis', 'Nucleus', 12),
+('GADPH', 'Facilitate apoptosis via including mitochondrial membrane permeabilization (MOMP) and subsequent release of cytochrome c and apoptosis-inducing factor', 'Mitochondria', 13),
+('PGK1', 'Recognizes primer and robustly stimulates DNA synthesis catalyzed by DNA polymerase alpha and epsilon', 'Nucleus', 14),
+('ENO1', 'MYC binding protein-1 (MBP-1) transcribes from the same gene as ENO1; MBP-1 binds to MYC and represses its expression by recruiting histone deacetylase (HDAC)', 'Nucleus', 15),
+('ENO1', 'Attenuate Notxh1-mediated c-Myc activation by interacting with activated Notch1 receptor, N1IC', 'Nucleus', 16),
+('PKM', 'Acts as a binding partner of Oct-4 and ehances its transcriptonal activity ', 'Nucleus', 17),
+('PKM', 'Interacts with HIF-1alpha and increases p300 recruitment to HIF target genes', 'Nucleus', 18),
+('PKM', 'Upon EGFR stimulation, PKM2 binds to beta-catenin and co-activates cyclin D1 and c-Myc', 'Nucleus', 19),
+('PKM', 'Kinase activity (controversial): PKM2 phosphorylates a variety of proteins, such as Stat3, histone H3, Bub3 and myosin light chain 2 (MLC2). PKM2 promotes G1/S transition by promoting cyclin D1 and c-Myc expression and chromosome segregation by phosphorylating spindle checkpoint protein Bub3', 'Nucleus / Cytosol', 20),
+('PKM', 'In yeast, Pyk1 (the yeast PKM2 homolog) forms the SESAME complex. SESAME interacts with Set1 methyltransferase and controls H3K4me3', 'Nucleus / Cystosol', 21),
+('LDHA', 'Forms OCA-S complex with GAPDH and regulates cell cycle progression', 'Nucleus', 22),
+('LDHA', 'Activates SIRT1 by supplementing NAD+', 'Nucleaus', 23),
+('LDHA', 'Binds to ssDNA and facilitates DNA replication by recruiting DNA polymerase alpha, delta and epsilon', 'Nucleus', 24),
+('ACO2', 'In yeast, aconitase (Aco1p) is essential for mitochondrial DNA (mtDNA) maintenance', 'Mitochondria', 25),
+('SUCLG1', 'SCS-A is associated with mtDNA maintenance', 'Mitochondria', 26),
+('FH', 'Participates in DNA damage repair in an enzymatic-activity-dependent manner', 'Nucleus', 27),
+('MDH1', 'Increases p53 stabilization and transcriptonal activity by facilitating its phosphorylation and acetylation', 'Nucleus', 28),
+('MDH2', 'Increases p53 stabilization and transcriptonal activity by facilitating its phosphorylation and acetylation', 'Nucleus', 29),
+('PDC', 'Produces actelyl-CoA in the nucleus and increases histone acetylation', 'Nucleus', 30),
+('PDC', 'Promotes cell cycle progression by increasing acetylation of histones important for G1/S transition and activating S-phase regulator expression (pRb, E2F, cyclin A and Cdk2)', 'Nucleus', 31),
+('ACLY', 'Produces acetyl-CoA and increases histone actetylation', 'Nucleus', 32),
+('ACLY', 'Upon DNA damage, nuclear ACLY promotes homologus recombination', 'Nucleus', 33),
+('ACSS2', 'Forms a complex with TFEB and increases lysosomal and autophagy gene expression by local histone acetylation', 'Nucleus', 34),
+('ACSS2', 'Provides acetyl-CoA for lysine acetyltransferase CREB-binding protein (CBP)-mediated HIF-2alpha acetylation', 'Not specified', 35),
+('ACSS2', 'Increases histone acetylation near the sites of neuronal genes and upreglates their expression in neuronal cells', 'Nucleus', 36),
+('MAT2A', 'Forms a complex with Maf and represses HMOX1 expression by increasing histone methylation and recruiting chromatin co-repressors', 'Nucleus', 37),
+('SHMT-1', 'Directs deubiquitinating complex BRISC to IFAR1 and protects it from lysosomal degradation and promotes IFNAR1 signaling', 'Cytosol', 38);
 
 -- --------------------------------------------------------
 
