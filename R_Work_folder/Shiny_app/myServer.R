@@ -334,7 +334,7 @@ myserver <- function(input, output, session) {
       output$connect_db_status <- renderText("Please enter a valid email address")
     }else if (nchar(input$comments)>300){
       output$connect_db_status <- renderText(paste("Too many characters in comment box. Characters used:",nchar(input$comments)))
-    }else if(nchar(input$comments)<300&&isValidEmail(input$email)==TRUE&&is.null(DB_Connect$DB<-Connect_to_database(input$email,input$study_type,input$user_position,input$comments))==FALSE){
+    }else if(nchar(input$comments)<300&&isValidEmail(input$email)==TRUE&&is.null(DB_Connect$DB<-Connect_to_database(input$email,input$study_type,input$comments))==FALSE){
       output$connect_db_status <- renderText(paste("Email address is valid. Database is connected. Characters in comment box:",nchar(input$comments)))
       #The reactive variable is updated in the if statement directly.
     }else{

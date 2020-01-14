@@ -211,14 +211,14 @@ DESeq2_pre_processing <- function(File_1, File_2, variable_condition_1, variable
 
 #Connects to the database once the user has filled in the form
 #Before starting the connection, this function kills any existing connections to the database.
-Connect_to_database <- function(email="error_occured", type_research="error_occured", position="error_occured", comments="error_occured")
+Connect_to_database <- function(email="error_occured", type_research="error_occured", comments="error_occured")
 {
   killDbConnections()
   
   DB <- dbConnect(RMySQL::MySQL(), user="root", host="localhost",
                   password="UpsilonLambda94", dbname="non_canonic")
   
-  dbGetQuery(DB, paste0("INSERT INTO `questionnaire`(`Email`, `Type_of_Study`, `Position_Held`, `Comments`) VALUES (\"",email,"\",\"",type_research,"\",\"",position,"\",\"",comments,"\");"))
+  dbGetQuery(DB, paste0("INSERT INTO `questionnaire`(`Email`, `Type_of_Study`, `Comments`) VALUES (\"",email,"\",\"",type_research,"\",\"",comments,"\");"))
   
   return(DB)
 }
