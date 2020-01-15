@@ -235,9 +235,13 @@ killDbConnections <- function ()
 #This function takes in a file which will contain at least one column with the name 'Genes', this column will then be read
 #and filtered to find (if any) non-canonical genes according to the database
 #The function then writes three result files if any results were found, it then returns what it has found in the form of a list
-Non_canonic_analysis <- function(DB,file_to_analyze)
+Non_canonic_analysis <- function(DB,file_to_analyze,hsa_choice)
 {
-  convert_gene_to_hsa(file_to_analyze)
+  #If the user has chosen to perform the hsa conversion
+  if(hsa_choice==TRUE){
+    convert_gene_to_hsa(file_to_analyze)
+  }
+  
 
   sig_gene_list<-file_to_analyze$Genes
   

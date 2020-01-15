@@ -480,7 +480,7 @@ myserver <- function(input, output, session) {
   #This section first reads the file then uses the analysis function to analyze the contents
   #of the file
   observeEvent(input$launch_list_analysis,{(the_file <- read_csv_function(input$gene_list_file$datapath))
-    (gene_list_results <- Non_canonic_analysis(DB_Connect$DB,the_file))
+    (gene_list_results <- Non_canonic_analysis(DB_Connect$DB,the_file,input$hsa_conversion_choice))
     
     #Runs the show results function which will put the results in the table if there are any
     show_results(gene_list_results)

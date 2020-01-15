@@ -118,6 +118,10 @@ myUI <- dashboardPage(dbHeader,
                                      ".csv")),
                          
                          directoryInput('directory_gene_list', label = 'select a directory', value = getwd()),
+                         tags$h6("The hsa conversion can be used with the KEGGS mapping tool to find all pathways (only for human genome)"),
+                         tags$h6("Check the guide in the information tab for more information on KEEGS mapping tool"),
+                         checkboxInput("hsa_conversion_choice", "Find hsa conversions", value = FALSE, width = NULL),
+                         tags$br(),
                          disabled(actionButton("launch_list_analysis", "Launch Analysis")),
                          textOutput("launch_gene_list_status"),
                          textOutput("check_gene_column_status")
