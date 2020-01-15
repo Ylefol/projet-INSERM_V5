@@ -78,6 +78,24 @@ if(!require(shinycssloaders)){
   library(shinycssloaders)
 }
 
+#Used for connecting to the internet, will be usefull for gene_symbol conversion
+if(!require(tcltk)){
+  install.packages("tcltk")
+  library(tcltk)
+}
+
+#Used for connecting to the internet, will be usefull for gene_symbol conversion
+if(!require(tidyverse)){
+  install.packages("tidyverse")
+  library(tidyverse)
+}
+
+#Used for connecting to the internet, will be usefull for gene_symbol conversion
+if(!require(RCurl)){
+  install.packages("RCurl")
+  library(RCurl)
+}
+
 
 #############################################################################################################################################
 

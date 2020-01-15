@@ -1,4 +1,0 @@
-"Gene_Symbol" "Gene_Name" "References"
-"PDC" "Pyruvate dehydrogenase complex" "Acetyl-CoA induces cell growth and proliferation by promoting the acetylation of histones at growth genes"
-"PDC" "Pyruvate dehydrogenase complex" "HIF-1-mediated expression of pyruvate dehydrogenase kinase: a metabolic switch required for cellular adaptation to hypoxia"
-"PDC" "Pyruvate dehydrogenase complex" "A nuclear pyruvate dehydrogenase complex is important for the generation of Acetyl-CoA and histone acetylation"
