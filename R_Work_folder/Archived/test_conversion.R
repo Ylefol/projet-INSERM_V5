@@ -5,6 +5,8 @@ library(RCurl)
 library(tidyverse)
 options(RCurlOptions = list(cainfo = system.file("CurlSSL", "cacert.pem", package = "RCurl")))
 
+setwd("C:/Users/yohan/Desktop")
+
 path="C:\\Users\\yohan\\Desktop\\test_can_no_ncan.txt"
 
 
@@ -78,7 +80,7 @@ write.table(found[,"entrez"], file = "hsa_ID.txt", row.names=FALSE, col.names=FA
 
 #Write the found and missing table
 write.table(found, file = "convert.txt", row.names=FALSE, col.names=TRUE,sep=",",quote=FALSE)
-write.table(missing, file = "missing.txt", row.names=FALSE, col.names=TRUE,sep=",",quote=FALSE)
+write.table(missing, file = "missing.txt", row.names=FALSE, col.names=FALSE,sep=",",quote=FALSE)
   
 
 

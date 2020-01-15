@@ -515,7 +515,7 @@ convert_gene_to_hsa<-function(full_file)
   #Create a list with only the hsa list
   found <- rbind(with_hsa[grep("hsa:", with_hsa[,"entrez"]), ])
   #Writes the hsa table
-  write.table(found[,1], file = "hsa_ID.txt", row.names=FALSE, col.names=FALSE,sep=",",quote = FALSE)
+  write.table(found[,"entrez"], file = "hsa_ID.txt", row.names=FALSE, col.names=FALSE,sep=",",quote = FALSE)
   
   #Write the found and missing table
   write.table(found, file = "convert.txt", row.names=FALSE, col.names=TRUE,sep=",",quote=FALSE)
