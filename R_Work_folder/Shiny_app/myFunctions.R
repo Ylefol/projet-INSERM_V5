@@ -458,7 +458,6 @@ convert_gene_to_hsa<-function(full_file)
   #Put the data in a new variable
   newdata <- data.frame(data[,"Genes"])
   colnames(newdata)="Genes"
-  print(newdata)
   #Instantiate three empty vectors
   entrez = c()
   Genes=c()

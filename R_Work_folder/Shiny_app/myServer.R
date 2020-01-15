@@ -109,7 +109,7 @@ myserver <- function(input, output, session) {
         showConfirmButton = FALSE,
         showCancelButton = FALSE,
         timer = 0,
-        imageUrl = "https://i.imgur.com/f8vNJCt.gif",
+        imageUrl = "loading.gif",
         animation = TRUE
       )
       #Disables MA buttons
@@ -150,7 +150,7 @@ myserver <- function(input, output, session) {
         showConfirmButton = FALSE,
         showCancelButton = FALSE,
         timer = 0,
-        imageUrl = "https://i.imgur.com/f8vNJCt.gif",
+        imageUrl = "loading.gif",
         animation = TRUE
       )
       #Disables MA buttons
@@ -238,7 +238,7 @@ myserver <- function(input, output, session) {
         showConfirmButton = FALSE,
         showCancelButton = FALSE,
         timer = 0,
-        imageUrl = "https://i.imgur.com/f8vNJCt.gif",
+        imageUrl = "loading.gif",
         animation = TRUE
       )
       #disables the volcanos buttons
@@ -278,7 +278,7 @@ myserver <- function(input, output, session) {
         showConfirmButton = FALSE,
         showCancelButton = FALSE,
         timer = 0,
-        imageUrl = "https://i.imgur.com/f8vNJCt.gif",
+        imageUrl = "loading.gif",
         animation = TRUE
       )
       #disables the volcanos buttons
@@ -472,7 +472,7 @@ myserver <- function(input, output, session) {
     showConfirmButton = FALSE,
     showCancelButton = FALSE,
     timer = 0,
-    imageUrl = "https://i.imgur.com/f8vNJCt.gif",
+    imageUrl = "loading.gif",
     animation = TRUE
   )})
   
@@ -566,7 +566,7 @@ myserver <- function(input, output, session) {
     showConfirmButton = FALSE,
     showCancelButton = FALSE,
     timer = 0,
-    imageUrl = "https://i.imgur.com/f8vNJCt.gif",
+    imageUrl = "loading.gif",
     animation = TRUE
   )})
   
