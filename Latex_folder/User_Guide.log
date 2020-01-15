@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.4)  14 JAN 2020 09:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.4)  15 JAN 2020 17:23
 entering extended mode
 **./User_Guide.tex
 (User_Guide.tex
@@ -423,12 +423,12 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 40.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 40.
-<logo-CELLOMET-a.png, id=66, 301.125pt x 158.84344pt>
+<logo-CELLOMET-a.png, id=74, 301.125pt x 158.84344pt>
 File: logo-CELLOMET-a.png Graphic file (type png)
 <use logo-CELLOMET-a.png>
 Package pdftex.def Info: logo-CELLOMET-a.png  used on input line 42.
 (pdftex.def)             Requested size: 227.62204pt x 120.07512pt.
-<Logo-Master-GPhy.png, id=68, 450.9347pt x 441.90094pt>
+<Logo-Master-GPhy.png, id=76, 450.9347pt x 441.90094pt>
 File: Logo-Master-GPhy.png Graphic file (type png)
 <use Logo-Master-GPhy.png>
 Package pdftex.def Info: Logo-Master-GPhy.png  used on input line 46.
@@ -437,30 +437,30 @@ Package pdftex.def Info: Logo-Master-GPhy.png  used on input line 46.
 
 {C:/Users/yohan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./logo-CELL
 OMET-a.png> <./Logo-Master-GPhy.png>]
-<main_app_screen.png, id=81, 724.20563pt x 785.18344pt>
+<main_app_screen.png, id=90, 724.20563pt x 785.18344pt>
 File: main_app_screen.png Graphic file (type png)
 <use main_app_screen.png>
 Package pdftex.def Info: main_app_screen.png  used on input line 56.
 (pdftex.def)             Requested size: 262.4377pt x 284.53485pt.
  [2 <./main_app_screen.png>]
-<connect_DB.png, id=90, 722.7pt x 782.925pt>
+<connect_DB.png, id=98, 724.20563pt x 784.43062pt>
 File: connect_DB.png Graphic file (type png)
 <use connect_DB.png>
 Package pdftex.def Info: connect_DB.png  used on input line 70.
-(pdftex.def)             Requested size: 262.64195pt x 284.5288pt.
+(pdftex.def)             Requested size: 262.6808pt x 284.52536pt.
  [3 <./connect_DB.png>]
-<deseq2_screen.png, id=102, 721.94719pt x 782.925pt>
+<deseq2_screen.png, id=110, 724.95844pt x 784.43062pt>
 File: deseq2_screen.png Graphic file (type png)
 <use deseq2_screen.png>
 Package pdftex.def Info: deseq2_screen.png  used on input line 87.
-(pdftex.def)             Requested size: 262.36838pt x 284.5288pt.
+(pdftex.def)             Requested size: 262.95386pt x 284.52536pt.
  [4 <./deseq2_screen.png>]
-<data_format_deseq2.PNG, id=113, 476.53032pt x 74.52844pt>
+<data_format_deseq2.PNG, id=120, 476.53032pt x 74.52844pt>
 File: data_format_deseq2.PNG Graphic file (type png)
 <use data_format_deseq2.PNG>
 Package pdftex.def Info: data_format_deseq2.PNG  used on input line 99.
 (pdftex.def)             Requested size: 426.81557pt x 66.75313pt.
-<dese2_excel_data_format.png, id=116, 483.30562pt x 145.29282pt>
+<dese2_excel_data_format.png, id=123, 483.30562pt x 145.29282pt>
 File: dese2_excel_data_format.png Graphic file (type png)
 <use dese2_excel_data_format.png>
 Package pdftex.def Info: dese2_excel_data_format.png  used on input line 108.
@@ -478,55 +478,65 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 135.
 
 [6]
-<gene_list_analysis.png, id=135, 722.7pt x 782.925pt>
+<gene_list_analysis.png, id=144, 725.71124pt x 784.43062pt>
 File: gene_list_analysis.png Graphic file (type png)
 <use gene_list_analysis.png>
 Package pdftex.def Info: gene_list_analysis.png  used on input line 162.
-(pdftex.def)             Requested size: 262.64195pt x 284.5288pt.
+(pdftex.def)             Requested size: 263.22691pt x 284.52536pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [7]
-<results_tab.png, id=144, 724.20563pt x 784.43062pt>
-File: results_tab.png Graphic file (type png)
-<use results_tab.png>
-Package pdftex.def Info: results_tab.png  used on input line 176.
-(pdftex.def)             Requested size: 262.6808pt x 284.52536pt.
+<KEGGS_Mapper.png, id=154, 721.19438pt x 549.55313pt>
+File: KEGGS_Mapper.png Graphic file (type png)
+<use KEGGS_Mapper.png>
+Package pdftex.def Info: KEGGS_Mapper.png  used on input line 182.
+(pdftex.def)             Requested size: 373.40558pt x 284.5366pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [8 <./gene_list_analysis.png>]
-<custom_volcano_tab.png, id=152, 724.95844pt x 782.925pt>
-File: custom_volcano_tab.png Graphic file (type png)
-<use custom_volcano_tab.png>
-Package pdftex.def Info: custom_volcano_tab.png  used on input line 189.
-(pdftex.def)             Requested size: 263.4627pt x 284.5288pt.
+<results_tab.png, id=167, 724.20563pt x 784.43062pt>
+File: results_tab.png Graphic file (type png)
+<use results_tab.png>
+Package pdftex.def Info: results_tab.png  used on input line 197.
+(pdftex.def)             Requested size: 262.6808pt x 284.52536pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[9 <./results_tab.png>] (User_Guide.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 203.
- [10 <./custom_volcano_tab.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 203.
+[9 <./KEGGS_Mapper.png>]
+<custom_volcano_tab.png, id=175, 724.20563pt x 784.43062pt>
+File: custom_volcano_tab.png Graphic file (type png)
+<use custom_volcano_tab.png>
+Package pdftex.def Info: custom_volcano_tab.png  used on input line 210.
+(pdftex.def)             Requested size: 262.6808pt x 284.52536pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[10 <./results_tab.png>] (User_Guide.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 224.
+ [11 <./custom_volcano_tab.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 224.
 
 (User_Guide.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 203.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 203.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 224.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 224.
 Package rerunfilecheck Info: File `User_Guide.out' has not changed.
-(rerunfilecheck)             Checksum: 5CB91575C24FF24E30CBC983D83441B8;953.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 203.
+(rerunfilecheck)             Checksum: BE081CDD4C12973BF96B4C53D84C1F13;1109.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 224.
  ) 
 Here is how much of TeX's memory you used:
- 7059 strings out of 492452
- 107761 string characters out of 3120064
- 215707 words of memory out of 3000000
- 11251 multiletter control sequences out of 15000+200000
- 9765 words of font info for 34 fonts, out of 3000000 for 9000
+ 7079 strings out of 492452
+ 108037 string characters out of 3120064
+ 215771 words of memory out of 3000000
+ 11261 multiletter control sequences out of 15000+200000
+ 9933 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,6n,34p,696b,347s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 46i,6n,34p,696b,350s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmbx12.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/f
@@ -536,10 +546,11 @@ Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/yo
 han/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb>
 <C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmsy10.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmti10.pfb>
-Output written on User_Guide.pdf (10 pages, 848562 bytes).
+ic/amsfonts/cm/cmti10.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on User_Guide.pdf (11 pages, 935053 bytes).
 PDF statistics:
- 200 PDF objects out of 1000 (max. 8388607)
- 35 named destinations out of 1000 (max. 500000)
- 179 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 230 PDF objects out of 1000 (max. 8388607)
+ 43 named destinations out of 1000 (max. 500000)
+ 200 words of extra memory for PDF output out of 10000 (max. 10000000)
 

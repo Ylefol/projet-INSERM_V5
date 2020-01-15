@@ -47,8 +47,8 @@ Marie Terrien
 \end{center}
 \newpage
 \section{Introduction \label{intro}}
-The non-canonical analysis tool (CelloApp) is a tool with several uses. It's main feature is a non-canonical gene analysis from a gene list. Yet this tool also boasts several other interesting functionalities such a differential expression analysis, customizable MA and Volcano plots which in turn allow to obtain significant gene sets according to a users custom parameters.
-This guide will go over each functionality and explain how to best use \textbf{CelloApp}.
+The non-canonical analysis tool (CelloApp) is a tool with several uses. It's main feature is a non-canonical gene analysis from a gene list. Yet this tool also boasts several other interesting functionalities such a differential expression analysis, customizable MA and Volcano plots which in turn allow to obtain significant gene sets according to a users custom parameters.Additionally, this tool is capable of converting gene symbols to KEGGS identifier (type hsa), see \autoref{gene_list_analysis} for more information.
+This guide will go over each functionality and explain how to best use CelloApp.
 
 As can be seen in \autoref{fig:main_app_screen}, the application is split into several tabs. The information tab shows two pdf files, the first being this one, and the second being a detailed explanation of the tool and it's components. The last tab 'Citation' is a simple tab which gives the citation information for the use of this tool.This guide will now go over the remaining tabs and explain their uses and how to maneuver them.
 \begin{figure}[h!]
@@ -156,7 +156,7 @@ Additionally, results can be viewed immediately in the results tab of the applic
 
 
 \section{Gene list analysis \label{gene_list_analysis}}
-This tab allows users to perform a non-canonical gene analysis with a simple gene list file. The only obligation that this file must respect is that the genes must be in a column with a column header names 'Genes'. If the file entered is correct, a table will appear showing that specific column as seen in \autoref{fig:gene_list_analysis_uploaded}. If this does not occur, a text will appear, stating that a different file should be chosen.
+This tab allows users to perform a non-canonical gene analysis and a gene symbol to hsa identifier conversion with a simple gene list file. The only obligation that this file must respect is that the genes must be in a column with a column header names 'Genes'. If the file entered is correct, a table will appear showing that specific column as seen in \autoref{fig:gene_list_analysis_uploaded}. If this does not occur, a text will appear, stating that a different file should be chosen.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=15cm,height=10cm,keepaspectratio]{gene_list_analysis.png}
@@ -165,7 +165,28 @@ This tab allows users to perform a non-canonical gene analysis with a simple gen
 \end{figure}
 
 Considering that the requirement for this analysis is a single column carrying the name of 'Genes', possible files can be the significant gene list obtained from the DESeq2 analysis, or the significant differential expression results obtained from either the DESeq2 analysis or the downloading of the data from custom plots in \autoref{custom_plots}.
+\subsection{gene symbol to hsa conversion}
+By checking the 'Find hsa conversions' checkbox in the CelloMap tool, a conversion script will automatically be run along with a non-canonical gene analysis. This conversion will allow users to run a KEGGS mapping analysis using the file generated from the conversion.
+KEGG Mapper is a mapping tool that will search and find any pathways associated to a list of identifiers provided. It will then allow the user to view every pathway found while highlighting the gene that was in the original list.
+To perform the analysis, follow these steps, also seen in \autoref{fig:keggs_mapper}
+\begin{enumerate}
+\item Go to the website: \url{https://www.kegg.jp/kegg/tool/map_pathway2.html}
+\item Make sure that the search mode is \textbf{Organism-specific} with the letter \textbf{hsa} in the text box
+\item Upload the file created by CelloMap, the file will be called \textbf{hsa\_ID.txt} 
+\item Launch the analysis and wait a few seconds/minutes
 
+\end{enumerate}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=15cm,height=10cm,keepaspectratio]{KEGGS_Mapper.png}
+\caption{The set-up for the KEGGS Mapper tool}
+\label{fig:keggs_mapper}
+\end{figure}
+
+
+\subsection{Non-canonical gene analysis}
+zvbuyhefq
 \newpage
 \section{Results \label{res}}
 The results tab, seen in \autoref{fig:results_tab}, shows the results of a non-canonical gene analysis within the application itself. There isn't much to be said about this tab, it is only for visualization.
