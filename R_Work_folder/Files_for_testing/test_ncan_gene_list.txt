@@ -1,4 +1,4 @@
-Gene
+Genes
 HK2
 GPI
 PFKM

@@ -238,7 +238,7 @@ killDbConnections <- function ()
 Non_canonic_analysis <- function(DB,file_to_analyze)
 {
   convert_gene_to_hsa(file_to_analyze)
-  
+
   sig_gene_list<-file_to_analyze$Genes
   
   #Initialize dataframes
@@ -457,6 +457,7 @@ convert_gene_to_hsa<-function(full_file)
   data <- full_file
   #Put the data in a new variable
   newdata <- data.frame(data[,"Genes"])
+  newdata <- data.frame(newdata)
   colnames(newdata)="Genes"
   #Instantiate three empty vectors
   entrez = c()
@@ -512,10 +513,9 @@ convert_gene_to_hsa<-function(full_file)
   with_hsa <- cbind(Genes, entrez)
   
   #Create a list with only the hsa list
-  found <- with_hsa[grep("hsa:", with_hsa[,"entrez"]), ]
-  
+  found <- rbind(with_hsa[grep("hsa:", with_hsa[,"entrez"]), ])
   #Writes the hsa table
-  write.table(found[,"entrez"], file = "hsa_ID.txt", row.names=FALSE, col.names=FALSE,sep=",",quote = FALSE)
+  write.table(found[,1], file = "hsa_ID.txt", row.names=FALSE, col.names=FALSE,sep=",",quote = FALSE)
   
   #Write the found and missing table
   write.table(found, file = "convert.txt", row.names=FALSE, col.names=TRUE,sep=",",quote=FALSE)
