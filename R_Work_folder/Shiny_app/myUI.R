@@ -160,6 +160,7 @@ myUI <- dashboardPage(dbHeader,
                                      ".csv")
                          ),
                          checkboxInput("DESeq2_Ncan", "Perform a non-canonical gene analysis", value = TRUE, width = NULL),
+                         checkboxInput("hsa_conversion_choice_Deseq2", "Find hsa conversions", value = FALSE, width = NULL),
                          
                          directoryInput('directory_DESeq2', label = 'select a directory', value = getwd()),
                          #Adds the text_input which will take in the first condition

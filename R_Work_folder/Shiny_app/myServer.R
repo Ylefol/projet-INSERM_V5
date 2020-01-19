@@ -528,6 +528,12 @@ myserver <- function(input, output, session) {
     check_upload_File2_DESeq2=0
   )
   
+  observeEvent(input$DESeq2_Ncan, {(if(input$DESeq2_Ncan==TRUE){
+    shinyjs::show("hsa_conversion_choice_Deseq2")
+  }else{
+    shinyjs::hide("hsa_conversion_choice_Deseq2")
+  })})
+  
   #Sets the check_if_upload variable to one if a file has been entered by the user
   observeEvent(input$file2, {(check_if_upload_File2_DESeq2$check_upload_File2_DESeq2 <- c(1))})
   
@@ -593,7 +599,7 @@ myserver <- function(input, output, session) {
     
     #If the user wanted to run a non-canonical gene analysis as part of the DESeq2 analysis
     if (input$DESeq2_Ncan==TRUE){
-      Final_Results <- Non_canonic_analysis(DB_Connect$DB,my_list[["file"]])
+      Final_Results <- Non_canonic_analysis(DB_Connect$DB,my_list[["file"]],input$hsa_conversion_choice_Deseq2)
       #Below is the format of 'Final_Results'
       #list("sig_genes"=file_to_analyze,"ncan"=non_canonic_results,"can"=canonic_results,"refs"=ref_results)
       
