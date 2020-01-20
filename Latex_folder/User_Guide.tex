@@ -32,6 +32,7 @@ Marie Terrien
 \usepackage{comment}
 \usepackage[english]{babel}
 \usepackage{titlesec}
+\usepackage{setspace}
 
 \setcounter{secnumdepth}{4}
 
@@ -45,9 +46,15 @@ Marie Terrien
 \begin{center}
 \includegraphics[width = 7cm]{Logo-Master-GPhy.png}
 \end{center}
+\thispagestyle{empty}
+
+\doublespacing
+\tableofcontents
+\singlespacing
+
 \newpage
 \section{Introduction \label{intro}}
-The non-canonical analysis tool (CelloApp) is a tool with several uses. It's main feature is a non-canonical gene analysis from a gene list. Yet this tool also boasts several other interesting functionalities such a differential expression analysis, customizable MA and Volcano plots which in turn allow to obtain significant gene sets according to a users custom parameters.Additionally, this tool is capable of converting gene symbols to KEGGS identifier (type hsa), see \autoref{gene_list_analysis} for more information.
+The non-canonical analysis tool (CelloApp) is a tool with several uses. It's main feature is a non-canonical gene analysis from a gene list. Yet this tool also boasts several other interesting functionalities such a differential expression analysis, customizable MA and Volcano plots which in turn allow to obtain significant gene sets according to a users custom parameters.Additionally, this tool is capable of converting gene symbols to KEGG identifier (type hsa), see \autoref{gene_list_analysis} for more information.
 This guide will go over each functionality and explain how to best use CelloApp.
 
 As can be seen in \autoref{fig:main_app_screen}, the application is split into several tabs. The information tab shows two pdf files, the first being this one, and the second being a detailed explanation of the tool and it's components. The last tab 'Citation' is a simple tab which gives the citation information for the use of this tool.This guide will now go over the remaining tabs and explain their uses and how to maneuver them.
@@ -165,10 +172,10 @@ This tab allows users to perform a non-canonical gene analysis and a gene symbol
 \end{figure}
 
 Considering that the requirement for this analysis is a single column carrying the name of 'Genes', possible files can be the significant gene list obtained from the DESeq2 analysis, or the significant differential expression results obtained from either the DESeq2 analysis or the downloading of the data from custom plots in \autoref{custom_plots}.
-\subsection{gene symbol to hsa conversion}
-By checking the 'Find hsa conversions' checkbox in the CelloMap tool, a conversion script will automatically be run along with a non-canonical gene analysis. This conversion will allow users to run a KEGGS mapping analysis using the file generated from the conversion.
+\subsection{KEGG Mapper \label{KEGG Map}}
+By checking the 'Find hsa conversions' checkbox in the CelloMap tool, a conversion script will automatically be run along with a non-canonical gene analysis. This conversion will allow users to run a KEGG mapping analysis using the file generated from the conversion.
 KEGG Mapper is a mapping tool that will search and find any pathways associated to a list of identifiers provided \cite{kanehisa2019kegg}. It will then allow the user to view every pathway found while highlighting the gene that was in the original list.
-To perform the analysis, follow these steps, also seen in \autoref{fig:keggs_mapper}
+To perform the analysis, follow these steps, also seen in \autoref{fig:KEGG_mapper}
 \begin{enumerate}
 \item Go to the website: \url{https://www.kegg.jp/kegg/tool/map_pathway2.html}
 \item Make sure that the search mode is \textbf{Organism-specific} with the letter \textbf{hsa} in the text box
@@ -178,12 +185,13 @@ To perform the analysis, follow these steps, also seen in \autoref{fig:keggs_map
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=15cm,height=10cm,keepaspectratio]{KEGGS_Mapper.png}
-\caption{The set-up for the KEGGS Mapper tool}
-\label{fig:keggs_mapper}
+\includegraphics[width=15cm,height=10cm,keepaspectratio]{KEGG_Mapper.png}
+\caption{The set-up for the KEGG Mapper tool}
+\label{fig:KEGG_mapper}
 \end{figure}
 
-An alternative to this tool is Metabolic GEne RApid Visualizer (MERAV), this tool was designed to analyze \textbf{human} gene expression across a large variety of arrays. All of the arrays were normalized together to generate a gene expression database composed of several types of human tissue \cite{shaul2015merav}.
+\subsection{Metabolic GEne RApid Visualizer (MERAV)\label{MERAV}}
+An alternative to the KEGG Mapper is Metabolic GEne RApid Visualizer (MERAV), this tool was designed to analyze \textbf{human} gene expression across a large variety of arrays. All of the arrays were normalized together to generate a gene expression database composed of several types of human tissue \cite{shaul2015merav}.
 This tool offers two types of searches:
 \begin{enumerate}
 \item Search expression levels in one or several genes\\
@@ -219,7 +227,7 @@ This file will contain the non-canonical gene symbols and names along with their
 \item references.txt\\
 This file will contain the gene symbol and name of non-canonical genes and the references that were used to determine their canonical and non-canonical functions within this database.
 \end{enumerate}
-Each text file was created with the intention to be read by Microsoft excel. The text files need to be opened in excel and the separator/deliminator must be declared as `Tab'.
+Each text file was created with the intention to be read by Microsoft excel. The text files need to be opened in excel and the separator/deliminator must be declared as `Tab'. Once opened, it is recommended to use the `wrap text' and `AutoFit Row Height' in the alignment and cell format sections of excel. This will ensure that the table is legible in excel.
 \newpage
 \section{Results \label{res}}
 The results tab, seen in \autoref{fig:results_tab}, shows the results of a non-canonical gene analysis within the application itself. There isn't much to be said about this tab, it is only for visualization.

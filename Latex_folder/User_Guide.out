@@ -10,9 +10,10 @@
 \BOOKMARK [3][-]{subsubsection.4.4.2}{Figures generated}{subsection.4.4}% 10
 \BOOKMARK [3][-]{subsubsection.4.4.3}{Non-canonical gene analysis}{subsection.4.4}% 11
 \BOOKMARK [1][-]{section.5}{Gene list analysis }{}% 12
-\BOOKMARK [2][-]{subsection.5.1}{gene symbol to hsa conversion}{section.5}% 13
-\BOOKMARK [2][-]{subsection.5.2}{Non-canonical gene analysis}{section.5}% 14
-\BOOKMARK [1][-]{section.6}{Results }{}% 15
-\BOOKMARK [1][-]{section.7}{Custom MA and Volcano plots }{}% 16
-\BOOKMARK [1][-]{section.8}{Common errors }{}% 17
-\BOOKMARK [1][-]{section.8}{References}{}% 18
+\BOOKMARK [2][-]{subsection.5.1}{KEGG Mapper }{section.5}% 13
+\BOOKMARK [2][-]{subsection.5.2}{Metabolic GEne RApid Visualizer \(MERAV\)}{section.5}% 14
+\BOOKMARK [2][-]{subsection.5.3}{Non-canonical gene analysis}{section.5}% 15
+\BOOKMARK [1][-]{section.6}{Results }{}% 16
+\BOOKMARK [1][-]{section.7}{Custom MA and Volcano plots }{}% 17
+\BOOKMARK [1][-]{section.8}{Common errors }{}% 18
+\BOOKMARK [1][-]{section.8}{References}{}% 19
