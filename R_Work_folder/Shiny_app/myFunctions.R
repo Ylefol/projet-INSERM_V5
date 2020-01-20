@@ -218,7 +218,7 @@ Connect_to_database <- function(email="error_occured", type_research="error_occu
   DB <- dbConnect(RMySQL::MySQL(), user="root", host="localhost",
                   password="UpsilonLambda94", dbname="non_canonic")
   
-  dbGetQuery(DB, paste0("INSERT INTO `questionnaire`(`Email`, `Type_of_Study`, `Comments`) VALUES (\"",email,"\",\"",type_research,"\",\"",comments,"\");"))
+  dbGetQuery(DB, paste0("INSERT INTO `questionnaire`(`Email`, `Type_of_Study`, `Comments`,`submit_date`) VALUES (\"",email,"\",\"",type_research,"\",\"",comments,"\",\"",Sys.Date(),"\");"))
   
   return(DB)
 }

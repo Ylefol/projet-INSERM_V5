@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 14, 2020 at 07:27 AM
+-- Generation Time: Jan 20, 2020 at 01:16 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `cellomet1`
+-- Database: `non_canonic`
 --
 
 -- --------------------------------------------------------
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `canonic` (
   `C_Pathway` varchar(1000) NOT NULL,
   `C_Loc` varchar(1000) NOT NULL,
   `num_can` int(11) NOT NULL AUTO_INCREMENT,
-  `C_category` varchar(50) DEFAULT NULL,
+  `C_category` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`num_can`)
 ) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4;
 
@@ -44,27 +44,27 @@ CREATE TABLE IF NOT EXISTS `canonic` (
 --
 
 INSERT INTO `canonic` (`Gene_Symbol`, `Gene_Name`, `C_Pathway`, `C_Loc`, `num_can`, `C_category`) VALUES
-('HK2', 'Hexokinase 2', 'Convert phosphorylate glucose to glucose 6-phosphate', 'Cytosol', 1, NULL),
-('GPI', 'Phosphoglucose isomerase', 'Interconvert G6P to fructose 6-phosphate (F6P)', 'Cytosol', 2, NULL),
-('PFKM', 'Phosphofructokinase', 'Phosphorylate F6P to fructose 1,6-biphosphate', 'Cytosol', 3, NULL),
-('PFKFB3', '6-phosphofructose-2-kinase/fructose-2,6-biphosphatase 3', 'Interconvert F6P to fructose 2,6-biphosphate (F2,6BP)', 'Cytosol', 4, NULL),
-('FBP1', 'Fructose 1,6-biphosphate', 'Hydrolyze F1,6BP to F6P', 'Cytosol', 5, NULL),
-('ALDOA', 'Aldolase A', 'Split F1,6BP to dihydroxyacetone phosphate (DHAP) and glyceraldehyde', 'Cytosol', 6, NULL),
-('GAPDH', 'Glyceraldehyde 3-phosphate dehydrogenase', 'Interconvert G3P to 1,3-biphosphoglycerate', 'Cytosol', 7, NULL),
-('PGK1', 'Phosphoglycerate kinase', 'Interconvert 1,3BPG to 3-phosphoglycerate', 'Cytosol', 8, NULL),
-('ENO1', 'Enolase 1', 'Interconvert 2-phosphoglycerate to phosphoenolpyruvate (PEP)', 'Cytosol', 9, NULL),
-('PKM', 'Pyruvate kinase 2', 'Transfer a phosphate group from PEP to ADP to yield pyruvate and ATP', 'Cytosol', 10, NULL),
+('HK2', 'Hexokinase 2', 'Convert phosphorylate glucose to glucose 6-phosphate', 'Cytosol', 1, 'Glycolysis/Gluconeogenesis, Fructose and mannose metabolism, Galactose metabolism, Starch and sucrose metabolism, Amino sugar and nucleotide sugar metabolism'),
+('GPI', 'Phosphoglucose isomerase', 'Interconvert G6P to fructose 6-phosphate (F6P)', 'Cytosol', 2, 'Glycolysis/Gluconeogenesis, Pentose phosphate pathway (PPP), Starch and sucrose metabolism, Amino sugar and nucleotide sugar metabolism'),
+('PFKM', 'Phosphofructokinase', 'Phosphorylate F6P to fructose 1,6-biphosphate', 'Cytosol', 3, 'Glycolysis/Gluconeogenesis, Pentose phosphate pathway (PPP), Fructose and mannose metabolism, Galactose metabolism'),
+('PFKFB3', '6-phosphofructose-2-kinase/fructose-2,6-biphosphatase 3', 'Interconvert F6P to fructose 2,6-biphosphate (F2,6BP)', 'Cytosol', 4, 'Fructose and mannose metabolism'),
+('FBP1', 'Fructose 1,6-biphosphate', 'Hydrolyze F1,6BP to F6P', 'Cytosol', 5, 'Glycolysis/Gluconeogenesis, Pentose phosphate pathway (PPP), Fructose and mannose metabolism'),
+('ALDOA', 'Aldolase A', 'Split F1,6BP to dihydroxyacetone phosphate (DHAP) and glyceraldehyde', 'Cytosol', 6, 'Glycolysis/Gluconeogenesis, Pentose phosphate pathway (PPP), Fructose and mannose metabolism'),
+('GAPDH', 'Glyceraldehyde 3-phosphate dehydrogenase', 'Interconvert G3P to 1,3-biphosphoglycerate', 'Cytosol', 7, 'Glycolysis/Gluconeogenesis'),
+('PGK1', 'Phosphoglycerate kinase', 'Interconvert 1,3BPG to 3-phosphoglycerate', 'Cytosol', 8, 'Glycolysis/Gluconeogenesis'),
+('ENO1', 'Enolase 1', 'Interconvert 2-phosphoglycerate to phosphoenolpyruvate (PEP)', 'Cytosol', 9, 'Glycolysis/Gluconeogenesis'),
+('PKM', 'Pyruvate kinase 2', 'Transfer a phosphate group from PEP to ADP to yield pyruvate and ATP', 'Cytosol', 10, 'Glycolysis, Angiogenesis'),
 ('LDHA', 'Lactate dehydrogenase A', 'Interconvert lactate to pyruvate', 'Cytosol', 11, NULL),
-('ACO2', 'Aconitase', 'Interconvert citrate to isocitrate in the tricarboxylic acid (TCA) cycle', 'Mitocondria', 12, NULL),
-('SUCLG1', 'Succinyl-CoA synthetase', 'Interconvert succinyl-CoA to succinate in the TCA cycle', 'Mitochondria', 13, NULL),
-('FH', 'Fumarase ', 'Interconvert fumarate to malate in the TCA cycle', 'Mitochondria', 14, NULL),
-('MDH1', 'Malate dehydrogenase', 'Interconvert malate to oxaloacetate in the TCA cycle', 'Cytosol', 15, NULL),
-('MDH2', 'Malate dehydrogenase', 'Interconvert malate to oxaloacetate in the TCA cycle', 'Mitochondria', 16, NULL),
-('PDC', 'Pyruvate dehydrogenase complex', 'Convert pyruvate to acetyl-CoA', 'Mitochondria', 17, NULL),
-('ACLY', 'ATP-citrate lyase', 'Convert citrate to oxaloacetate and acetyl-CoA', 'Mitochondria', 18, NULL),
-('ACSS2', 'Acetyl-CoA synthetase short-chain family member 2', 'Catalyze acetate to acetyl-CoA', 'Cytosol', 19, NULL),
-('MAT2A', 'methionine adenosyltransferase IIalpha', 'Produce S-adenosylmethionine (SAM) from methionine', 'Cytosol', 20, NULL),
-('SHMT-1', 'Serine hydroxymethyltransferase', 'Interconvert L-serine to glycine and tetrahydrofolate 5,10-methylenetetrahydrofolate', 'Cytosol', 21, NULL);
+('ACO2', 'Aconitase', 'Interconvert citrate to isocitrate in the tricarboxylic acid (TCA) cycle', 'Mitocondria', 12, 'Citric acid cycle (tricarboxylic acid cycle/Krebs cycle), Glyoxylate and dicarboxylate metabolism'),
+('SUCLG1', 'Succinyl-CoA synthetase', 'Interconvert succinyl-CoA to succinate in the TCA cycle', 'Mitochondria', 13, 'Citric acid cycle (tricarboxylic acid cycle/Krebs cycle), Propanoate metabolism'),
+('FH', 'Fumarase ', 'Interconvert fumarate to malate in the TCA cycle', 'Mitochondria', 14, 'Citric acid cycle (tricarboxylic acid cycle/Krebs cycle)'),
+('MDH1', 'Malate dehydrogenase', 'Interconvert malate to oxaloacetate in the TCA cycle', 'Cytosol', 15, 'Citric acid cycle (tricarboxylic acid cycle/Krebs cycle), Pyruvate metabolism, Glyoxylate and dicarboxylate metabolism'),
+('MDH2', 'Malate dehydrogenase', 'Interconvert malate to oxaloacetate in the TCA cycle', 'Mitochondria', 16, 'Citric acid cycle (tricarboxylic acid cycle/Krebs cycle), Pyruvate metabolism, Glyoxylate and dicarboxylate metabolism'),
+('PDC', 'Pyruvate dehydrogenase complex', 'Convert pyruvate to acetyl-CoA', 'Mitochondria', 17, 'Glycolysis, Citric acid cycle (tricarboxylic acid cycle/Krebs cycle)'),
+('ACLY', 'ATP-citrate lyase', 'Convert citrate to oxaloacetate and acetyl-CoA', 'Mitochondria', 18, 'Citric acid cycle (tricarboxylic acid cycle/Krebs cycle)'),
+('ACSS2', 'Acetyl-CoA synthetase short-chain family member 2', 'Catalyze acetate to acetyl-CoA', 'Cytosol', 19, 'Glycolysis/Gluconeogenesis, Pyruvate metabolism, Propanoate metabolism'),
+('MAT2A', 'methionine adenosyltransferase IIalpha', 'Produce S-adenosylmethionine (SAM) from methionine', 'Cytosol', 20, 'Cysteine and methionine metabolism, Selenoamino acid metabolism'),
+('SHMT-1', 'Serine hydroxymethyltransferase', 'Interconvert L-serine to glycine and tetrahydrofolate 5,10-methylenetetrahydrofolate', 'Cytosol', 21, 'Glycine, Serine and Threonine metabolism, Cyanoamino acid metabolism');
 
 -- --------------------------------------------------------
 
@@ -135,18 +135,17 @@ DROP TABLE IF EXISTS `questionnaire`;
 CREATE TABLE IF NOT EXISTS `questionnaire` (
   `Email` varchar(150) NOT NULL,
   `Type_of_Study` varchar(50) NOT NULL,
-  `Comments` varchar(300) NOT NULL
+  `Comments` varchar(300) NOT NULL,
+  `submit_date` date DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `questionnaire`
 --
 
-INSERT INTO `questionnaire` (`Email`, `Type_of_Study`, `Comments`) VALUES
-('yohan.lefol@gmail.com', 'Metabolic', 'blarg'),
-('yohan.lefol@gmail.com', 'Metabolic', ''),
-('yohan.lefol@gmail.com', 'Metabolomic', 'zedfg'),
-('yohan.lefol@gmail.com', 'Academic', '');
+INSERT INTO `questionnaire` (`Email`, `Type_of_Study`, `Comments`, `submit_date`) VALUES
+('yohan.lefol@gmail.com', 'Academic', '', NULL),
+('yohan.lefol@gmail.com', 'Academic', 'Test sys.date', '2020-01-20');
 
 -- --------------------------------------------------------
 
