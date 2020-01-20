@@ -167,14 +167,13 @@ This tab allows users to perform a non-canonical gene analysis and a gene symbol
 Considering that the requirement for this analysis is a single column carrying the name of 'Genes', possible files can be the significant gene list obtained from the DESeq2 analysis, or the significant differential expression results obtained from either the DESeq2 analysis or the downloading of the data from custom plots in \autoref{custom_plots}.
 \subsection{gene symbol to hsa conversion}
 By checking the 'Find hsa conversions' checkbox in the CelloMap tool, a conversion script will automatically be run along with a non-canonical gene analysis. This conversion will allow users to run a KEGGS mapping analysis using the file generated from the conversion.
-KEGG Mapper is a mapping tool that will search and find any pathways associated to a list of identifiers provided. It will then allow the user to view every pathway found while highlighting the gene that was in the original list.
+KEGG Mapper is a mapping tool that will search and find any pathways associated to a list of identifiers provided \cite{kanehisa2019kegg}. It will then allow the user to view every pathway found while highlighting the gene that was in the original list.
 To perform the analysis, follow these steps, also seen in \autoref{fig:keggs_mapper}
 \begin{enumerate}
 \item Go to the website: \url{https://www.kegg.jp/kegg/tool/map_pathway2.html}
 \item Make sure that the search mode is \textbf{Organism-specific} with the letter \textbf{hsa} in the text box
 \item Upload the file created by CelloMap, the file will be called \textbf{hsa\_ID.txt} 
 \item Launch the analysis and wait a few seconds/minutes
-
 \end{enumerate}
 
 \begin{figure}[h!]
@@ -184,9 +183,43 @@ To perform the analysis, follow these steps, also seen in \autoref{fig:keggs_map
 \label{fig:keggs_mapper}
 \end{figure}
 
+An alternative to this tool is Metabolic GEne RApid Visualizer (MERAV), this tool was designed to analyze \textbf{human} gene expression across a large variety of arrays. All of the arrays were normalized together to generate a gene expression database composed of several types of human tissue \cite{shaul2015merav}.
+This tool offers two types of searches:
+\begin{enumerate}
+\item Search expression levels in one or several genes\\
+This search will provide the user with the ability to search the database for the expression of a given gene(s).
+\item Search all genes expression levels in one or more cell types\\
+This search will provide the user with the ability to search the database for the expression of a given array.
+\end{enumerate}
+
+CelloMap creates a significant gene file that can be used with the first type of search, the one relating to finding gene expressions. To perform the search, follow these steps, also seen in \autoref{fig:merav}.
+\begin{enumerate}
+\item Go to the website: \url{http://merav.wi.mit.edu/}
+\item Click the `Search expression levels...' link.
+\item Load the gene search box\\
+To do this, copy paste all the genes from the significant gene file generated from DESeq2 or the one inputted in the gene list analysis. The main thing to watch out for is to not include the column name 'Genes'. If it is included, it's not a problem, it will simply be considered a gene symbol and will not be found by the search, this will not prevent the tool from searching for the other genes.
+\item Set the parameters to your liking
+\item If help is required, follow this link: \url{http://merav.wi.mit.edu/help/help.html}
+\end{enumerate}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=15cm,height=10cm,keepaspectratio]{MERAV.png}
+\caption{The set-up for the MERAV search tool}
+\label{fig:merav}
+\end{figure}
 
 \subsection{Non-canonical gene analysis}
-zvbuyhefq
+The non-canonical analysis will cross check the provided gene list with our database, and depending on if it finds non-canonical genes within the gene list, three text files will be created.
+\begin{enumerate}
+\item canonic\_results.txt\\
+This file will contain the non-canonical gene symbols and names along with their \textbf{canonical} function and location.
+\item non\_canonical\_results.txt\\
+This file will contain the non-canonical gene symbols and names along with their \textbf{non-canonical} function and location.
+\item references.txt\\
+This file will contain the gene symbol and name of non-canonical genes and the references that were used to determine their canonical and non-canonical functions within this database.
+\end{enumerate}
+Each text file was created with the intention to be read by Microsoft excel. The text files need to be opened in excel and the separator/deliminator must be declared as `Tab'.
 \newpage
 \section{Results \label{res}}
 The results tab, seen in \autoref{fig:results_tab}, shows the results of a non-canonical gene analysis within the application itself. There isn't much to be said about this tab, it is only for visualization.
@@ -211,9 +244,6 @@ Aside that, each element of the different tabs is self explanatory. After each p
 \caption{The tab to create a custom volcano plot.}
 \label{fig:custom_plots}
 \end{figure}
-
-
-
 
 
 \newpage

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.4)  15 JAN 2020 17:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.4)  20 JAN 2020 11:04
 entering extended mode
 **./User_Guide.tex
 (User_Guide.tex
@@ -488,55 +488,56 @@ Package pdftex.def Info: gene_list_analysis.png  used on input line 162.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [7]
-<KEGGS_Mapper.png, id=154, 721.19438pt x 549.55313pt>
+<KEGGS_Mapper.png, id=156, 721.19438pt x 549.55313pt>
 File: KEGGS_Mapper.png Graphic file (type png)
 <use KEGGS_Mapper.png>
-Package pdftex.def Info: KEGGS_Mapper.png  used on input line 182.
+Package pdftex.def Info: KEGGS_Mapper.png  used on input line 181.
 (pdftex.def)             Requested size: 373.40558pt x 284.5366pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [8 <./gene_list_analysis.png>]
-<results_tab.png, id=167, 724.20563pt x 784.43062pt>
+<MERAV.png, id=176, 721.94719pt x 782.17218pt>
+File: MERAV.png Graphic file (type png)
+<use MERAV.png>
+Package pdftex.def Info: MERAV.png  used on input line 207.
+(pdftex.def)             Requested size: 262.62173pt x 284.52971pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[9 <./KEGGS_Mapper.png>] [10 <./MERAV.png>]
+<results_tab.png, id=198, 724.20563pt x 784.43062pt>
 File: results_tab.png Graphic file (type png)
 <use results_tab.png>
-Package pdftex.def Info: results_tab.png  used on input line 197.
+Package pdftex.def Info: results_tab.png  used on input line 230.
 (pdftex.def)             Requested size: 262.6808pt x 284.52536pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[9 <./KEGGS_Mapper.png>]
-<custom_volcano_tab.png, id=175, 724.20563pt x 784.43062pt>
+ [11 <./results_tab.png>]
+<custom_volcano_tab.png, id=206, 724.20563pt x 784.43062pt>
 File: custom_volcano_tab.png Graphic file (type png)
 <use custom_volcano_tab.png>
-Package pdftex.def Info: custom_volcano_tab.png  used on input line 210.
+Package pdftex.def Info: custom_volcano_tab.png  used on input line 243.
 (pdftex.def)             Requested size: 262.6808pt x 284.52536pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[10 <./results_tab.png>] (User_Guide.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 224.
- [11 <./custom_volcano_tab.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 224.
-
-(User_Guide.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 224.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 224.
+ [12 <./custom_volcano_tab.png>] (User_Guide.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 254.
+ [13]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 254.
+ (User_Guide.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 254.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 254.
 Package rerunfilecheck Info: File `User_Guide.out' has not changed.
 (rerunfilecheck)             Checksum: BE081CDD4C12973BF96B4C53D84C1F13;1109.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 224.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 254.
  ) 
 Here is how much of TeX's memory you used:
- 7079 strings out of 492452
- 108037 string characters out of 3120064
- 215771 words of memory out of 3000000
- 11261 multiletter control sequences out of 15000+200000
+ 7109 strings out of 492452
+ 108386 string characters out of 3120064
+ 216015 words of memory out of 3000000
+ 11275 multiletter control sequences out of 15000+200000
  9933 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,6n,34p,696b,350s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 46i,6n,34p,696b,412s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmbx12.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/f
@@ -548,9 +549,9 @@ han/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb>
 m/cmsy10.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmti10.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on User_Guide.pdf (11 pages, 935053 bytes).
+Output written on User_Guide.pdf (13 pages, 989663 bytes).
 PDF statistics:
- 230 PDF objects out of 1000 (max. 8388607)
- 43 named destinations out of 1000 (max. 500000)
- 200 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 263 PDF objects out of 1000 (max. 8388607)
+ 58 named destinations out of 1000 (max. 500000)
+ 205 words of extra memory for PDF output out of 10000 (max. 10000000)
 

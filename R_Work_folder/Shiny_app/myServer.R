@@ -592,39 +592,36 @@ myserver <- function(input, output, session) {
     
     
     
-    
+    #Checks that there was not an error
     if(typeof(my_list[["message"]])=="character"){
-      #shinyjs::show("contents")
-    }
-    
-    #If the user wanted to run a non-canonical gene analysis as part of the DESeq2 analysis
-    if (input$DESeq2_Ncan==TRUE){
-      Final_Results <- Non_canonic_analysis(DB_Connect$DB,my_list[["file"]],input$hsa_conversion_choice_Deseq2)
-      #Below is the format of 'Final_Results'
-      #list("sig_genes"=file_to_analyze,"ncan"=non_canonic_results,"can"=canonic_results,"refs"=ref_results)
-      
-      #Call a function to print the results
-      show_results(Final_Results)
-      if(nrow(Final_Results[["sig_genes"]])>0){
-        showTab(inputId = "results_tabs", target = "Significant Genes")
-      }
-      if (nrow(Final_Results[["ncan"]])>0){
-        showTab(inputId = "results_tabs", target = "Non_Canonic")
-        showTab(inputId = "results_tabs", target = "Canonic")
-        showTab(inputId = "results_tabs", target = "References") 
-      }
-      
-      #If the user did not want to run a non-canonical gene analysis as part of the DESeq2 analysis
-    }else{
-      output$sig_genes <- DT::renderDataTable({
-        DT::datatable(data=my_list[["file"]], options=list(scrollX = TRUE,scrollY=TRUE,paging=FALSE),class = 'cell-border stripe', rownames = FALSE, fillContainer = TRUE)
-      })
-      if(nrow(my_list[["file"]])>0){
-        showTab(inputId = "results_tabs", target = "Significant Genes")
+      #If there are rows in the file (rows equalling to significant genes)
+      if (nrow(my_list[["file"]])>0) {
+        #If the user wanted to run a non-canonical gene analysis as part of the DESeq2 analysis
+        if (input$DESeq2_Ncan==TRUE){
+          Final_Results <- Non_canonic_analysis(DB_Connect$DB,my_list[["file"]],input$hsa_conversion_choice_Deseq2)
+          #Below is the format of 'Final_Results'
+          #list("sig_genes"=file_to_analyze,"ncan"=non_canonic_results,"can"=canonic_results,"refs"=ref_results)
+          
+          #Call a function to print the results
+          show_results(Final_Results)
+          if(nrow(Final_Results[["sig_genes"]])>0){
+            showTab(inputId = "results_tabs", target = "Significant Genes")
+          }
+          if (nrow(Final_Results[["ncan"]])>0){
+            showTab(inputId = "results_tabs", target = "Non_Canonic")
+            showTab(inputId = "results_tabs", target = "Canonic")
+            showTab(inputId = "results_tabs", target = "References") 
+          }
+          
+          #If the user did not want to run a non-canonical gene analysis as part of the DESeq2 analysis
+        }else{
+          output$sig_genes <- DT::renderDataTable({
+            DT::datatable(data=my_list[["file"]], options=list(scrollX = TRUE,scrollY=TRUE,paging=FALSE),class = 'cell-border stripe', rownames = FALSE, fillContainer = TRUE)
+          })
+        }
       }else{
         output$results_status<- renderText("No significant genes were found")
       }
-      
     }
     
     #Checks if the message is of character type or not indicating if an error must be shown

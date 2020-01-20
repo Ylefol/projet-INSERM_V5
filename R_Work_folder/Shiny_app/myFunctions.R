@@ -102,7 +102,7 @@ DESeq2_pre_processing <- function(File_1, File_2, variable_condition_1, variable
     head(resdata)
     pre_processed_file_full<-resdata
     ## Write results
-    write.csv(resdata, file=paste("diffexpr_results",variable_condition_1,"vs",variable_condition_2,".csv",sep=""))
+    write.csv(resdata, file=paste("diffexpr_results",variable_condition_1,"vs",variable_condition_2,".csv",sep=""),row.names=FALSE,quote = FALSE)
     
     ## MA plots
     ###################################################################################################################################
@@ -167,7 +167,7 @@ DESeq2_pre_processing <- function(File_1, File_2, variable_condition_1, variable
         with(subset(res, abs(log2FoldChange)>lfcthresh), points(log2FoldChange, -log10(pvalue), pch=20, col="orange", ...))
         with(subset(res, padj<sigthresh & abs(log2FoldChange)>lfcthresh), points(log2FoldChange, -log10(pvalue), pch=20, col="green", ...))
         x <-subset(res, padj<sigthresh & abs(log2FoldChange)>lfcthresh)
-        write.csv(x,file = paste(variable_condition_1,"vs",variable_condition_2,"_RESULTS_VOLCANO.csv",sep=""))
+        write.csv(x,file = paste(variable_condition_1,"vs",variable_condition_2,"_RESULTS_VOLCANO.csv",sep=""),row.names=FALSE,quote = FALSE)
         return (x)
       },error=function(error_message){
       })
@@ -188,7 +188,7 @@ DESeq2_pre_processing <- function(File_1, File_2, variable_condition_1, variable
     #Creates a list of significant genes according to the volcano plot
     file_for_sig_genes <-  pre_processed_file_short['Genes']
     
-    write.csv(file_for_sig_genes,file=paste("gene_list_",variable_condition_1,"vs",variable_condition_2,"_Most_Significant.txt",sep=""))
+    write.csv(file_for_sig_genes,file=paste("gene_list_",variable_condition_1,"vs",variable_condition_2,"_Most_Significant.txt",sep=""),row.names=FALSE,col.names = TRUE,quote = FALSE)
     ###################################################################################################################################
     
     pre_processed_file_short <- pre_processed_file_short[,1:7]
@@ -242,7 +242,6 @@ Non_canonic_analysis <- function(DB,file_to_analyze,hsa_choice=FALSE)
     convert_gene_to_hsa(file_to_analyze)
   }
   
-
   sig_gene_list<-file_to_analyze$Genes
   
   #Initialize dataframes
@@ -281,11 +280,11 @@ Non_canonic_analysis <- function(DB,file_to_analyze,hsa_choice=FALSE)
   my_results_list <- list("sig_genes"=file_to_analyze,"ncan"=non_canonic_results,"can"=canonic_results,"refs"=ref_results)
   
   if(nrow(my_results_list[["ncan"]])>0){
-    write.table(my_results_list[["ncan"]],file = "non_canonic_results.txt",row.names = FALSE)
+    write.table(my_results_list[["ncan"]],file = "non_canonic_results.txt",row.names = FALSE,quote = FALSE,sep = "\t")
     
-    write.table(my_results_list[["can"]],file = "canonic_results.txt",row.names = FALSE)
+    write.table(my_results_list[["can"]],file = "canonic_results.txt",row.names = FALSE,quote = FALSE,sep = "\t")
     
-    write.table(my_results_list[["refs"]],file = "references.txt",row.names = FALSE)
+    write.table(my_results_list[["refs"]],file = "references.txt",row.names = FALSE,quote = FALSE,sep = "\t")
   }
   
   return(my_results_list)
