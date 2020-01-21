@@ -1,0 +1,5 @@
+lien : https://sql.webmo.fr/pma/index.php
+
+IP : 10.50.225.14
+
+user/mdp/base : cellomet1
