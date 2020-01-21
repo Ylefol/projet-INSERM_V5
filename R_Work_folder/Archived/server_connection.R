@@ -5,6 +5,6 @@ if(!require(RMySQL)){
 }
 
 
-DB <- dbConnect(RMySQL::MySQL(), user="cellomet1", host="https://sql.webmo.fr",
-                password="cellomet1", dbname="cellomet1")
+DB <- dbConnect(RMySQL::MySQL(), user="cellomet1", host="sql25.webmo.fr",password="cellomet1", dbname="cellomet1")
 
+dbGetQuery(DB, paste0("INSERT INTO `questionnaire` (`Email`, `Type_of_Study`, `Comments`, `submit_date`) VALUES ('yohan.lefol@gmail.com', 'test_connect_real', '#3', '2020-01-21');"))
