@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 20, 2020 at 01:16 PM
+-- Generation Time: Jan 21, 2020 at 08:13 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -145,7 +145,9 @@ CREATE TABLE IF NOT EXISTS `questionnaire` (
 
 INSERT INTO `questionnaire` (`Email`, `Type_of_Study`, `Comments`, `submit_date`) VALUES
 ('yohan.lefol@gmail.com', 'Academic', '', NULL),
-('yohan.lefol@gmail.com', 'Academic', 'Test sys.date', '2020-01-20');
+('yohan.lefol@gmail.com', 'Academic', 'Test sys.date', '2020-01-20'),
+('yohan.lefol@gmail.com', 'Others', 'Full test @14:52', '2020-01-20'),
+('yohan.lefol@gmail.com', 'Academic', 'n_can test @ 15h00', '2020-01-20');
 
 -- --------------------------------------------------------
 
@@ -229,6 +231,25 @@ INSERT INTO `references` (`id_ref`, `Gene_Symbol`, `ref`) VALUES
 (69, 'SHMT-1', 'A BRISC-SHMT complex deubiquitinates IFNAR1 and regulates interferon responses'),
 (72, 'MDH2', 'A nucleocytoplasmic malate dehydrogenase regulates p53 transcriptional activity in response to metabolic stress'),
 (73, 'MDH2', 'Studies on energy-yielding reactions in thymus nuclei. 2. Pathways of aerobic carbohydrate catabolism');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE IF NOT EXISTS `user` (
+  `login` varchar(40) DEFAULT NULL,
+  `password` varchar(40) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`login`, `password`) VALUES
+('Cellomet', '26483305466571f8c70f248b3074f5df');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
