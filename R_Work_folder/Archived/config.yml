@@ -1,0 +1,8 @@
+default:
+  datawarehouse:
+    driver: 'Postgres' 
+    server: 'sql25.webmo.fr'
+    uid: 'cellomet1'
+    pwd: 'cellomet1'  
+    port: 3306
+    database: 'cellomet1'

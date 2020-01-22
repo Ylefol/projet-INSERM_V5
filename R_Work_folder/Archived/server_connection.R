@@ -4,15 +4,14 @@ if(!require(RMySQL)){
   library(RMySQL)
 }
 
-if(!require(keyring)){
-  install.packages("keyring")
-  library(keyring)
+if(!require(config)){
+  install.packages("config")
+  library(config)
 }
+getwd()
+setwd("C:/Users/yohan/Desktop/projet-INSERM_V5/R_Work_folder/Archived")
+dw <- config::get("datawarehouse")
 
-#key_set("ddb")
+DB <- dbConnect(RMySQL::MySQL(), user=dw$uid, host=dw$server,password=dw$pwd, dbname=dw$database)
 
-
-
-DB <- dbConnect(RMySQL::MySQL(), user="cellomet1", host="sql25.webmo.fr",password=key_get("ddb"), dbname="cellomet1")
-
-dbGetQuery(DB, paste0("INSERT INTO `questionnaire` (`Email`, `Type_of_Study`, `Comments`, `submit_date`) VALUES ('yohan.lefol@gmail.com', 'test_connect_real_marie', '#3', '2020-01-21');"))
+dbGetQuery(DB, paste0("INSERT INTO `questionnaire` (`Email`, `Type_of_Study`, `Comments`, `submit_date`) VALUES ('yohan.lefol@gmail.com', 'test_connect_real_config_marie', '#3', '2020-01-21');"))
