@@ -215,11 +215,11 @@ Connect_to_database <- function(email="error_occured", type_research="error_occu
 {
   killDbConnections()
   
-  DB <- dbConnect(RMySQL::MySQL(), user="root", host="localhost",
-                  password="UpsilonLambda94", dbname="non_canonic")
+  DB <- dbConnect(RMySQL::MySQL(), user="cellomet1", host="sql25.webmo.fr",password="cellomet1", dbname="cellomet1")
   
   dbGetQuery(DB, paste0("INSERT INTO `questionnaire`(`Email`, `Type_of_Study`, `Comments`,`submit_date`) VALUES (\"",email,"\",\"",type_research,"\",\"",comments,"\",\"",Sys.Date(),"\");"))
   
+  killDbConnections()
   return(DB)
 }
 
@@ -241,7 +241,7 @@ Non_canonic_analysis <- function(DB,file_to_analyze,hsa_choice=FALSE)
   if(hsa_choice==TRUE){
     convert_gene_to_hsa(file_to_analyze)
   }
-  
+  DB <- dbConnect(RMySQL::MySQL(), user="cellomet1", host="sql25.webmo.fr",password="cellomet1", dbname="cellomet1")
   sig_gene_list<-file_to_analyze$Genes
   
   #Initialize dataframes
@@ -267,14 +267,17 @@ Non_canonic_analysis <- function(DB,file_to_analyze,hsa_choice=FALSE)
   
   
   for (i in 1:length(sig_gene_list)){
-    if (nrow(dbGetQuery(DB, paste0("SELECT * FROM Canonic WHERE Gene_Symbol = '" , sig_gene_list[i]  ,"';")))>0){
+    if (nrow(dbGetQuery(DB, paste0("SELECT * FROM canonic WHERE Gene_Symbol = '" , sig_gene_list[i]  ,"';")))>0){
       non_canonic_results <- rbind(non_canonic_results,dbGetQuery(DB, paste0("SELECT Gene_Symbol, Gene_Name, C_category as Category, NC_Pathway as Non_Canonic_Pathway, NC_Loc as Non_Canonic_Location FROM ncanonic join canonic using (Gene_Symbol) WHERE Gene_Symbol = '" , sig_gene_list[i]  ,"';")))
-      canonic_results <- rbind(canonic_results,dbGetQuery(DB, paste0("SELECT Gene_Symbol, Gene_Name, C_category as Category, C_Pathway as Canonical_Pathway, C_Loc as Canonical_Location FROM Canonic WHERE Gene_Symbol = '" , sig_gene_list[i]  ,"';")))
-      ref_results <- rbind(ref_results,dbGetQuery(DB, paste0("SELECT Gene_Symbol, Gene_Name, ref as `References` FROM `references` join Canonic using (Gene_Symbol) WHERE Gene_Symbol = '" , sig_gene_list[i]  ,"';")))
+      canonic_results <- rbind(canonic_results,dbGetQuery(DB, paste0("SELECT Gene_Symbol, Gene_Name, C_category as Category, C_Pathway as Canonical_Pathway, C_Loc as Canonical_Location FROM canonic WHERE Gene_Symbol = '" , sig_gene_list[i]  ,"';")))
+      ref_results <- rbind(ref_results,dbGetQuery(DB, paste0("SELECT Gene_Symbol, Gene_Name, ref as `References` FROM `refs` join canonic using (Gene_Symbol) WHERE Gene_Symbol = '" , sig_gene_list[i]  ,"';")))
     }
     
   }
   
+  #Kill the connection after every use
+  killDbConnections()
+
   #Store each dataframe in a list for return
   
   my_results_list <- list("sig_genes"=file_to_analyze,"ncan"=non_canonic_results,"can"=canonic_results,"refs"=ref_results)

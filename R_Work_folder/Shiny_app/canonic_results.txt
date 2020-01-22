@@ -1,0 +1,5 @@
+Gene_Symbol	Gene_Name	Category	Canonical_Pathway	Canonical_Location
+HK2	Hexokinase 2	Glycolysis/Gluconeogenesis, Fructose and mannose metabolism, Galactose metabolism, Starch and sucrose metabolism, Amino sugar and nucleotide sugar metabolism	Convert phosphorylate glucose to glucose 6-phosphate	Cytosol
+GPI	Phosphoglucose isomerase	Glycolysis/Gluconeogenesis, Pentose phosphate pathway (PPP), Starch and sucrose metabolism, Amino sugar and nucleotide sugar metabolism	Interconvert G6P to fructose 6-phosphate (F6P)	Cytosol
+PFKM	Phosphofructokinase	Glycolysis/Gluconeogenesis, Pentose phosphate pathway (PPP), Fructose and mannose metabolism, Galactose metabolism	Phosphorylate F6P to fructose 1,6-biphosphate	Cytosol
+PGK1	Phosphoglycerate kinase	Glycolysis/Gluconeogenesis	Interconvert 1,3BPG to 3-phosphoglycerate	Cytosol

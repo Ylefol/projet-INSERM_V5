@@ -17,4 +17,4 @@
 \contentsline {section}{\numberline {6}Results }{12}{section.6}% 
 \contentsline {section}{\numberline {7}Custom MA and Volcano plots }{13}{section.7}% 
 \contentsline {section}{\numberline {8}Common errors }{14}{section.8}% 
-\contentsline {section}{References}{14}{section.8}% 
+\contentsline {section}{References}{14}{Item.15}% 

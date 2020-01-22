@@ -256,7 +256,12 @@ Aside that, each element of the different tabs is self explanatory. After each p
 
 \newpage
 \section{Common errors \label{common_err}}
-
+\begin{enumerate}
+\item \textbf{Error in DESeqDataSet(se, design = design, ignoreRank): design has a single variable, with all samples having the same value. use instead a design of '~ 1'. estimateSizeFactors, rlog and the VST can then be used}\\
+This error may occur when only one condition is named, as well as randomly. It is a simple bug where DESeq2 finds only one variable and thus cannot proceed with its intended process.
+To correct this issue, simply try again, make sure that two conditions are names and that both csv files are properly uploaded to the application.
+  
+\end{enumerate}
 \bibliographystyle{apacite}
 \bibliography{references}
 \end{document}

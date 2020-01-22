@@ -506,7 +506,15 @@ myserver <- function(input, output, session) {
       showTab(inputId = "results_tabs", target = "Canonic")
       showTab(inputId = "results_tabs", target = "References")
     }
+    #Sets the variable to NULL, forcing a database reconnection after every
+    DB_Connect$DB=NULL
     
+    #Sets email to empty
+    updateTextInput(session,"email", value="")
+    #Sets comment to empty
+    updateTextInput(session,"comments", value="")
+    output$connect_db_status <- renderText("")
+
   })
   #############################################################################################################################################
   
