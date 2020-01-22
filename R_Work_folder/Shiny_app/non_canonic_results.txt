@@ -1,6 +1,0 @@
-Gene_Symbol	Gene_Name	Category	Non_Canonic_Pathway	Non_Canonic_Location
-HK2	Hexokinase 2	Glycolysis/Gluconeogenesis, Fructose and mannose metabolism, Galactose metabolism, Starch and sucrose metabolism, Amino sugar and nucleotide sugar metabolism	Repress the expression of genes involved in glucose repression	Cytosol
-HK2	Hexokinase 2	Glycolysis/Gluconeogenesis, Fructose and mannose metabolism, Galactose metabolism, Starch and sucrose metabolism, Amino sugar and nucleotide sugar metabolism	Protect cells from apotosis by regulating the mitochondrial permeability transition pore and by limiting the production of reactive oxygen species	Mitochondria
-GPI	Phosphoglucose isomerase	Glycolysis/Gluconeogenesis, Pentose phosphate pathway (PPP), Starch and sucrose metabolism, Amino sugar and nucleotide sugar metabolism	Act as an autocrine factor extracellulary to elicit cell migration and proliferation	Extracellular localization
-PFKM	Phosphofructokinase	Glycolysis/Gluconeogenesis, Pentose phosphate pathway (PPP), Fructose and mannose metabolism, Galactose metabolism	Bind to transcription factor TEAD and stabilize its interaction with YAP/TAZ, and promote gene expression	Nucleus
-PGK1	Phosphoglycerate kinase	Glycolysis/Gluconeogenesis	Recognizes primer and robustly stimulates DNA synthesis catalyzed by DNA polymerase alpha and epsilon	Nucleus
