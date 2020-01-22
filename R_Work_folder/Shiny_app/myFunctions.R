@@ -211,14 +211,29 @@ DESeq2_pre_processing <- function(File_1, File_2, variable_condition_1, variable
 
 #Connects to the database once the user has filled in the form
 #Before starting the connection, this function kills any existing connections to the database.
-Connect_to_database <- function(email="error_occured", type_research="error_occured", comments="error_occured")
+Connect_to_database <- function(email="error_occured", type_research="error_occured", comments="error_occured",date=Sys.Date(),second_try)
 {
   killDbConnections()
   
-  DB <- dbConnect(RMySQL::MySQL(), user="cellomet1", host="sql25.webmo.fr",password="cellomet1", dbname="cellomet1")
-  
-  dbGetQuery(DB, paste0("INSERT INTO `questionnaire`(`Email`, `Type_of_Study`, `Comments`,`submit_date`) VALUES (\"",email,"\",\"",type_research,"\",\"",comments,"\",\"",Sys.Date(),"\");"))
-  
+  for (i in 1:3){
+    tryCatch({
+      invisible(DB <- dbConnect(RMySQL::MySQL(), user="cellomet1", host="sql25.webmo.fr",password="cellomet1", dbname="cellomet1"))
+      break
+    },error=function(error_message){
+      
+    })
+    if(second_try==TRUE){
+      Sys.sleep(30)
+      if (i==3){
+        DB=NULL
+      }
+    }else{
+      message_DB <- "END"
+      return(message_DB)
+    }
+    
+  }
+  #dbGetQuery(DB, paste0("INSERT INTO `questionnaire`(`Email`, `Type_of_Study`, `Comments`,`submit_date`) VALUES (\"",email,"\",\"",type_research,"\",\"",comments,"\",\"",Sys.Date(),"\");"))
   killDbConnections()
   return(DB)
 }
@@ -241,7 +256,22 @@ Non_canonic_analysis <- function(DB,file_to_analyze,hsa_choice=FALSE)
   if(hsa_choice==TRUE){
     convert_gene_to_hsa(file_to_analyze)
   }
-  DB <- dbConnect(RMySQL::MySQL(), user="cellomet1", host="sql25.webmo.fr",password="cellomet1", dbname="cellomet1")
+  #Recharge the connection
+  for (i in 1:3){
+    tryCatch({
+      invisible(DB <- dbConnect(RMySQL::MySQL(), user="cellomet1", host="sql25.webmo.fr",password="cellomet1", dbname="cellomet1"))
+      break
+    },error=function(error_message){
+      
+    })
+    Sys.sleep(30)
+    if (i==3){
+      DB=NULL
+      return_message_ncan<-"END"
+      return(return_message_ncan)
+    }
+  }
+
   sig_gene_list<-file_to_analyze$Genes
   
   #Initialize dataframes

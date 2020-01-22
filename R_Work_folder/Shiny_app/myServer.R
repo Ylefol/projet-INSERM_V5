@@ -326,21 +326,51 @@ myserver <- function(input, output, session) {
   DB_Connect <- reactiveValues(
     DB=NULL
   )
+
   
   #Used to check if the email is valid when clicking the 'connect' button
   #It then prints the appropriate text in accordance to how the form was filled in
-  observeEvent(input$connect_DB, {(
+  observeEvent(input$connect_DB, {
+    (
     if (isValidEmail(input$email)==FALSE){
       output$connect_db_status <- renderText("Please enter a valid email address")
     }else if (nchar(input$comments)>300){
       output$connect_db_status <- renderText(paste("Too many characters in comment box. Characters used:",nchar(input$comments)))
-    }else if(nchar(input$comments)<300&&isValidEmail(input$email)==TRUE&&is.null(DB_Connect$DB<-Connect_to_database(input$email,input$study_type,input$comments))==FALSE){
-      output$connect_db_status <- renderText(paste("Email address is valid. Database is connected. Characters in comment box:",nchar(input$comments)))
-      #The reactive variable is updated in the if statement directly.
     }else{
-      output$connect_db_status <- renderText(paste("Email address is valid. Database is NOT connected. Characters in comment box:",nchar(input$comments)))
+      DB_Connect$DB<-Connect_to_database(input$email,input$study_type,input$comments,second_try=FALSE)
+      #This if will be entered if the connection was not made on the first try, thus it will call a 'waiting' modal indicating to the user that the application is trying to establisha connection
+      suppressWarnings(
+        if(typeof(DB_Connect$DB)!="S4"){
+          shinyalert(
+            title = "Connecting...",
+            text = "Trying to establish a connection, this can take a maximum of a minute and a half...",
+            closeOnEsc = FALSE,
+            closeOnClickOutside = FALSE,
+            html = FALSE,
+            type = "",
+            showConfirmButton = FALSE,
+            showCancelButton = FALSE,
+            timer = 0,
+            imageUrl = "loading.gif",
+            animation = TRUE
+          )
+          #This second call ensures that there will be three tries for the database connection, this is called following the modal call
+          DB_Connect$DB<-Connect_to_database(input$email,input$study_type,input$comments,second_try=TRUE)
+        }
+      )
+      if(nchar(input$comments)<300&&isValidEmail(input$email)==TRUE&&is.null(DB_Connect$DB)==FALSE){
+        output$connect_db_status <- renderText(paste("Email address is valid. Database is connected. Characters in comment box:",nchar(input$comments)))
+      }else{
+        output$connect_db_status <- renderText(paste("Email address is valid. Database is NOT connected (please check the common errors section of the guide in the information tab for more information on the subject) . Characters in comment box:",nchar(input$comments)))
+      }
+      #Closes the shiny alert
+      shinyjs::runjs("swal.close();")
     }
-  )})
+      
+    
+    )
+    })
+
   #############################################################################################################################################
   
   #Directory set up
@@ -481,31 +511,51 @@ myserver <- function(input, output, session) {
   #of the file
   observeEvent(input$launch_list_analysis,{(the_file <- read_csv_function(input$gene_list_file$datapath))
     (gene_list_results <- Non_canonic_analysis(DB_Connect$DB,the_file,input$hsa_conversion_choice))
-    
-    #Runs the show results function which will put the results in the table if there are any
-    show_results(gene_list_results)
-    
-    #Creates a shiny alert telling the user that the analysis is done
-    shinyalert(
-      title = "Done",
-      text = paste("Your results have been downloaded here:",getwd()," \n They can also be viewed in the results tab"),
-      closeOnEsc = TRUE,
-      closeOnClickOutside = FALSE,
-      html = FALSE,
-      type = "success",
-      showConfirmButton = TRUE,
-      showCancelButton = FALSE,
-      timer = 0,
-      imageUrl = "",
-      animation = TRUE
+    suppressWarnings(
+      if(gene_list_results=="END"){
+      shinyalert(
+        title = "Database problem",
+        text = paste("There was an issue with the database connection, please try connecting to the database and trying again. If this message appears after a DESeq2 analysis,
+                the entire DESeq2 analysis IS saved in the following location:",getwd(),"\nYou can use the non canonical analysis tab to resume your analysis using the 
+                     significant gene list file created from the DESeq2 analysis."),
+        closeOnEsc = TRUE,
+        closeOnClickOutside = FALSE,
+        html = FALSE,
+        type = "error",
+        showConfirmButton = TRUE,
+        showCancelButton = FALSE,
+        timer = 0,
+        imageUrl = "",
+        animation = TRUE
+      )
+      }else{
+        #Runs the show results function which will put the results in the table if there are any
+        show_results(gene_list_results)
+        
+        #Creates a shiny alert telling the user that the analysis is done
+        shinyalert(
+          title = "Done",
+          text = paste("Your results have been downloaded here:",getwd()," \n They can also be viewed in the results tab"),
+          closeOnEsc = TRUE,
+          closeOnClickOutside = FALSE,
+          html = FALSE,
+          type = "success",
+          showConfirmButton = TRUE,
+          showCancelButton = FALSE,
+          timer = 0,
+          imageUrl = "",
+          animation = TRUE
+        )
+      
+        #Shows the results tabs if there are results to show
+        if(nrow(gene_list_results[["ncan"]])>0){
+          showTab(inputId = "results_tabs", target = "Non_Canonic")
+          showTab(inputId = "results_tabs", target = "Canonic")
+          showTab(inputId = "results_tabs", target = "References")
+        }
+      }
     )
-    
-    #Shows the results tabs if there are results to show
-    if(nrow(gene_list_results[["ncan"]])>0){
-      showTab(inputId = "results_tabs", target = "Non_Canonic")
-      showTab(inputId = "results_tabs", target = "Canonic")
-      showTab(inputId = "results_tabs", target = "References")
-    }
+    #Happens no matter what
     #Sets the variable to NULL, forcing a database reconnection after every
     DB_Connect$DB=NULL
     
@@ -514,8 +564,9 @@ myserver <- function(input, output, session) {
     #Sets comment to empty
     updateTextInput(session,"comments", value="")
     output$connect_db_status <- renderText("")
-
+    
   })
+  
   #############################################################################################################################################
   
   #Reactive variables DESeq2 analysis
