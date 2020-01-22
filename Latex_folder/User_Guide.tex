@@ -257,6 +257,10 @@ Aside that, each element of the different tabs is self explanatory. After each p
 \newpage
 \section{Common errors \label{common_err}}
 \begin{enumerate}
+\item \textbf{Failed to connect to database}\\
+This may occur from time to time, the ideal is to wait and try again later. The database we are using can have a maximum of four connections at a time, as such, CelloMap was created in a way that it utilizes the connection as little as possible. As in, it only applies the connection right before it needs it and removes the connection once it is done. This time frame lasts no more than ten seconds.
+That said, if retrying several times has not solved the issue, it is recommended to contact one CelloMap's developer at the following email address: yohan.lefol@gmail.com.
+
 \item \textbf{Error in DESeqDataSet(se, design = design, ignoreRank): design has a single variable, with all samples having the same value. use instead a design of '~ 1'. estimateSizeFactors, rlog and the VST can then be used}\\
 This error may occur when only one condition is named, as well as randomly. It is a simple bug where DESeq2 finds only one variable and thus cannot proceed with its intended process.
 To correct this issue, simply try again, make sure that two conditions are names and that both csv files are properly uploaded to the application.

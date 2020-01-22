@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.4)  22 JAN 2020 08:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.4)  22 JAN 2020 14:59
 entering extended mode
 **./User_Guide.tex
 (User_Guide.tex
@@ -529,19 +529,26 @@ File: custom_volcano_tab.png Graphic file (type png)
 Package pdftex.def Info: custom_volcano_tab.png  used on input line 251.
 (pdftex.def)             Requested size: 262.6808pt x 284.52536pt.
  [13 <./custom_volcano_tab.png>] (User_Guide.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 267.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 271.
  [14]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 267.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 271.
  (User_Guide.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 267.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 267.
-Package rerunfilecheck Info: File `User_Guide.out' has not changed.
-(rerunfilecheck)             Checksum: 62EB86C62CDDA6E04FDBB8515FB6D303;1181.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 267.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 271.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 271.
+
+
+Package rerunfilecheck Warning: File `User_Guide.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `User_Guide.out':
+(rerunfilecheck)             Before: 62EB86C62CDDA6E04FDBB8515FB6D303;1181
+(rerunfilecheck)             After:  7A3D7159A3CDA3B5A350932949C73E74;1181.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 271.
  ) 
 Here is how much of TeX's memory you used:
- 7156 strings out of 492452
- 109222 string characters out of 3120064
+ 7157 strings out of 492452
+ 109229 string characters out of 3120064
  216473 words of memory out of 3000000
  11312 multiletter control sequences out of 15000+200000
  9933 words of font info for 35 fonts, out of 3000000 for 9000
@@ -558,9 +565,9 @@ han/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb>
 m/cmsy10.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmti10.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on User_Guide.pdf (14 pages, 1000236 bytes).
+Output written on User_Guide.pdf (14 pages, 1001141 bytes).
 PDF statistics:
- 292 PDF objects out of 1000 (max. 8388607)
- 61 named destinations out of 1000 (max. 500000)
+ 293 PDF objects out of 1000 (max. 8388607)
+ 62 named destinations out of 1000 (max. 500000)
  213 words of extra memory for PDF output out of 10000 (max. 10000000)
 
