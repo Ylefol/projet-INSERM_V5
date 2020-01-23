@@ -215,6 +215,10 @@ Connect_to_database <- function(email="error_occured", type_research="error_occu
 {
   killDbConnections()
   
+  #Starts a for loop that will try a connection once if the 'second_try' variable is FALSE
+  #However if the second_try variable is TRUE, it will continue in the loop (if the initial connection does not work)
+  #It will then try to connect three times on a 30 second interval, if on the last try the connection does not work, a "END" return message is sent.
+  #This will be used to interpret a failure in the database connection
   for (i in 1:3){
     tryCatch({
       invisible(DB <- dbConnect(RMySQL::MySQL(), user="cellomet1", host="sql25.webmo.fr",password="cellomet1", dbname="cellomet1"))
