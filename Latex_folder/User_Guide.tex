@@ -54,10 +54,10 @@ Marie Terrien
 
 \newpage
 \section{Introduction \label{intro}}
-The non-canonical analysis tool (CelloApp) is a tool with several uses. It's main feature is a non-canonical gene analysis from a gene list. Yet this tool also boasts several other interesting functionalities such a differential expression analysis, customizable MA and Volcano plots which in turn allow to obtain significant gene sets according to a users custom parameters.Additionally, this tool is capable of converting gene symbols to KEGG identifier (type hsa), see \autoref{gene_list_analysis} for more information.
+The non-canonical analysis tool (CelloMap) is a tool with several uses. It's main feature is a non-canonical gene analysis. Yet this tool also boasts several other interesting functionalities such as differential expression analyses, customizable MA and Volcano plots which in turn allow to obtain significant gene sets according to a users custom parameters. Additionally, this tool is also capable of converting gene symbols to KEGG identifier (type hsa), see \autoref{gene_list_analysis} for more information.
 This guide will go over each functionality and explain how to best use CelloApp.
 
-As can be seen in \autoref{fig:main_app_screen}, the application is split into several tabs. The information tab shows two pdf files, the first being this one, and the second being a detailed explanation of the tool and it's components. The last tab 'Citation' is a simple tab which gives the citation information for the use of this tool.This guide will now go over the remaining tabs and explain their uses and how to maneuver them.
+As can be seen in \autoref{fig:main_app_screen}, the application is split into several tabs. The information tab shows the user guide pdf file. The last tab 'Citation' is a simple tab which gives the citation information for the use of this tool. This guide will now go over the remaining tabs and explain their uses and how to use their functionalities them.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=15cm,height=10cm,keepaspectratio]{main_app_screen.png}
@@ -69,8 +69,8 @@ As can be seen in \autoref{fig:main_app_screen}, the application is split into s
 HOW DOES THE INSTALLATION WORK.
 
 \section{Connection to database}
-The identification of non-canonical genes is the main aspect of this tool. As the list of non-canonical genes is increasing as discoveries are being made, we could not 'hard code' a list of genes in the program as we wanted to ensure that the search list is being updated without having users re-download the application for each update. Therefore we implemented a database that can be updated by the owners of the tool (Cellomet) and that can be accessed remotely through this application.
-In order to establish this connection, a user needs to fill in the small questionnaire as seen in \autoref{fig:connect_DB}, and click the 'Connect to database' button. We created the small questionnaire in order to see the main users of this tool as we intend to keep developing new functionalities and we want these functionalities to be catered to the types of study that require it the most.
+The identification of non-canonical genes is the main aspect of this tool. Since the list of non-canonical genes is increasing as discoveries are being made, we could not 'hard code' a list of genes in the program as we wanted to ensure that the search list is being updated without having users re-download the application for each update. Therefore we implemented a database that can be updated by the owners of the tool (Cellomet) and that can be accessed remotely through this application.
+In order to establish this connection, a user needs to fill in the small questionnaire as seen in \autoref{fig:connect_DB}, and click the 'Connect to database' button.
 
 \begin{figure}[h!]
 \centering
@@ -79,13 +79,13 @@ In order to establish this connection, a user needs to fill in the small questio
 \label{fig:connect_DB}
 \end{figure}
 
-The database connection is only necessary if a non-canonical gene analysis is to be performed, either individually or as part of a DESeq2 analysis. If this is not the users intentions, he does not need to establish a connection to the database.
+The database connection is only necessary if a non-canonical gene analysis or hsa conversion is to be performed, either individually or as part of a DESeq2 analysis. If this is not the users intentions, he does not need to establish a connection to the database.
 
 \section{DESeq2 analysis}
 DESeq2 is a powerfull tool which allows users to perform differential analyses using RNAseq 'COUNTS' data \cite{love2014moderated}. However this tool requires a very specific data format. This part of the guide will go over the data format necessary to run a DESeq2 analysis, the added parameters specific to this application, and the results that are generated.
 
 \subsection{Tab layout \label{deseq2_layout}}
-As seen in \autoref{fig:deseq2_screen}, there are several requirements for the the DESeq2 analysis. First we observe that two csv files are needed, these will be the two files representing the two conditions that will be analyzed. We then observe a small check box which asks if the user want to perform a non-canonical gene analysis. If this box remains checked, the user will have to be connected to the database and the non-canonical gene analysis will be run on the list of significant genes isolated by the DESeq2 analysis (explained below). A user can also select a directory, this will be the folder in which the several DESeq2 results will be saved.
+As seen in \autoref{fig:deseq2_screen}, there are several requirements for the the DESeq2 analysis. First we observe that two csv files are needed, these will be the two files representing the two conditions that will be analyzed. We then observe a small check box which asks if the user want to perform a non-canonical gene analysis. Checking this box also enables the possibility of checking the hsa conversion box. If the non-canonical analysis box remains checked, the user will have to be connected to the database and the non-canonical gene analysis will be run with the list of significant genes isolated by the DESeq2 analysis (explained below). A user can also select a directory, this will be the folder in which the several DESeq2 results will be saved.
 There are then two text boxes which can be customized to be whatever text a user whishes, the content of these text boxes is used to name the files that will be produced by the analysis. Condition 1 represents File 1 and Condition 2 represents File 2.
 Lastly there are two check boxes that check if the user would like to create the standard MA and Volcano plots. If checked, two types of each plot will be made, one type with text, and the other without text. The plots generated will be with standard values, however a user will be able to take the differential expression data obtained from the DESeq2 analysis and make his own customized MA and Volcano plots with the custom plot tabs, see \autoref{custom_plots} for more details.
 
@@ -108,8 +108,8 @@ In order to better explain the data format and what a csv file really is, an exc
 \label{fig:data_format_deseq2}
 \end{figure}
 
-When comparing both \autoref{fig:data_format_deseq2} and \autoref{fig:data_format_deseq2_simplified} we can clearly observe that the commas create the 'separation' of the values. Now we will explain what these values are. 
-The first column represents the genes, it is important to note that these genes are in gene symbols and not another type of format such as Ensembl. DESeq2 will perform the analysis regardless of the type of gene name used however \textbf{a non-canonical gene analysis can only be performed with gene symbols}. As such it is advised to use gene symbols in the data in order to fully benefit from this tool. Next we have the other columns which represents the different sequencings. In this example, the second column shows the RNAseq 'COUNTS' results of patient \#1 and the second column shows the same but for patient \#2.
+When comparing both \autoref{fig:data_format_deseq2} and \autoref{fig:data_format_deseq2_simplified} we can clearly observe that the commas create the 'separation' of the values. 
+The first column represents the genes, it is important to note that these genes are in gene symbols and not another type of format such as Ensembl. DESeq2 will perform the analysis regardless of the type of gene name used however \textbf{a non-canonical gene analysis can only be performed with gene symbols}. As such it is advised to use gene symbols in the data in order to fully benefit from this tool. Next we have the other columns which represents the different sequencings. In this example, the second column shows the RNAseq 'COUNTS' results of patient \#1 and the third column shows the same but for patient \#2.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=15cm,height=10cm,keepaspectratio]{dese2_excel_data_format.png}
@@ -117,14 +117,13 @@ The first column represents the genes, it is important to note that these genes 
 \label{fig:data_format_deseq2_simplified}
 \end{figure}
 
-That's it, that is the data format required. As previously mentioned, two files are necessary, i.e: one file per condition. An easy example to explain this would be the comparative study of young vs old pulmonary cancer patients. In order to do such an analysis, we would have file \#1 contain all of the patients in the 'young' category and file \#2 would contain all the patients of the 'old' category. Of course both files must respect the data format.
+That's it, that is the data format required. As previously mentioned, two files are necessary, i.e: one file per condition. An easy example to explain this would be the comparative study of young vs old pulmonary cancer patients. In order to do such an analysis, we would have file \#1 contain all of the patients in the 'young' category and file \#2 would contain all the patients of the 'old' category. Of course both files must respect the data format. This means that both files will require the 'Genes' column and both must be in the same order of gene apparition.
 
 \subsection{launching the analysis}
 Once all necessary files have been uploaded, a user can click the 'launch analysis' button, at which point a pop-up will appear indicating the the analysis is being performed. This pop-up will lock the application preventing any further use, this is done to avoid the application from crashing if too many actions are performed at once.
-It is important to note that a DESeq2 analysis can be very quick just as it may take several hours. The length of the analysis depends on the size of the files used as well as the computing strength of the users computer. If a user is using a old computer, it may be advised to let the computer run the analysis without doing anything else on the side. 
-If an error occurs during the analysis, another pop-up will appear stating that there was an error and that the user can read about the error in the error\_log.txt that was created. Using the information from the error log, the user should consult \autoref{common_err} in order to solve the issue.
-Once the analysis is done and if no error has occurred, the pop-up message will be replaced by a different pop-up message indicating that the analysis is done, the pop-up message will also remind the user in which files he has stored the results of the analysis.
-
+It is important to note that a DESeq2 analysis can be very quick just as it may take several hours. The length of the analysis depends on the size of the files used as well as the computing strength of the users computer. If a user is using a old computer, it may be advised to let the computer run the analysis without doing anything else on the side.\\
+If an error occurs during the analysis, another pop-up will appear stating that there was an error and that the user can read about the error in the error\_log.txt that was created. Using the information from the error log, the user should consult \autoref{common_err} in order to solve the issue.\\
+Once the analysis is done and if no error has occurred, the pop-up message will be replaced by a different pop-up message indicating that the analysis is done, the pop-up message will also remind the user of the location of the results.
 \subsection{Results obtained}
 Several results can be obtained from this analysis, some are obtained regardless of user input, others will only appear if a user has asked for those results to be produced.
 \subsubsection{Main results}
@@ -133,37 +132,27 @@ A DESeq2 analysis generates three standard results:
 \item diffexpr\_results condition\_1 vs condition\_1 .csv\\
 A differential expression file
 \item condition\_1vscondition\_1\_RESULTS\_VOLCANO.csv\\
-A differential expression file for significant genes
+A differential expression file for the significant genes
 \item gene\_list\_ condition\_1 vs condition\_1 \_Most\_Significant.txt\\
-A significant gene list
+A list of the significant genes obtained
 \end{itemize}
 
 It is important to note that the significant genes were obtained by filtering the main differential expression file for standard significance parameters while using a volcano plot to visualize the significant genes. The standard significance algorithm is the following:
 \[padj<0.05 \ \&\ abs(log2FoldChange)>2\]
-This equation indicates that genes which have a Padj value below 0.05 and a log2FoldChange above 2 or below -2 are considered to be significant. A user can also generate his own list of significant genes by modifying these parameters. This is further explained in \autoref{custom_plots} of this guide.
+This equation indicates that genes which have a Padj value below 0.05 and a log2FoldChange above 2 or below -2 are considered to be significant. A user can also generate his own list of significant genes by modifying these parameters in the custom volcano plot tab. This is further explained in \autoref{custom_plots} of this guide.
 
 \subsubsection{Figures generated}
-If a user has selected that he wanted standard MA and Volcano plots, there will be four png files in the results folder; Two MA plots, one with text and the other without text, the same applies for the volcano plot.
-The plots with texts are much larger in order to accommodate for the additional text besides the points representing significant genes.
+If a user has selected that he wanted standard MA and Volcano plots, there will be four png files in the results folder: Two MA plots, one with text and the other without text, the same applies for the volcano plot.
+The plots with texts are much larger in order to accommodate for the additional text next to the points representing significant genes.
 If a user wishes to modify these plots and create his own set, it can be easily be done in the custom plot tabs, further explained in \autoref{custom_plots} of this guide.
 
 \subsubsection{Non-canonical gene analysis}
-If a user had selected that he wanted a non-canonical gene analysis to be performed, there will three extra text files in the results folder. That is, if any non-canonical genes were found within the significant genes list. The files are the following: 
-\begin{itemize}
-\item non\_canonic\_results.txt\\
-This file will contain the gene symbols and gene names that were found to be non-canonic genes within the significant gene list that was analyzed. The file also contains the non-canonical action and localization of the genes identified
-\item canonic\_results.txt\\
-Similarly to non-canonic results, however this once contains the canonic action and localization.
-\item references.txt\\
-Any and all references that were used to identify non-canonical genes and their actions.
-\end{itemize}
-
-The results were saved as text files that can easily be read by microsoft excel, or any similar program.
-Additionally, results can be viewed immediately in the results tab of the application, see \autoref{res} of this guide for more information.
+If a user had selected that he wanted a non-canonical gene analysis to be performed, there will be three extra text files in the results folder. That is, if any non-canonical genes were found within the significant genes list. More information can be obtained in \autoref{gene_list_analysis} of this guide.
 
 
 \section{Gene list analysis \label{gene_list_analysis}}
-This tab allows users to perform a non-canonical gene analysis and a gene symbol to hsa identifier conversion with a simple gene list file. The only obligation that this file must respect is that the genes must be in a column with a column header names 'Genes'. If the file entered is correct, a table will appear showing that specific column as seen in \autoref{fig:gene_list_analysis_uploaded}. If this does not occur, a text will appear, stating that a different file should be chosen.
+This tab allows users to perform a non-canonical gene analysis and a gene symbol to hsa identifier conversion with a simple gene list file. The hsa file enables the possibility of using the KEGG Mapper tool, we also describe the use of the MERAV tool in this section.\\
+The only obligation that this file must respect is that the genes must be in a column with a column header named 'Genes'. If the file entered is correct, a table will appear showing that specific column as seen in \autoref{fig:gene_list_analysis_uploaded}. If this does not occur, a text will appear, stating that a different file should be chosen.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=15cm,height=10cm,keepaspectratio]{gene_list_analysis.png}
@@ -171,11 +160,12 @@ This tab allows users to perform a non-canonical gene analysis and a gene symbol
 \label{fig:gene_list_analysis_uploaded}
 \end{figure}
 
-Considering that the requirement for this analysis is a single column carrying the name of 'Genes', possible files can be the significant gene list obtained from the DESeq2 analysis, or the significant differential expression results obtained from either the DESeq2 analysis or the downloading of the data from custom plots in \autoref{custom_plots}.
+Considering that the requirement for this analysis is a single column carrying the name of 'Genes', possible files can be the significant gene list obtained from the DESeq2 analysis, or the significant differential expression results obtained from either the DESeq2 analysis or the downloading of the data from custom plots in \autoref{custom_plots}. A user could also create his own gene list file.
 \subsection{KEGG Mapper \label{KEGG Map}}
 By checking the 'Find hsa conversions' checkbox in the CelloMap tool, a conversion script will automatically be run along with a non-canonical gene analysis. This conversion will allow users to run a KEGG mapping analysis using the file generated from the conversion.
 KEGG Mapper is a mapping tool that will search and find any pathways associated to a list of identifiers provided \cite{kanehisa2019kegg}. It will then allow the user to view every pathway found while highlighting the gene that was in the original list.
-To perform the analysis, follow these steps, also seen in \autoref{fig:KEGG_mapper}
+To perform the analysis, follow these steps, also seen in \autoref{fig:KEGG_mapper}.
+IT is worth mentioning that the speed at which the conversion occurs depends on internet stability and speed as well as the amount of genes that need to be converted. It is recommended to have a stable internet connection to perform the hsa conversion.
 \begin{enumerate}
 \item Go to the website: \url{https://www.kegg.jp/kegg/tool/map_pathway2.html}
 \item Make sure that the search mode is \textbf{Organism-specific} with the letter \textbf{hsa} in the text box
@@ -203,7 +193,7 @@ This search will provide the user with the ability to search the database for th
 CelloMap creates a significant gene file that can be used with the first type of search, the one relating to finding gene expressions. To perform the search, follow these steps, also seen in \autoref{fig:merav}.
 \begin{enumerate}
 \item Go to the website: \url{http://merav.wi.mit.edu/}
-\item Click the `Search expression levels...' link.
+\item Once on the website, click the `Search expression levels...' link.
 \item Load the gene search box\\
 To do this, copy paste all the genes from the significant gene file generated from DESeq2 or the one inputted in the gene list analysis. The main thing to watch out for is to not include the column name 'Genes'. If it is included, it's not a problem, it will simply be considered a gene symbol and will not be found by the search, this will not prevent the tool from searching for the other genes.
 \item Set the parameters to your liking
@@ -227,11 +217,12 @@ This file will contain the non-canonical gene symbols and names along with their
 \item references.txt\\
 This file will contain the gene symbol and name of non-canonical genes and the references that were used to determine their canonical and non-canonical functions within this database.
 \end{enumerate}
-Each text file was created with the intention to be read by Microsoft excel. The text files need to be opened in excel and the separator/deliminator must be declared as `Tab'. Once opened, it is recommended to use the `wrap text' and `AutoFit Row Height' in the alignment and cell format sections of excel. This will ensure that the table is legible in excel.
-\newpage
+Each text file was created with the intention to be read by Microsoft excel. The text files need to be opened in excel and the separator/delimiter must be declared as `Tab'. Once opened, it is recommended to use the `wrap text' and `AutoFit Row Height' in the alignment and cell format sections of excel. This will ensure that the table is legible.
+
+
 \section{Results \label{res}}
 The results tab, seen in \autoref{fig:results_tab}, shows the results of a non-canonical gene analysis within the application itself. There isn't much to be said about this tab, it is only for visualization.
-Every registered non-canonical genes are registered in a database hosted on Cellomet.com which can be accessed, updated and generally modified by the owner of Cellomet. For any questions regarding the non-canonical genes, their function, localization etc. Please contact Cellomet via their website.
+Every registered non-canonical genes are registered in a database hosted on Cellomet.com which can be accessed, updated and generally modified by the owner of Cellomet. For any questions regarding the non-canonical genes, their function, localization etc. Please contact Cellomet via their website \cite{Cellomet}.
 
 \begin{figure}[h!]
 \centering
@@ -240,7 +231,7 @@ Every registered non-canonical genes are registered in a database hosted on Cell
 \label{fig:results_tab}
 \end{figure}
 
-\newpage
+
 \section{Custom MA and Volcano plots \label{custom_plots}}
 This application allows users to create their own custom figures, and from these figures, significant gene data can be downloaded. There are two possible figures, MA plots and Volcano plots, each plot type has it's own tab, however they behave very similarly, the volcano plot tab can be seen in \autoref{fig:custom_plots}. 
 The main thing to know about these tabs is that a differential expression file is required, like the one obtained from DESeq2 analyses. The columns required are the 'Genes' column, the 'baseMean' column, the log2FoldChange' column, the 'pvalue' column, and the 'padj' column, each written the same way as they are written in the guide. The file must also be a csv file.
@@ -254,16 +245,15 @@ Aside that, each element of the different tabs is self explanatory. After each p
 \end{figure}
 
 
-\newpage
 \section{Common errors \label{common_err}}
 \begin{enumerate}
 \item \textbf{Failed to connect to database}\\
-This may occur from time to time, the ideal is to wait and try again later. The database we are using can have a maximum of four connections at a time, as such, CelloMap was created in a way that it utilizes the connection as little as possible. As in, it only applies the connection right before it needs it and removes the connection once it is done. This time frame lasts no more than ten seconds.
+This may occur from time to time, the ideal is to wait and try again later. The database we are using can have a maximum of fifteen connections at a time, as such, CelloMap was created in a way that it utilizes the connection as little as possible. As in, it only applies the connection right before it needs it and removes the connection once it is done. This time frame lasts no more than thirty seconds.
 That said, if retrying several times has not solved the issue, it is recommended to contact one CelloMap's developer at the following email address: yohan.lefol@gmail.com.
 
 \item \textbf{Error in DESeqDataSet(se, design = design, ignoreRank): design has a single variable, with all samples having the same value. use instead a design of '~ 1'. estimateSizeFactors, rlog and the VST can then be used}\\
 This error may occur when only one condition is named, as well as randomly. It is a simple bug where DESeq2 finds only one variable and thus cannot proceed with its intended process.
-To correct this issue, simply try again, make sure that two conditions are names and that both csv files are properly uploaded to the application.
+To correct this issue, simply try again, make sure that two conditions are named and that both csv files are properly uploaded to the application.
   
 \end{enumerate}
 \bibliographystyle{apacite}

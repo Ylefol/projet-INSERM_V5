@@ -56,6 +56,31 @@ Love, M\BPBI I.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Rodrigue~Rossignol%
+}{%
+Rodrigue~Rossignol%
+}{%
+{\protect \APACyear {2020}}%
+}]{%
+Cellomet}
+\APACinsertmetastar {%
+Cellomet}%
+\begin{APACrefauthors}%
+Rodrigue~Rossignol, B\BPBI F., Nivea Dias~Amoedo.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+\APACrefbtitle {Cellomet, Metabolic Science for Health.} {Cellomet, metabolic
+  science for health.}
+\newblock
+\APAChowpublished {\url{http://www.cellomet.com/?index}}.
+\newblock
+\APACrefnote{Accessed: 24-01-2020}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Shaul%
 \ \protect \BOthers {.}}{%
 Shaul%
