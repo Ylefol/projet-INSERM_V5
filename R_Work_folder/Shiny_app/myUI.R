@@ -3,7 +3,7 @@
 #Adding the logo.png from the www file located in the same area as the R scripts.
 #The logo is also linked with the Cellomet website
 dbHeader <- dashboardHeader(title = div(img(src="logo_app.png", width = 190,title="CelloMap"),titlePanel(title="",windowTitle = "CelloMap")),
-                            tags$li(a(href = 'http://www.cellomet.com/?index',
+                            tags$li(a(href = 'http://www.cellomet.com/?index', target="_blank",
                                       img(src = 'logo_cell.png',
                                           title = "Company Home", height = "30px"),
                                       style = "padding-top:10px; padding-bottom:10px;"),

@@ -222,6 +222,8 @@ Connect_to_database <- function(email="error_occured", type_research="error_occu
   for (i in 1:3){
     tryCatch({
       invisible(DB <- dbConnect(RMySQL::MySQL(), user="cellomet1", host="sql25.webmo.fr",password="cellomet1", dbname="cellomet1"))
+      #Will not run this query if there is an error in the connection
+      dbGetQuery(DB, paste0("INSERT INTO `questionnaire` (`Email`, `Type_of_Study`, `Comments`, `submit_date`) VALUES ('",email,"', '",type_research,"', '",comments,"', '",Sys.Date(),"');"))
       break
     },error=function(error_message){
       

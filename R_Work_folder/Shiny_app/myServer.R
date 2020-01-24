@@ -327,6 +327,11 @@ myserver <- function(input, output, session) {
     DB=NULL
   )
 
+  observe(if(is.null(DB_Connect$DB)==TRUE){
+    enable("connect_DB")
+  }else{
+    disable("connect_DB")
+  })
   
   #Used to check if the email is valid when clicking the 'connect' button
   #It then prints the appropriate text in accordance to how the form was filled in
