@@ -1,2 +1,2 @@
-# app launching code, e.g.:
+#code to launch the app
 shiny::runApp(".", launch.browser=TRUE)

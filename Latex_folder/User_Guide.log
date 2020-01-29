@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.4)  29 JAN 2020 14:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.4)  29 JAN 2020 18:42
 entering extended mode
 **./User_Guide.tex
 (User_Guide.tex
@@ -976,7 +976,7 @@ File: main_app_screen.png Graphic file (type png)
 <use main_app_screen.png>
 Package pdftex.def Info: main_app_screen.png  used on input line 93.
 (pdftex.def)             Requested size: 262.4377pt x 284.53485pt.
-
+ [3 <./main_app_screen.png>]
 ("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1.
 sty"
 File: lstlang1.sty 2019/09/10 1.8c listings language file
@@ -988,144 +988,149 @@ File: lstlang1.sty 2019/09/10 1.8c listings language file
 ("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.s
 ty"
 File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
-) [3 <./main_app_screen.png>]
+)
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-08.
-
-("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
+11.
+ ("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 108.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 111.
 
 ("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1.
 sty"
 File: lstlang1.sty 2019/09/10 1.8c listings language file
-)
-<connect_DB.png, id=152, 724.20563pt x 784.43062pt>
+) [4]
+Underfull \hbox (badness 10000) in paragraph at lines 127--130
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--138
+
+ []
+
+<R_studio_run_app.png, id=178, 963.6pt x 183.084pt>
+File: R_studio_run_app.png Graphic file (type png)
+<use R_studio_run_app.png>
+Package pdftex.def Info: R_studio_run_app.png  used on input line 149.
+(pdftex.def)             Requested size: 426.77895pt x 81.08798pt.
+[5 <./R_studio_run_app.png>]
+<connect_DB.png, id=192, 724.20563pt x 784.43062pt>
 File: connect_DB.png Graphic file (type png)
 <use connect_DB.png>
-Package pdftex.def Info: connect_DB.png  used on input line 129.
+Package pdftex.def Info: connect_DB.png  used on input line 163.
 (pdftex.def)             Requested size: 262.6808pt x 284.52536pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[4] [5 <./connect_DB.png>]
-<deseq2_screen.png, id=191, 719.68875pt x 780.66656pt>
+ [6 <./connect_DB.png>]
+<deseq2_screen.png, id=213, 719.68875pt x 780.66656pt>
 File: deseq2_screen.png Graphic file (type png)
 <use deseq2_screen.png>
-Package pdftex.def Info: deseq2_screen.png  used on input line 146.
+Package pdftex.def Info: deseq2_screen.png  used on input line 180.
 (pdftex.def)             Requested size: 262.30534pt x 284.52997pt.
-<data_format_deseq2.PNG, id=199, 482.55281pt x 72.27pt>
+ [7 <./deseq2_screen.png>]
+<data_format_deseq2.PNG, id=230, 482.55281pt x 72.27pt>
 File: data_format_deseq2.PNG Graphic file (type png)
 <use data_format_deseq2.PNG>
-Package pdftex.def Info: data_format_deseq2.PNG  used on input line 158.
+Package pdftex.def Info: data_format_deseq2.PNG  used on input line 192.
 (pdftex.def)             Requested size: 426.80518pt x 63.92088pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<dese2_excel_data_format.png, id=204, 460.72125pt x 109.1578pt>
+<dese2_excel_data_format.png, id=235, 460.72125pt x 109.1578pt>
 File: dese2_excel_data_format.png Graphic file (type png)
 <use dese2_excel_data_format.png>
-Package pdftex.def Info: dese2_excel_data_format.png  used on input line 167.
+Package pdftex.def Info: dese2_excel_data_format.png  used on input line 201.
 (pdftex.def)             Requested size: 426.78615pt x 101.11761pt.
-[6 <./deseq2_screen.png>] [7 <./data_format_deseq2.PNG> <./dese2_excel_data_for
-mat.png>]
-Overfull \hbox (2.72464pt too wide) in paragraph at lines 184--186
+
+[8 <./data_format_deseq2.PNG> <./dese2_excel_data_format.png>]
+Overfull \hbox (2.72464pt too wide) in paragraph at lines 218--220
 \OT1/cmr/m/n/10.95 A dif-fer-en-tial ex-pres-sion file, this is a file that wil
 l con-tain the base-Mean, log2FoldChange,
  []
 
-<gene_list_analysis.png, id=236, 721.94719pt x 782.925pt>
+[9]
+<gene_list_analysis.png, id=266, 721.94719pt x 782.925pt>
 File: gene_list_analysis.png Graphic file (type png)
 <use gene_list_analysis.png>
-Package pdftex.def Info: gene_list_analysis.png  used on input line 210.
+Package pdftex.def Info: gene_list_analysis.png  used on input line 244.
 (pdftex.def)             Requested size: 262.36838pt x 284.5288pt.
-[8] [9 <./gene_list_analysis.png>]
-<KEGG_Mapper.png, id=265, 721.19438pt x 549.55313pt>
+ [10 <./gene_list_analysis.png>]
+<KEGG_Mapper.png, id=287, 721.19438pt x 549.55313pt>
 File: KEGG_Mapper.png Graphic file (type png)
 <use KEGG_Mapper.png>
-Package pdftex.def Info: KEGG_Mapper.png  used on input line 230.
+Package pdftex.def Info: KEGG_Mapper.png  used on input line 264.
 (pdftex.def)             Requested size: 373.40558pt x 284.5366pt.
- [10 <./KEGG_Mapper.png>]
-<MERAV.png, id=286, 721.94719pt x 782.17218pt>
+ [11 <./KEGG_Mapper.png>]
+<MERAV.png, id=308, 721.94719pt x 782.17218pt>
 File: MERAV.png Graphic file (type png)
 <use MERAV.png>
-Package pdftex.def Info: MERAV.png  used on input line 257.
+Package pdftex.def Info: MERAV.png  used on input line 291.
 (pdftex.def)             Requested size: 262.62173pt x 284.52971pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[11]
-<results_tab.png, id=306, 724.20563pt x 784.43062pt>
+[12]
+<results_tab.png, id=329, 724.20563pt x 784.43062pt>
 File: results_tab.png Graphic file (type png)
 <use results_tab.png>
-Package pdftex.def Info: results_tab.png  used on input line 281.
+Package pdftex.def Info: results_tab.png  used on input line 315.
 (pdftex.def)             Requested size: 262.6808pt x 284.52536pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[12 <./MERAV.png>]
-<custom_volcano_tab.png, id=323, 724.20563pt x 784.43062pt>
+[13 <./MERAV.png>]
+<custom_volcano_tab.png, id=346, 724.20563pt x 784.43062pt>
 File: custom_volcano_tab.png Graphic file (type png)
 <use custom_volcano_tab.png>
-Package pdftex.def Info: custom_volcano_tab.png  used on input line 294.
+Package pdftex.def Info: custom_volcano_tab.png  used on input line 328.
 (pdftex.def)             Requested size: 262.6808pt x 284.52536pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<maplot.png, id=324, 2509.375pt x 2007.5pt>
+<maplot.png, id=347, 2509.375pt x 2007.5pt>
 File: maplot.png Graphic file (type png)
 <use maplot.png>
-Package pdftex.def Info: maplot.png  used on input line 304.
+Package pdftex.def Info: maplot.png  used on input line 338.
 (pdftex.def)             Requested size: 199.60895pt x 159.68433pt.
-<volcano.png, id=325, 1204.5pt x 1003.75pt>
+<volcano.png, id=348, 1204.5pt x 1003.75pt>
 File: volcano.png Graphic file (type png)
 <use volcano.png>
-Package pdftex.def Info: volcano.png  used on input line 310.
+Package pdftex.def Info: volcano.png  used on input line 344.
 (pdftex.def)             Requested size: 199.60895pt x 166.33145pt.
-[13 <./results_tab.png>] (User_Guide.acr [14 <./custom_volcano_tab.png>])
+[14 <./results_tab.png>] (User_Guide.acr [15 <./custom_volcano_tab.png>])
 (User_Guide.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 336.
- [15 <./maplot.png> <./volcano.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 336.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 370.
+ [16 <./maplot.png> <./volcano.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 370.
  (User_Guide.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 336.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 336.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 370.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 370.
 Package rerunfilecheck Info: File `User_Guide.out' has not changed.
-(rerunfilecheck)             Checksum: F456942CEE8FC95B14E09E662335D21D;1339.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 336.
+(rerunfilecheck)             Checksum: BA24D3921D5338AB95C127CB9992C942;1383.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 370.
  ) 
 Here is how much of TeX's memory you used:
- 26499 strings out of 492452
- 471967 string characters out of 3120064
- 891659 words of memory out of 3000000
- 30401 multiletter control sequences out of 15000+200000
+ 26547 strings out of 492452
+ 472654 string characters out of 3120064
+ 892293 words of memory out of 3000000
+ 30441 multiletter control sequences out of 15000+200000
  540033 words of font info for 52 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  52i,8n,97p,1018b,1192s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{glo:wsf} has been referenced but does not exist, 
-replaced by a fixed one
-
+<C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmbx10.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmbx12.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/yohan/AppData/Local/Program
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/yohan/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/yo
+han/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb>
 <C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmbx10.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmbx12.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/yohan/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/yohan/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/yoha
-n/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C
-:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmti10.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on User_Guide.pdf (15 pages, 1118611 bytes).
+m/cmsy10.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmti10.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on User_Guide.pdf (16 pages, 1225897 bytes).
 PDF statistics:
- 422 PDF objects out of 1000 (max. 8388607)
- 87 named destinations out of 1000 (max. 500000)
- 247 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 448 PDF objects out of 1000 (max. 8388607)
+ 94 named destinations out of 1000 (max. 500000)
+ 252 words of extra memory for PDF output out of 10000 (max. 10000000)
 

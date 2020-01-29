@@ -95,9 +95,12 @@ As can be seen in \autoref{fig:main_app_screen}, the application is split into s
 \label{fig:main_app_screen}
 \end{figure}
 
-\section{Installation}
-MAKE AN INTRO
-\subsection{Windows}
+\section{Installation \label{install}}
+To launch a shiny application locally (which is the objective) our options are limited. Currently we have two methods to use the application on windows and one to use it on Mac.
+The reason that windows has two methods is in case users are lacking administrative privileges on their computers preventing them from running bat files. However this second option requires more downloads than the first.\\
+Basically, for Windows we managed to package everything into one folder, thus no other downloads are required, however this only works using bat files. The entire process is explained in \autoref{win_1}.
+If this solution doesn't suit a user, we have an alternative solution. The alternative is to download R and R studio, and run the code manually. This is not a complicated thing, however it does require the user to download and install two extra programs. This is further explained in \autoref{alter_install}.
+\subsection{Windows first solution\label{win_1}}
 In order to package the application into a executable file, we used a tool called R portable \cite{R_portable} with the solution called `DesktopDeployR' \cite{Deploy_R_Shiny}. This solution allowed us to combine R, the various packages we used, and the code for the application into one folder. In order for a user to install this version of our application, he must only download the folder (less than 1 Gb) and launch the application using the `CelloMap.bat' file. Standard windows computers will raise a warning when a .bat file is clicked, to continue you must allow the computer to read the script.\\
 In order to put some minds at ease, an explanation of the entire launch process will be given below.\\
 A bat file (short for batch file) is a type of script file used by windows to execute a series of commands within the command line interpreter. The code used in our bat file is the following:
@@ -118,7 +121,38 @@ This \acrshort{wsf} (Windows Script File) allows us to launch three seperate jav
 The run.R script then calls the app.R script which will `fill' the application with the intended content (our application).\\
 If there are any concerns concerning the installation, feel free to check the webpage of DesktopDeployR \cite{Deploy_R_Shiny}. If concerns remain afterwards, feel free to contact one of the developers at: yohan.lefol@gmail.com.
 
-\subsection{Mac}
+\subsection{Alternative (Mac and Windows)\label{alter_install}}
+As mentionned above, the alternative solution is to download R and R studio. What this means is that the user must download the programming language (R) and the \acrshort{IDE} (Integrated Development Environment) in order to run the code that he will have downloaded from the website \cite{Cellomet}.
+\begin{enumerate}
+\item \textbf{Download R}\\
+First you will want to download the latest version of R from the following website: \url{https://www.r-project.org/}
+\\
+
+You will have to select a `CRAN mirror', simply select the region from which you are working, if there are several links for your region, simply select one, the choice does not matter.\\
+Now select the download necessary for your work station (Windows, Mac, Linux etc...) and follow the download steps, leave all the parameters as default.
+\item \textbf{Download R studio}\\
+To be able to properly run the app, r studio is also required. RStudio is an IDE (Integrated Development Environment) which normally allows users to maximize a programmers productivity. For our purposes, RStudio will be used to launch the application in a browser. As with R, downloading the latest version is recommended. Version 1.2.5 was used for this application.
+
+R Studio website: \url{https://rstudio.com/products/rstudio/download/}
+\\
+
+You will only have to select the version for your operating system (Windows, Mac, Linux etc...) and follow the download steps, leave all the parameters as default.
+\item \textbf{Download the scripts}\\
+If it is not already done, download the folder containing the scripts form the Cellomet website \cite{Cellomet}.
+Store the folder wherever you would like. Now you have everything you need to run CelloMap.
+
+\item \textbf{Run the app}
+You will need to open the file called `launcher.R' with Rstudio, then launch the app using the `run' button, as seen in \autoref{fig:r_studio}.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=15cm,height=10cm,keepaspectratio]{R_studio_run_app.png}
+\caption{The R studio interface with the `run' button circled}
+\label{fig:r_studio}
+\end{figure}
+
+\end{enumerate}
+
 
 \section{Connection to database}
 The identification of non-canonical genes is the main aspect of this tool. Since the list of non-canonical genes is increasing as discoveries are being made, we could not `hard code' a list of genes in the program as we wanted to ensure that the search list is being updated without having users re-download the application for each update. Therefore we implemented a database that can be updated by the owners of the tool (Cellomet) and that can be accessed remotely through this application.
