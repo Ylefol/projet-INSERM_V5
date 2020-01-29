@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.4)  29 JAN 2020 11:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.4)  29 JAN 2020 14:15
 entering extended mode
 **./User_Guide.tex
 (User_Guide.tex
@@ -523,6 +523,44 @@ Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
 )
+("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.
+sty"
+\lst@mode=\count280
+\lst@gtempboxa=\box47
+\lst@token=\toks19
+\lst@length=\count281
+\lst@currlwidth=\dimen155
+\lst@column=\count282
+\lst@pos=\count283
+\lst@lostspace=\dimen156
+\lst@width=\dimen157
+\lst@newlines=\count284
+\lst@lineno=\count285
+\lst@maxwidth=\dimen158
+
+("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.s
+ty"
+File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
+\c@lstnumber=\count286
+\lst@skipnumbers=\count287
+\lst@framebox=\box48
+)
+("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.
+cfg"
+File: listings.cfg 2019/09/10 1.8c listings configuration
+))
+Package: listings 2019/09/10 1.8c (Carsten Heinz)
+
+("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\color.sty
+"
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\color
+.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
 ("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/glossaries/base\gl
 ossaries.sty"
 Package: glossaries 2019/12/06 v4.44 (NLCT)
@@ -538,10 +576,10 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 tex"
 ("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xkeyval\xkvutils
 .tex"
-\XKV@toks=\toks19
-\XKV@tempa@toks=\toks20
+\XKV@toks=\toks20
+\XKV@tempa@toks=\toks21
 )
-\XKV@depth=\count280
+\XKV@depth=\count288
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 ("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mfirstuc\mfirstuc.
@@ -551,10 +589,10 @@ Package: mfirstuc 2017/11/14 v2.06 (NLCT)
 ("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.
 sty"
 Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count281
+\etb@tempcnta=\count289
 )
-\@glsmfirst=\toks21
-\@glsmrest=\toks22
+\@glsmfirst=\toks22
+\@glsmrest=\toks23
 )
 ("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/textcase\textcase.
 sty"
@@ -580,59 +618,59 @@ Package: amstext 2000/06/29 v2.01 AMS text
 ("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty
 "
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks23
-\ex@=\dimen155
+\@emptytoks=\toks24
+\ex@=\dimen159
 ))
 ("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty
 "
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen156
+\pmbraise@=\dimen160
 )
 ("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty
 "
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count282
+\inf@bad=\count290
 LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count283
-\leftroot@=\count284
+\uproot@=\count291
+\leftroot@=\count292
 LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count285
-\DOTSCASE@=\count286
+\classnum@=\count293
+\DOTSCASE@=\count294
 LaTeX Info: Redefining \ldots on input line 486.
 LaTeX Info: Redefining \dots on input line 489.
 LaTeX Info: Redefining \cdots on input line 610.
-\Mathstrutbox@=\box47
-\strutbox@=\box48
-\big@size=\dimen157
+\Mathstrutbox@=\box49
+\strutbox@=\box50
+\big@size=\dimen161
 LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count287
-\c@MaxMatrixCols=\count288
+\macc@depth=\count295
+\c@MaxMatrixCols=\count296
 \dotsspace@=\muskip17
-\c@parentequation=\count289
-\dspbrk@lvl=\count290
-\tag@help=\toks24
-\row@=\count291
-\column@=\count292
-\maxfields@=\count293
-\andhelp@=\toks25
-\eqnshift@=\dimen158
-\alignsep@=\dimen159
-\tagshift@=\dimen160
-\tagwidth@=\dimen161
-\totwidth@=\dimen162
-\lineht@=\dimen163
-\@envbody=\toks26
+\c@parentequation=\count297
+\dspbrk@lvl=\count298
+\tag@help=\toks25
+\row@=\count299
+\column@=\count300
+\maxfields@=\count301
+\andhelp@=\toks26
+\eqnshift@=\dimen162
+\alignsep@=\dimen163
+\tagshift@=\dimen164
+\tagwidth@=\dimen165
+\totwidth@=\dimen166
+\lineht@=\dimen167
+\@envbody=\toks27
 \multlinegap=\skip58
 \multlinetaggap=\skip59
-\mathdisplay@stack=\toks27
+\mathdisplay@stack=\toks28
 LaTeX Info: Redefining \[ on input line 2855.
 LaTeX Info: Redefining \] on input line 2856.
 )
 ("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/substr\substr.sty"
 Package: substr 2009/10/20 v1.2 Handle substrings
-\c@su@anzahl=\count294
+\c@su@anzahl=\count302
 )
 ("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/datatool\datatool-
 fp.sty"
@@ -642,18 +680,18 @@ Package: fp 1995/04/02
 `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
 ("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fp\defpattern.sty"
 Package: defpattern 1994/10/12
-\actioncount=\count295
+\actioncount=\count303
 ) ("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fp\fp-basic.sty"
 Package: fp-basic 1996/05/13
-\FP@xs=\count296
-\FP@xia=\count297
-\FP@xib=\count298
-\FP@xfa=\count299
-\FP@xfb=\count300
-\FP@rega=\count301
-\FP@regb=\count302
-\FP@regs=\count303
-\FP@times=\count304
+\FP@xs=\count304
+\FP@xia=\count305
+\FP@xib=\count306
+\FP@xfa=\count307
+\FP@xfb=\count308
+\FP@rega=\count309
+\FP@regb=\count310
+\FP@regs=\count311
+\FP@times=\count312
 ) ("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fp\fp-addons.sty
 "
 Package: fp-addons 1995/03/15
@@ -670,7 +708,7 @@ Package: fp-pas 1994/08/29
 )
 ("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fp\fp-random.sty"
 Package: fp-random 1995/02/23
-\FPseed=\count305
+\FPseed=\count313
 ) ("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fp\fp-eqn.sty"
 Package: fp-eqn 1995/04/03
 )
@@ -680,15 +718,15 @@ Package: fp-upn 1996/10/21
 ("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fp\fp-eval.sty"
 Package: fp-eval 1995/04/03
 )))
-\@dtl@toks=\toks28
-\@dtl@tmpcount=\count306
+\@dtl@toks=\toks29
+\@dtl@tmpcount=\count314
 \dtl@tmplength=\skip60
-\dtl@sortresult=\count307
-\@dtl@numgrpsepcount=\count308
-\@dtl@datatype=\count309
-\dtl@codeA=\count310
-\dtl@codeB=\count311
-\@dtl@foreach@level=\count312
+\dtl@sortresult=\count315
+\@dtl@numgrpsepcount=\count316
+\@dtl@datatype=\count317
+\dtl@codeA=\count318
+\dtl@codeB=\count319
+\@dtl@foreach@level=\count320
 )
 ("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/glossaries/base\gl
 ossaries-compatible-307.sty"
@@ -708,13 +746,13 @@ Package: translator 2019-05-31 v1.12a Easy translation of strings in LaTeX
 \glossaries-english.ldf"
 File: glossaries-english.ldf 2014/11/23 v1.0
 )
-\gls@level=\count313
-\@gls@tmpb=\toks29
+\gls@level=\count321
+\@gls@tmpb=\toks30
 \gls@tmplen=\skip61
-\glskeylisttok=\toks30
-\glslabeltok=\toks31
-\glsshorttok=\toks32
-\glslongtok=\toks33
+\glskeylisttok=\toks31
+\glslabeltok=\toks32
+\glsshorttok=\toks33
+\glslongtok=\toks34
 
 ("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/glossaries/styles\
 glossary-hypernav.sty"
@@ -736,17 +774,17 @@ Package: longtable 2019/02/06 v4.12 Multi-page Table package (DPC)
 \LTright=\skip64
 \LTpre=\skip65
 \LTpost=\skip66
-\LTchunksize=\count314
-\LTcapwidth=\dimen164
-\LT@head=\box49
-\LT@firsthead=\box50
-\LT@foot=\box51
-\LT@lastfoot=\box52
-\LT@cols=\count315
-\LT@rows=\count316
-\c@LT@tables=\count317
-\c@LT@chunks=\count318
-\LT@p@ftn=\toks34
+\LTchunksize=\count322
+\LTcapwidth=\dimen168
+\LT@head=\box51
+\LT@firsthead=\box52
+\LT@foot=\box53
+\LT@lastfoot=\box54
+\LT@cols=\count323
+\LT@rows=\count324
+\c@LT@tables=\count325
+\c@LT@chunks=\count326
+\LT@p@ftn=\toks35
 )
 \glsdescwidth=\skip67
 \glspagelistwidth=\skip68
@@ -758,22 +796,22 @@ Package: glossary-super 2019/12/06 v4.44 (NLCT)
 ("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/supertabular\super
 tabular.sty"
 Package: supertabular 2004/02/20 v4.1e the supertabular environment
-\c@tracingst=\count319
-\ST@wd=\dimen165
+\c@tracingst=\count327
+\ST@wd=\dimen169
 \ST@rightskip=\skip69
 \ST@leftskip=\skip70
 \ST@parfillskip=\skip71
-\ST@pageleft=\dimen166
-\ST@headht=\dimen167
-\ST@tailht=\dimen168
-\ST@pagesofar=\dimen169
-\ST@pboxht=\dimen170
-\ST@lineht=\dimen171
-\ST@stretchht=\dimen172
-\ST@prevht=\dimen173
-\ST@toadd=\dimen174
-\ST@dimen=\dimen175
-\ST@pbox=\box53
+\ST@pageleft=\dimen170
+\ST@headht=\dimen171
+\ST@tailht=\dimen172
+\ST@pagesofar=\dimen173
+\ST@pboxht=\dimen174
+\ST@lineht=\dimen175
+\ST@stretchht=\dimen176
+\ST@prevht=\dimen177
+\ST@toadd=\dimen178
+\ST@dimen=\dimen179
+\ST@pbox=\box55
 ))
 ("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/glossaries/styles\
 glossary-tree.sty"
@@ -784,27 +822,39 @@ Package: glossary-tree 2019/12/06 v4.44 (NLCT)
 \glo@acronym@file=\write5
 \openout5 = `User_Guide.acn'.
 
-Package glossaries Info: Writing glossary file User_Guide.acn on input line 42.
+Package glossaries Info: Writing glossary file User_Guide.acn on input line 43.
 
- (User_Guide.aux)
+
+("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1.
+sty"
+File: lstlang1.sty 2019/09/10 1.8c listings language file
+)
+("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang2.
+sty"
+File: lstlang2.sty 2019/09/10 1.8c listings language file
+)
+("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang3.
+sty"
+File: lstlang3.sty 2019/09/10 1.8c listings language file
+) (User_Guide.aux)
 \openout1 = `User_Guide.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-\AtBeginShipoutBox=\box54
-Package hyperref Info: Link coloring OFF on input line 47.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+\AtBeginShipoutBox=\box56
+Package hyperref Info: Link coloring OFF on input line 69.
 
 ("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.s
 ty"
@@ -818,11 +868,11 @@ Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 estring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count320
+\c@section@level=\count328
 )
-LaTeX Info: Redefining \ref on input line 47.
-LaTeX Info: Redefining \pageref on input line 47.
-LaTeX Info: Redefining \nameref on input line 47.
+LaTeX Info: Redefining \ref on input line 69.
+LaTeX Info: Redefining \pageref on input line 69.
+LaTeX Info: Redefining \nameref on input line 69.
  (User_Guide.out) (User_Guide.out)
 \@outlinefile=\write6
 \openout6 = `User_Guide.out'.
@@ -831,17 +881,17 @@ LaTeX Info: Redefining \nameref on input line 47.
 ("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
 df.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count321
-\scratchdimen=\dimen176
-\scratchbox=\box55
-\nofMPsegments=\count322
-\nofMParguments=\count323
-\everyMPshowfont=\toks35
-\MPscratchCnt=\count324
-\MPscratchDim=\dimen177
-\MPnumerator=\count325
-\makeMPintoPDFobject=\count326
-\everyMPtoPDFconversion=\toks36
+\scratchcounter=\count329
+\scratchdimen=\dimen180
+\scratchbox=\box57
+\nofMPsegments=\count330
+\nofMParguments=\count331
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count332
+\MPscratchDim=\dimen181
+\MPnumerator=\count333
+\makeMPintoPDFobject=\count334
+\everyMPtoPDFconversion=\toks37
 )
 ("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-
 base.sty"
@@ -858,7 +908,7 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-\c@maskedRefs=\count327
+\c@maskedRefs=\count335
 
 ("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/apacite\english.ap
 c"
@@ -900,15 +950,16 @@ LaTeX Info: Redefining \BHBI on input line 130.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+\c@lstlisting=\count336
 <logo-CELLOMET-a.png, id=90, 301.125pt x 158.84344pt>
 File: logo-CELLOMET-a.png Graphic file (type png)
 <use logo-CELLOMET-a.png>
-Package pdftex.def Info: logo-CELLOMET-a.png  used on input line 51.
+Package pdftex.def Info: logo-CELLOMET-a.png  used on input line 73.
 (pdftex.def)             Requested size: 227.62204pt x 120.07512pt.
 <Logo-Master-GPhy.png, id=92, 450.9347pt x 441.90094pt>
 File: Logo-Master-GPhy.png Graphic file (type png)
 <use Logo-Master-GPhy.png>
-Package pdftex.def Info: Logo-Master-GPhy.png  used on input line 55.
+Package pdftex.def Info: Logo-Master-GPhy.png  used on input line 77.
 (pdftex.def)             Requested size: 199.16928pt x 195.17873pt.
 (User_Guide.toc [1
 
@@ -923,136 +974,158 @@ OMET-a.png> <./Logo-Master-GPhy.png>])
 <main_app_screen.png, id=135, 724.20563pt x 785.18344pt>
 File: main_app_screen.png Graphic file (type png)
 <use main_app_screen.png>
-Package pdftex.def Info: main_app_screen.png  used on input line 71.
+Package pdftex.def Info: main_app_screen.png  used on input line 93.
 (pdftex.def)             Requested size: 262.4377pt x 284.53485pt.
- [3 <./main_app_screen.png>]
-<connect_DB.png, id=145, 724.20563pt x 784.43062pt>
-File: connect_DB.png Graphic file (type png)
-<use connect_DB.png>
-Package pdftex.def Info: connect_DB.png  used on input line 89.
-(pdftex.def)             Requested size: 262.6808pt x 284.52536pt.
- [4 <./connect_DB.png>]
-<deseq2_screen.png, id=166, 719.68875pt x 780.66656pt>
-File: deseq2_screen.png Graphic file (type png)
-<use deseq2_screen.png>
-Package pdftex.def Info: deseq2_screen.png  used on input line 106.
-(pdftex.def)             Requested size: 262.30534pt x 284.52997pt.
- [5 <./deseq2_screen.png>]
-<data_format_deseq2.PNG, id=180, 482.55281pt x 72.27pt>
-File: data_format_deseq2.PNG Graphic file (type png)
-<use data_format_deseq2.PNG>
-Package pdftex.def Info: data_format_deseq2.PNG  used on input line 118.
-(pdftex.def)             Requested size: 426.80518pt x 63.92088pt.
-<dese2_excel_data_format.png, id=185, 460.72125pt x 109.1578pt>
-File: dese2_excel_data_format.png Graphic file (type png)
-<use dese2_excel_data_format.png>
-Package pdftex.def Info: dese2_excel_data_format.png  used on input line 127.
-(pdftex.def)             Requested size: 426.78615pt x 101.11761pt.
- [6 <./data_format_deseq2.PNG> <./dese2_excel_data_format.png>]
+
+("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1.
+sty"
+File: lstlang1.sty 2019/09/10 1.8c listings language file
+)
+("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1.
+sty"
+File: lstlang1.sty 2019/09/10 1.8c listings language file
+)
+("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.s
+ty"
+File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
+) [3 <./main_app_screen.png>]
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-44.
+08.
 
 ("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 144.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 108.
 
-Overfull \hbox (2.72464pt too wide) in paragraph at lines 144--146
-\OT1/cmr/m/n/10.95 A dif-fer-en-tial ex-pres-sion file, this is a file that wil
-l con-tain the base-Mean, log2FoldChange,
- []
-
-[7]
-<gene_list_analysis.png, id=220, 721.94719pt x 782.925pt>
-File: gene_list_analysis.png Graphic file (type png)
-<use gene_list_analysis.png>
-Package pdftex.def Info: gene_list_analysis.png  used on input line 170.
-(pdftex.def)             Requested size: 262.36838pt x 284.5288pt.
- [8 <./gene_list_analysis.png>]
-<KEGG_Mapper.png, id=241, 721.19438pt x 549.55313pt>
-File: KEGG_Mapper.png Graphic file (type png)
-<use KEGG_Mapper.png>
-Package pdftex.def Info: KEGG_Mapper.png  used on input line 190.
-(pdftex.def)             Requested size: 373.40558pt x 284.5366pt.
+("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1.
+sty"
+File: lstlang1.sty 2019/09/10 1.8c listings language file
+)
+<connect_DB.png, id=152, 724.20563pt x 784.43062pt>
+File: connect_DB.png Graphic file (type png)
+<use connect_DB.png>
+Package pdftex.def Info: connect_DB.png  used on input line 129.
+(pdftex.def)             Requested size: 262.6808pt x 284.52536pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[9]
-<MERAV.png, id=268, 721.94719pt x 782.17218pt>
+[4] [5 <./connect_DB.png>]
+<deseq2_screen.png, id=191, 719.68875pt x 780.66656pt>
+File: deseq2_screen.png Graphic file (type png)
+<use deseq2_screen.png>
+Package pdftex.def Info: deseq2_screen.png  used on input line 146.
+(pdftex.def)             Requested size: 262.30534pt x 284.52997pt.
+<data_format_deseq2.PNG, id=199, 482.55281pt x 72.27pt>
+File: data_format_deseq2.PNG Graphic file (type png)
+<use data_format_deseq2.PNG>
+Package pdftex.def Info: data_format_deseq2.PNG  used on input line 158.
+(pdftex.def)             Requested size: 426.80518pt x 63.92088pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<dese2_excel_data_format.png, id=204, 460.72125pt x 109.1578pt>
+File: dese2_excel_data_format.png Graphic file (type png)
+<use dese2_excel_data_format.png>
+Package pdftex.def Info: dese2_excel_data_format.png  used on input line 167.
+(pdftex.def)             Requested size: 426.78615pt x 101.11761pt.
+[6 <./deseq2_screen.png>] [7 <./data_format_deseq2.PNG> <./dese2_excel_data_for
+mat.png>]
+Overfull \hbox (2.72464pt too wide) in paragraph at lines 184--186
+\OT1/cmr/m/n/10.95 A dif-fer-en-tial ex-pres-sion file, this is a file that wil
+l con-tain the base-Mean, log2FoldChange,
+ []
+
+<gene_list_analysis.png, id=236, 721.94719pt x 782.925pt>
+File: gene_list_analysis.png Graphic file (type png)
+<use gene_list_analysis.png>
+Package pdftex.def Info: gene_list_analysis.png  used on input line 210.
+(pdftex.def)             Requested size: 262.36838pt x 284.5288pt.
+[8] [9 <./gene_list_analysis.png>]
+<KEGG_Mapper.png, id=265, 721.19438pt x 549.55313pt>
+File: KEGG_Mapper.png Graphic file (type png)
+<use KEGG_Mapper.png>
+Package pdftex.def Info: KEGG_Mapper.png  used on input line 230.
+(pdftex.def)             Requested size: 373.40558pt x 284.5366pt.
+ [10 <./KEGG_Mapper.png>]
+<MERAV.png, id=286, 721.94719pt x 782.17218pt>
 File: MERAV.png Graphic file (type png)
 <use MERAV.png>
-Package pdftex.def Info: MERAV.png  used on input line 217.
+Package pdftex.def Info: MERAV.png  used on input line 257.
 (pdftex.def)             Requested size: 262.62173pt x 284.52971pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[10 <./KEGG_Mapper.png>]
-<results_tab.png, id=283, 724.20563pt x 784.43062pt>
+[11]
+<results_tab.png, id=306, 724.20563pt x 784.43062pt>
 File: results_tab.png Graphic file (type png)
 <use results_tab.png>
-Package pdftex.def Info: results_tab.png  used on input line 241.
+Package pdftex.def Info: results_tab.png  used on input line 281.
 (pdftex.def)             Requested size: 262.6808pt x 284.52536pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[11 <./MERAV.png>]
-<custom_volcano_tab.png, id=296, 724.20563pt x 784.43062pt>
+[12 <./MERAV.png>]
+<custom_volcano_tab.png, id=323, 724.20563pt x 784.43062pt>
 File: custom_volcano_tab.png Graphic file (type png)
 <use custom_volcano_tab.png>
-Package pdftex.def Info: custom_volcano_tab.png  used on input line 254.
+Package pdftex.def Info: custom_volcano_tab.png  used on input line 294.
 (pdftex.def)             Requested size: 262.6808pt x 284.52536pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<maplot.png, id=297, 2509.375pt x 2007.5pt>
+<maplot.png, id=324, 2509.375pt x 2007.5pt>
 File: maplot.png Graphic file (type png)
 <use maplot.png>
-Package pdftex.def Info: maplot.png  used on input line 264.
+Package pdftex.def Info: maplot.png  used on input line 304.
 (pdftex.def)             Requested size: 199.60895pt x 159.68433pt.
-<volcano.png, id=298, 1204.5pt x 1003.75pt>
+<volcano.png, id=325, 1204.5pt x 1003.75pt>
 File: volcano.png Graphic file (type png)
 <use volcano.png>
-Package pdftex.def Info: volcano.png  used on input line 269.
+Package pdftex.def Info: volcano.png  used on input line 310.
 (pdftex.def)             Requested size: 199.60895pt x 166.33145pt.
-[12 <./results_tab.png>] (User_Guide.acr [13 <./custom_volcano_tab.png>])
+[13 <./results_tab.png>] (User_Guide.acr [14 <./custom_volcano_tab.png>])
 (User_Guide.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 295.
- [14 <./maplot.png> <./volcano.png>] [15]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 295.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 336.
+ [15 <./maplot.png> <./volcano.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 336.
  (User_Guide.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 295.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 295.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 336.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 336.
 Package rerunfilecheck Info: File `User_Guide.out' has not changed.
 (rerunfilecheck)             Checksum: F456942CEE8FC95B14E09E662335D21D;1339.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 295.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 336.
  ) 
 Here is how much of TeX's memory you used:
- 24587 strings out of 492452
- 445941 string characters out of 3120064
- 674399 words of memory out of 3000000
- 28534 multiletter control sequences out of 15000+200000
- 539865 words of font info for 51 fonts, out of 3000000 for 9000
+ 26499 strings out of 492452
+ 471967 string characters out of 3120064
+ 891659 words of memory out of 3000000
+ 30401 multiletter control sequences out of 15000+200000
+ 540033 words of font info for 52 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 52i,7n,71p,1018b,515s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmbx10.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmbx12.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/yohan/AppData/Local/Program
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/yohan/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/yo
-han/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb>
+ 52i,8n,97p,1018b,1192s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{glo:wsf} has been referenced but does not exist, 
+replaced by a fixed one
+
 <C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmti10.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on User_Guide.pdf (15 pages, 1108668 bytes).
+m/cmbx10.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmbx12.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/yohan/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/yohan/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/yoha
+n/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C
+:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmsy10.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmti10.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on User_Guide.pdf (15 pages, 1118611 bytes).
 PDF statistics:
- 399 PDF objects out of 1000 (max. 8388607)
- 76 named destinations out of 1000 (max. 500000)
+ 422 PDF objects out of 1000 (max. 8388607)
+ 87 named destinations out of 1000 (max. 500000)
  247 words of extra memory for PDF output out of 10000 (max. 10000000)
 

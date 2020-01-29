@@ -1,6 +1,30 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
+Huber%
+}{%
+Huber%
+}{%
+{\protect \APACyear {2020}}%
+}]{%
+R_portable}
+\APACinsertmetastar {%
+R_portable}%
+\begin{APACrefauthors}%
+Huber, W.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+\APACrefbtitle {R Portable.} {R portable.}
+\newblock
+\APAChowpublished {\url{https://sourceforge.net/projects/rportable/}}.
+\newblock
+\APACrefnote{Accessed: 29-01-2020}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Kanehisa%
 \ \BBA {} Sato%
 }{%
@@ -53,6 +77,30 @@ Love, M\BPBI I.%
   for rna-seq data with deseq2}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Genome biology}{15}{12}{550}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Pang%
+}{%
+Pang%
+}{%
+{\protect \APACyear {2020}}%
+}]{%
+Deploy_R_Shiny}
+\APACinsertmetastar {%
+Deploy_R_Shiny}%
+\begin{APACrefauthors}%
+Pang, L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+\APACrefbtitle {DesktopDeployR.} {Desktopdeployr.}
+\newblock
+\APAChowpublished {\url{https://github.com/wleepang/DesktopDeployR}}.
+\newblock
+\APACrefnote{Accessed: 29-01-2020}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
