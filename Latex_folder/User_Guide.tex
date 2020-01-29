@@ -33,6 +33,14 @@ Marie Terrien
 \usepackage[english]{babel}
 \usepackage{titlesec}
 \usepackage{setspace}
+\usepackage{mwe}
+\usepackage[utf8]{inputenc}
+
+
+\usepackage[acronym,nomain,toc,section=section]{glossaries}
+\loadglsentries{acronyms}
+\makeglossaries
+
 
 \setcounter{secnumdepth}{4}
 
@@ -48,16 +56,16 @@ Marie Terrien
 \end{center}
 \thispagestyle{empty}
 
-\doublespacing
+
 \tableofcontents
-\singlespacing
+
 
 \newpage
 \section{Introduction \label{intro}}
-The non-canonical analysis tool (CelloMap) is a tool with several uses. It's main feature is a non-canonical gene analysis. Yet this tool also boasts several other interesting functionalities such as differential expression analyses, customizable MA and Volcano plots which in turn allow to obtain significant gene sets according to a users custom parameters. Additionally, this tool is also capable of converting gene symbols to KEGG identifier (type hsa), see \autoref{gene_list_analysis} for more information.
+The non-canonical analysis tool (CelloMap) is a tool with several uses. Its main feature is a non-canonical gene analysis. Yet this tool also boasts several other interesting functionalities such as differential expression analyses, customizable MA and Volcano plots. Customized figures allow users to extract the significant genes (according to their own parameters) from the plots, among these, the volcano plot offers the best solution for significance as it measures p-value vs log2FoldChange. Additionally, this tool is also capable of converting gene symbols to \acrshort{KEGG} identifier (type \acrshort{hsa}), see \autoref{gene_list_analysis} for more information.
 This guide will go over each functionality and explain how to best use CelloApp.
 
-As can be seen in \autoref{fig:main_app_screen}, the application is split into several tabs. The information tab shows the user guide pdf file. The last tab 'Citation' is a simple tab which gives the citation information for the use of this tool. This guide will now go over the remaining tabs and explain their uses and how to use their functionalities them.
+As can be seen in \autoref{fig:main_app_screen}, the application is split into several tabs. The information tab shows the user guide pdf file. The last tab 'Citation' is a simple tab which gives the citation information for the use of this tool. This guide will now go over the remaining tabs and explain their uses and functionalities.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=15cm,height=10cm,keepaspectratio]{main_app_screen.png}
@@ -83,58 +91,58 @@ In order to establish this connection, a user needs to fill in the small questio
 \label{fig:connect_DB}
 \end{figure}
 
-The database connection is only necessary if a non-canonical gene analysis or hsa conversion is to be performed, either individually or as part of a DESeq2 analysis. If this is not the users intentions, he does not need to establish a connection to the database.
+The database connection is only necessary if a non-canonical gene analysis or \acrshort{hsa} conversion is to be performed, either individually or as part of a \acrshort{DESeq2} analysis. If this is not the users intentions,a connection to the database is not necessary.
 
 \section{DESeq2 analysis}
-DESeq2 is a powerfull tool which allows users to perform differential analyses using RNAseq 'COUNTS' data \cite{love2014moderated}. However this tool requires a very specific data format. This part of the guide will go over the data format necessary to run a DESeq2 analysis, the added parameters specific to this application, and the results that are generated.
+\acrshort{DESeq2} is a powerfull tool which allows users to perform differential analyses using RNAseq 'COUNTS' data \cite{love2014moderated}. However this tool requires a very specific data format. This part of the guide will go over the data format necessary to run a \acrshort{DESeq2} analysis, the added parameters specific to this application, and the results that are generated.
 
 \subsection{Tab layout \label{deseq2_layout}}
-As seen in \autoref{fig:deseq2_screen}, there are several requirements for the the DESeq2 analysis. First we observe that two csv files are needed, these will be the two files representing the two conditions that will be analyzed. We then observe a small check box which asks if the user want to perform a non-canonical gene analysis. Checking this box also enables the possibility of checking the hsa conversion box. If the non-canonical analysis box remains checked, the user will have to be connected to the database and the non-canonical gene analysis will be run with the list of significant genes isolated by the DESeq2 analysis (explained below). A user can also select a directory, this will be the folder in which the several DESeq2 results will be saved.
-There are then two text boxes which can be customized to be whatever text a user whishes, the content of these text boxes is used to name the files that will be produced by the analysis. Condition 1 represents File 1 and Condition 2 represents File 2.
-Lastly there are two check boxes that check if the user would like to create the standard MA and Volcano plots. If checked, two types of each plot will be made, one type with text, and the other without text. The plots generated will be with standard values, however a user will be able to take the differential expression data obtained from the DESeq2 analysis and make his own customized MA and Volcano plots with the custom plot tabs, see \autoref{custom_plots} for more details.
+As seen in \autoref{fig:deseq2_screen}, there are several requirements for the \acrshort{DESeq2} analysis. First we observe that two files representing the two conditions that will be analyzed are required. We then observe a small check box which asks if the user want to perform a non-canonical gene analysis. Checking this box also enables the possibility of checking the \acrshort{hsa} conversion box. If the non-canonical analysis box remains checked, the user will have to be connected to the database and the non-canonical gene analysis will be run with the list of significant genes isolated by the \acrshort{DESeq2} analysis (explained below). A user can also select a directory, a directory is the location on your computer where the files will be saved.
+There are then two text boxes which can be customized and are used to name the files that will be produced by the analysis. Condition 1 represents File 1 and Condition 2 represents File 2.
+Lastly there are two check boxes for the creation of the standard MA and Volcano plots. If checked, two types of each plot will be made, one type with text, and the other without text. The plots generated will be with standard values, however a user will be able to take the differential expression data obtained from the \acrshort{DESeq2} analysis and make his own customized MA and Volcano plots with the custom plot tabs, see \autoref{custom_plots} for more details.
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=15cm,height=10cm,keepaspectratio]{deseq2_screen.png}
-\caption{The main screen for the DESeq2 analysis tab.}
+\caption{The main screen for the \acrshort{DESeq2} analysis tab.}
 \label{fig:deseq2_screen}
 \end{figure}
 
 \subsection{Data format \label{deseq2 data_format}}
-As previously stated, DESeq2 requires a rather specific data format. We will be using \autoref{fig:data_format_deseq2} to explain the format.
-This format is presented as a CSV file, meaning a comma separated vector, or more simply put, a file in which the different elements/values are separated by a comma.
-In order to better explain the data format and what a csv file really is, an excel representation of \autoref{fig:data_format_deseq2} has been created and is shown in \autoref{fig:data_format_deseq2_simplified}
+As previously stated, \acrshort{DESeq2} requires a specific data format. We will be using \autoref{fig:data_format_deseq2} to explain the format.
+This format is presented as a \acrshort{csv} file, meaning a comma separated values, or more simply put, a file in which the different elements/values are separated by a comma.
+In order to better explain the data format and what a \acrshort{csv} file really is, an excel representation of \autoref{fig:data_format_deseq2} has been created and is shown in \autoref{fig:data_format_deseq2_simplified}
 
 \begin{figure}[h!]
 \centering
 \fbox{\includegraphics[width=15cm,height=10cm,keepaspectratio]{data_format_deseq2.PNG}}
-\caption{The data format for a DESeq2 analysis.}
+\caption{The data format for a \acrshort{DESeq2} analysis.}
 \label{fig:data_format_deseq2}
 \end{figure}
 
 When comparing both \autoref{fig:data_format_deseq2} and \autoref{fig:data_format_deseq2_simplified} we can clearly observe that the commas create the 'separation' of the values. 
-The first column represents the genes, it is important to note that these genes are in gene symbols and not another type of format such as Ensembl. DESeq2 will perform the analysis regardless of the type of gene name used however \textbf{a non-canonical gene analysis can only be performed with gene symbols}. As such it is advised to use gene symbols in the data in order to fully benefit from this tool. Next we have the other columns which represents the different sequencings. In this example, the second column shows the RNAseq 'COUNTS' results of patient \#1 and the third column shows the same but for patient \#2.
+The first column represents the genes and it is important to note that these genes are in gene symbols and not another type of format such as Ensembl. \acrshort{DESeq2} will perform the analysis regardless of the type of gene name used however \textbf{a non-canonical gene analysis can only be performed with gene symbols}. As such it is advised to use gene symbols in the data in order to fully benefit from this tool. Next we have the other columns which represents the different sequencings. In this example, the second column shows the RNAseq 'COUNTS' results of patient \#1 and the third column shows the same but for patient \#2.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=15cm,height=10cm,keepaspectratio]{dese2_excel_data_format.png}
-\caption{A simplified view of the DESeq2 data format.}
+\caption{A simplified view of the \acrshort{DESeq2} data format.}
 \label{fig:data_format_deseq2_simplified}
 \end{figure}
 
-That's it, that is the data format required. As previously mentioned, two files are necessary, i.e: one file per condition. An easy example to explain this would be the comparative study of young vs old pulmonary cancer patients. In order to do such an analysis, we would have file \#1 contain all of the patients in the 'young' category and file \#2 would contain all the patients of the 'old' category. Of course both files must respect the data format. This means that both files will require the 'Genes' column and both must be in the same order of gene apparition.
+As previously mentioned, two files are necessary, i.e: one file per condition. An easy example to explain this would be the comparative study of young vs old pulmonary cancer patients. In order to do such an analysis, we would have file \#1 contain all of the patients in the 'young' category and file \#2 would contain all the patients of the 'old' category. Of course both files must respect the data format. This means that both files will require the 'Genes' column and both must be in the same order of gene apparition.
 
 \subsection{launching the analysis}
-Once all necessary files have been uploaded, a user can click the 'launch analysis' button, at which point a pop-up will appear indicating the the analysis is being performed. This pop-up will lock the application preventing any further use, this is done to avoid the application from crashing if too many actions are performed at once.
-It is important to note that a DESeq2 analysis can be very quick just as it may take several hours. The length of the analysis depends on the size of the files used as well as the computing strength of the users computer. If a user is using a old computer, it may be advised to let the computer run the analysis without doing anything else on the side.\\
-If an error occurs during the analysis, another pop-up will appear stating that there was an error and that the user can read about the error in the error\_log.txt that was created. Using the information from the error log, the user should consult \autoref{common_err} in order to solve the issue.\\
+Once all necessary files have been uploaded, a user can click the 'launch analysis' button, at which point a pop-up will appear indicating that the analysis is being performed. This pop-up will lock the application preventing any further use, preventing further use to avoid the application from crashing if too many actions are performed at once.
+It is important to note that a \acrshort{DESeq2} analysis can be very quick just as it may take several hours. The length of the analysis depends on the size of the files used as well as the computing strength of the user's computer. For an old computer, it is advised to let the computer run the analysis without doing anything else on the side.\\
+If an error occurs during the analysis, a error pop-up will appear and the user can obtain information about the error in the error\_log.txt that was created. Using the information from the error log, the user should consult \autoref{common_err} in order to solve the issue.\\
 Once the analysis is done and if no error has occurred, the pop-up message will be replaced by a different pop-up message indicating that the analysis is done, the pop-up message will also remind the user of the location of the results.
 \subsection{Results obtained}
-Several results can be obtained from this analysis, some are obtained regardless of user input, others will only appear if a user has asked for those results to be produced.
+Several results can be obtained from this analysis, some are obtained regardless of user input, others will only appear if a user has asked for those results to be generated.
 \subsubsection{Main results}
-A DESeq2 analysis generates three standard results:
+A \acrshort{DESeq2} analysis generates three standard results:
 \begin{itemize}
 \item diffexpr\_results condition\_1 vs condition\_1 .csv\\
-A differential expression file
+A differential expression file, this is a file that will contain the baseMean, log2FoldChange, \acrshort{lfcSE}, stat(used for null hypothesis test), pvalue and \acrshort{Padj} for each genes in the original file.
 \item condition\_1vscondition\_1\_RESULTS\_VOLCANO.csv\\
 A differential expression file for the significant genes
 \item gene\_list\_ condition\_1 vs condition\_1 \_Most\_Significant.txt\\
@@ -142,21 +150,21 @@ A list of the significant genes obtained
 \end{itemize}
 
 It is important to note that the significant genes were obtained by filtering the main differential expression file for standard significance parameters while using a volcano plot to visualize the significant genes. The standard significance algorithm is the following:
-\[padj<0.05 \ \&\ abs(log2FoldChange)>2\]
-This equation indicates that genes which have a Padj value below 0.05 and a log2FoldChange above 2 or below -2 are considered to be significant. A user can also generate his own list of significant genes by modifying these parameters in the custom volcano plot tab. This is further explained in \autoref{custom_plots} of this guide.
+\[\acrshort{Padj}<0.05 \ \&\ abs(log2FoldChange)>2\]
+This equation indicates that genes which have a \acrshort{Padj} value below 0.05 and a log2FoldChange above 2 or below -2 are considered to be significant. A user can also generate his own list of significant genes by modifying these parameters (significant p-value and log2FoldChange threshold) in the custom volcano plot tab. This is further explained in \autoref{custom_plots} of this guide.
 
 \subsubsection{Figures generated}
-If a user has selected that he wanted standard MA and Volcano plots, there will be four png files in the results folder: Two MA plots, one with text and the other without text, the same applies for the volcano plot.
+If a user has selected that he wanted standard MA and Volcano plots, there will be four png files in the results folder: Two MA plots, one with text and the other without text, and two volcano plots, one with text and one without text.
 The plots with texts are much larger in order to accommodate for the additional text next to the points representing significant genes.
 If a user wishes to modify these plots and create his own set, it can be easily be done in the custom plot tabs, further explained in \autoref{custom_plots} of this guide.
 
 \subsubsection{Non-canonical gene analysis}
-If a user had selected that he wanted a non-canonical gene analysis to be performed, there will be three extra text files in the results folder. That is, if any non-canonical genes were found within the significant genes list. More information can be obtained in \autoref{gene_list_analysis} of this guide.
+When a user selects a non-canonical gene analysis, there will be three extra text files in the results folder. That is, if any non-canonical genes were found within the significant genes list. More information can be obtained in \autoref{gene_list_analysis} of this guide.
 
 
 \section{Gene list analysis \label{gene_list_analysis}}
-This tab allows users to perform a non-canonical gene analysis and a gene symbol to hsa identifier conversion with a simple gene list file. The hsa file enables the possibility of using the KEGG Mapper tool, we also describe the use of the MERAV tool in this section.\\
-The only obligation that this file must respect is that the genes must be in a column with a column header named 'Genes'. If the file entered is correct, a table will appear showing that specific column as seen in \autoref{fig:gene_list_analysis_uploaded}. If this does not occur, a text will appear, stating that a different file should be chosen.
+This tab allows users to perform a non-canonical gene analysis and a gene symbol to \acrshort{hsa} identifier conversion with a simple gene list file. The \acrshort{hsa} file enables the possibility of using the \acrshort{KEGG} Mapper tool, we also describe the use of the \acrshort{MERAV} tool in this section.\\
+It is extremely important that the genes be in a column with a column header named 'Genes'. If the file entered is correct, a table will appear showing that specific column as seen in \autoref{fig:gene_list_analysis_uploaded}. If this does not occur, a text will appear, stating that a different file should be chosen.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=15cm,height=10cm,keepaspectratio]{gene_list_analysis.png}
@@ -164,28 +172,28 @@ The only obligation that this file must respect is that the genes must be in a c
 \label{fig:gene_list_analysis_uploaded}
 \end{figure}
 
-Considering that the requirement for this analysis is a single column carrying the name of 'Genes', possible files can be the significant gene list obtained from the DESeq2 analysis, or the significant differential expression results obtained from either the DESeq2 analysis or the downloading of the data from custom plots in \autoref{custom_plots}. A user could also create his own gene list file.
+Considering that the requirement for this analysis is a single column carrying the name 'Genes', possible files can be the significant gene list obtained from the \acrshort{DESeq2} analysis, or the significant differential expression results obtained from either the \acrshort{DESeq2} analysis or the downloading of the data from custom plots in \autoref{custom_plots}. A user could also create his own gene list file.
 \subsection{KEGG Mapper \label{KEGG Map}}
-By checking the 'Find hsa conversions' checkbox in the CelloMap tool, a conversion script will automatically be run along with a non-canonical gene analysis. This conversion will allow users to run a KEGG mapping analysis using the file generated from the conversion.
-KEGG Mapper is a mapping tool that will search and find any pathways associated to a list of identifiers provided \cite{kanehisa2019kegg}. It will then allow the user to view every pathway found while highlighting the gene that was in the original list.
+By checking the 'Find \acrshort{hsa} conversions' checkbox in the CelloMap tool, a conversion script will automatically be run along with a non-canonical gene analysis. This conversion will allow users to run a \acrshort{KEGG} mapping analysis using the file generated from the conversion.
+\acrshort{KEGG} Mapper is a mapping tool that will search and find any pathways associated to a list of identifiers provided \cite{kanehisa2019kegg}. It will then allow the user to view every pathway found while highlighting the gene that was in the original list.
 To perform the analysis, follow these steps, also seen in \autoref{fig:KEGG_mapper}.
-IT is worth mentioning that the speed at which the conversion occurs depends on internet stability and speed as well as the amount of genes that need to be converted. It is recommended to have a stable internet connection to perform the hsa conversion.
+IT is worth mentioning that the speed at which the conversion occurs depends on internet stability and speed as well as the amount of genes that need to be converted. It is recommended to have a stable internet connection to perform the \acrshort{hsa} conversion.
 \begin{enumerate}
 \item Go to the website: \url{https://www.kegg.jp/kegg/tool/map_pathway2.html}
-\item Make sure that the search mode is \textbf{Organism-specific} with the letter \textbf{hsa} in the text box
-\item Upload the file created by CelloMap, the file will be called \textbf{hsa\_ID.txt} 
+\item Make sure that the search mode is \textbf{Organism-specific} with the letter \textbf{\acrshort{hsa}} in the text box
+\item Upload the file created by CelloMap, the file will be called \textbf{\acrshort{hsa}\_ID.txt} 
 \item Launch the analysis and wait a few seconds/minutes
 \end{enumerate}
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=15cm,height=10cm,keepaspectratio]{KEGG_Mapper.png}
-\caption{The set-up for the KEGG Mapper tool}
+\caption{The set-up for the \acrshort{KEGG} Mapper tool}
 \label{fig:KEGG_mapper}
 \end{figure}
 
 \subsection{Metabolic GEne RApid Visualizer (MERAV)\label{MERAV}}
-An alternative to the KEGG Mapper is Metabolic GEne RApid Visualizer (MERAV), this tool was designed to analyze \textbf{human} gene expression across a large variety of arrays. All of the arrays were normalized together to generate a gene expression database composed of several types of human tissue \cite{shaul2015merav}.
+An alternative to the \acrshort{KEGG} Mapper is Metabolic GEne RApid Visualizer (\acrshort{MERAV}), this tool was designed to analyze \textbf{human} gene expression across a large variety of arrays. All of the arrays were normalized together to generate a gene expression database composed of several types of human tissue \cite{shaul2015merav}.
 This tool offers two types of searches:
 \begin{enumerate}
 \item Search expression levels in one or several genes\\
@@ -194,12 +202,12 @@ This search will provide the user with the ability to search the database for th
 This search will provide the user with the ability to search the database for the expression of a given array.
 \end{enumerate}
 
-CelloMap creates a significant gene file that can be used with the first type of search, the one relating to finding gene expressions. To perform the search, follow these steps, also seen in \autoref{fig:merav}.
+CelloMap creates a significant gene file that can be used with the first type of search, related to gene expression finding. To perform the search, follow these steps, also seen in \autoref{fig:merav}.
 \begin{enumerate}
 \item Go to the website: \url{http://merav.wi.mit.edu/}
 \item Once on the website, click the `Search expression levels...' link.
 \item Load the gene search box\\
-To do this, copy paste all the genes from the significant gene file generated from DESeq2 or the one inputted in the gene list analysis. The main thing to watch out for is to not include the column name 'Genes'. If it is included, it's not a problem, it will simply be considered a gene symbol and will not be found by the search, this will not prevent the tool from searching for the other genes.
+To do this, copy paste all the genes from the significant gene file generated from \acrshort{DESeq2} or the one inputted in the gene list analysis. Do not include the cell 'Genes', as it will be considered a gene symbol and will not be found by the search tool. If it is included, it will not prevent the tool from searching for the other genes.
 \item Set the parameters to your liking
 \item If help is required, follow this link: \url{http://merav.wi.mit.edu/help/help.html}
 \end{enumerate}
@@ -207,12 +215,12 @@ To do this, copy paste all the genes from the significant gene file generated fr
 \begin{figure}[h!]
 \centering
 \includegraphics[width=15cm,height=10cm,keepaspectratio]{MERAV.png}
-\caption{The set-up for the MERAV search tool}
+\caption{The set-up for the \acrshort{MERAV} search tool}
 \label{fig:merav}
 \end{figure}
 
 \subsection{Non-canonical gene analysis}
-The non-canonical analysis will cross check the provided gene list with our database, and depending on if it finds non-canonical genes within the gene list, three text files will be created.
+The non-canonical analysis will cross check the provided gene list with our database, and if it finds non-canonical genes within the gene list, three text files will be created.
 \begin{enumerate}
 \item canonic\_results.txt\\
 This file will contain the non-canonical gene symbols and names along with their \textbf{canonical} function and location.
@@ -226,7 +234,7 @@ Each text file was created with the intention to be read by Microsoft excel. The
 
 \section{Results \label{res}}
 The results tab, seen in \autoref{fig:results_tab}, shows the results of a non-canonical gene analysis within the application itself. There isn't much to be said about this tab, it is only for visualization.
-Every registered non-canonical genes are registered in a database hosted on Cellomet.com which can be accessed, updated and generally modified by the owner of Cellomet. For any questions regarding the non-canonical genes, their function, localization etc. Please contact Cellomet via their website \cite{Cellomet}.
+Every registered non-canonical genes are registered in a database hosted on Cellomet.com which can be accessed, updated and generally modified by the owner of Cellomet. For any questions regarding the non-canonical genes, their function, localization etc., please contact Cellomet via their website \cite{Cellomet}.
 
 \begin{figure}[h!]
 \centering
@@ -237,9 +245,9 @@ Every registered non-canonical genes are registered in a database hosted on Cell
 
 
 \section{Custom MA and Volcano plots \label{custom_plots}}
-This application allows users to create their own custom figures, and from these figures, significant gene data can be downloaded. There are two possible figures, MA plots and Volcano plots, each plot type has it's own tab, however they behave very similarly, the volcano plot tab can be seen in \autoref{fig:custom_plots}. 
-The main thing to know about these tabs is that a differential expression file is required, like the one obtained from DESeq2 analyses. The columns required are the 'Genes' column, the 'baseMean' column, the log2FoldChange' column, the 'pvalue' column, and the 'padj' column, each written the same way as they are written in the guide. The file must also be a csv file.
-Aside that, each element of the different tabs is self explanatory. After each parameter modification, the create plot button needs to be clicked again. When a plot is loading, the rest of the application is locked to prevent the application from crashing due to a potential large number of buffered actions. On every button click the plot must be re loaded from scratch, this factor should be taken into consideration if a user is using a large differential expression files.
+This application allows users to create their own custom figures, and from these figures, significant gene data can be downloaded. There are two possible figures, MA plots and Volcano plots, each plot type has it's own tab. However they behave very similarly, the volcano plot tab can be seen in \autoref{fig:custom_plots}. 
+These tabs require a differential expression file, similar to those obtained from the \acrshort{DESeq2} analyses. The columns required are the 'Genes' column, the 'baseMean' column, the log2FoldChange' column, the 'pvalue' column, and the '\acrshort{Padj}' column, each written the same way as they are written in the guide. The file must also be a \acrshort{csv} file.
+Aside that, each element of the different tabs is self explanatory. After each parameter modification, the "create plot" button needs to be clicked again. When a plot is loading, the rest of the application is locked to prevent the application from crashing due to a potential large number of buffered actions. For every modification in the parameters the plot must be re loaded before the modifications can be seen. Considering this, it is advised to have all the parameters set to your liking and re-load the plot with the "create plot" button. This is recommended as plots can take a few minutes to load depending on the computer and the size of the file.
 
 \begin{figure}[h!]
 \centering
@@ -249,17 +257,39 @@ Aside that, each element of the different tabs is self explanatory. After each p
 \end{figure}
 
 
+\begin{figure}
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{maplot.png} % first figure itself
+        \caption{An example of an MA plot with significant genes marked in red}
+    \end{minipage}\hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{volcano.png} % second figure itself
+        \caption{An example of a volcano plot with significant genes marked in green}
+    \end{minipage}
+\end{figure}
+
+
+
 \section{Common errors \label{common_err}}
+This section of the guide will cover possible errors that may be encountered and will be periodically updated if new errors are found. There errors either reflect actions, such as the inability to connect to the database, or actual error messages received in the error.txt file that may appear if an error occurred during an analysis.
 \begin{enumerate}
 \item \textbf{Failed to connect to database}\\
-This may occur from time to time, the ideal is to wait and try again later. The database we are using can have a maximum of fifteen connections at a time, as such, CelloMap was created in a way that it utilizes the connection as little as possible. As in, it only applies the connection right before it needs it and removes the connection once it is done. This time frame lasts no more than thirty seconds.
+This may occur from time to time, the ideal is to wait and try again later. The database we are using can have a maximum of fifteen connections at a time, as such, CelloMap was created in a way that it utilizes the connection as little as possible, by connecting right before it is needed and then removes the connection once it (the analysis) is done. This time frame lasts no more than thirty seconds.
 That said, if retrying several times has not solved the issue, it is recommended to contact one CelloMap's developer at the following email address: yohan.lefol@gmail.com.
 
 \item \textbf{Error in DESeqDataSet(se, design = design, ignoreRank): design has a single variable, with all samples having the same value. use instead a design of '~ 1'. estimateSizeFactors, rlog and the VST can then be used}\\
-This error may occur when only one condition is named, as well as randomly. It is a simple bug where DESeq2 finds only one variable and thus cannot proceed with its intended process.
-To correct this issue, simply try again, make sure that two conditions are named and that both csv files are properly uploaded to the application.
+This error may occur when only one condition is named, as well as randomly. It is a simple bug where \acrshort{DESeq2} finds only one variable and thus cannot proceed with its intended process.
+To correct this issue, simply try again, make sure that two conditions are named and that both \acrshort{csv} files are properly uploaded to the application.
   
 \end{enumerate}
+
+\acrshort{KEGG}, BLARG
+
+\printglossary[type=\acronymtype]
+
 \bibliographystyle{apacite}
 \bibliography{references}
 \end{document}
