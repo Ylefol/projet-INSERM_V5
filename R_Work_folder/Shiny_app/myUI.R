@@ -99,6 +99,7 @@ myUI <- dashboardPage(dbHeader,
                           selected = 1),
               
               textAreaInput("comments", "Comments", placeholder = "Feel free to add a comment",width="500px"),
+              textOutput("message_about_data"),
               actionButton("connect_DB", "Connect to database"),
               textOutput("connect_db_status")
       ),

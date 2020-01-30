@@ -322,6 +322,9 @@ myserver <- function(input, output, session) {
   
   #Database connection and DB reactive value
   #############################################################################################################################################
+  
+  output$message_about_data<- renderText("By connecting to this database you are agreeing that the information in the questionnaire be saved on the Cellomet database")
+  
   #This creates a reactive variable, initializes it to null
   DB_Connect <- reactiveValues(
     DB=NULL
