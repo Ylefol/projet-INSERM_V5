@@ -24,12 +24,15 @@ myserver <- function(input, output, session) {
       if(nrow(List_of_results[["ncan"]])>0) {
         output$Ncan <- DT::renderDataTable({
           DT::datatable(data=List_of_results[["ncan"]], options=list(scrollX = TRUE,scrollY=TRUE,paging=FALSE),class = 'cell-border stripe', rownames = FALSE, fillContainer = TRUE)
+          output$results_status<- renderText("")
         })
         output$Can <- DT::renderDataTable({
           DT::datatable(data=List_of_results[["can"]], options=list(scrollX = TRUE,scrollY=TRUE,paging=FALSE),class = 'cell-border stripe', rownames = FALSE, fillContainer = TRUE)
+          output$results_status<- renderText("")
         })
         output$refs <- DT::renderDataTable({
           DT::datatable(data=List_of_results[["refs"]], options=list(scrollX = TRUE,scrollY=TRUE,paging=FALSE),class = 'cell-border stripe', rownames = FALSE, fillContainer = TRUE)
+          output$results_status<- renderText("")
         })
       }else{
         output$results_status<- renderText("No non-canonical genes were found")

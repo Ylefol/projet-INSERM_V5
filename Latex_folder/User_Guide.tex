@@ -151,7 +151,9 @@ Store the folder wherever you would like. Now you have everything you need to ru
 
 \item \textbf{Run the app}
 You will need to open the file called `launcher.R' with Rstudio, then launch the app by highlighting(selecting) the code and pressing cmd+enter if you are on Mac, or ctrl+enter if you are on Windows.\\
-During the installation of the various packages, there will be a few pop ups asking if you want to download a package from source, always say yes to these pop-ups. The entire package set-up takes around 20-30 minutes, but it only has to be done the first time the application is launched on the computer.
+\textbf{IMPORTANT: you must initiate the downloads by highlighting the text and running it. Otherwise certain packages will NOT be downloaded properly.} If this is not done properly the first time, it's not a problem, just try again using the `highlight code' method.\\
+During the installation of the various packages, there will be a few pop ups asking if you want to download a package from source, always say yes to these pop-ups. The entire package set-up takes around 20-30 minutes, but it only has to be done the first time the application is launched on the computer.\\
+If there are any issues concerning the download of the packages, feel free to contact Yohan Lefol using the following e-mail address: yohan.lefol@gmail.com.
 
 \end{enumerate}
 
@@ -355,7 +357,7 @@ Aside that, each element of the different tabs is self explanatory. After each p
 This section of the guide will cover possible errors that may be encountered and will be periodically updated if new errors are found. There errors either reflect actions, such as the inability to connect to the database, or actual error messages received in the error.txt file that may appear if an error occurred during an analysis.
 \begin{enumerate}
 \item \textbf{Failed to connect to database}\\
-This may occur from time to time, the ideal is to wait and try again later. The database we are using can have a maximum of fifteen connections at a time, as such, CelloMap was created in a way that it utilizes the connection as little as possible, by connecting right before it is needed and then removes the connection once it (the analysis) is done. This time frame lasts no more than thirty seconds.
+This may occur from time to time, the ideal is to wait and try again later. The database we are using has a limited number of connections at a time, as such, CelloMap was created in a way that it utilizes the connection as little as possible, by connecting right before it is needed and then removes the connection once it (the analysis) is done. This time frame lasts no more than ten minutes.
 That said, if retrying several times has not solved the issue, it is recommended to contact one CelloMap's developer at the following email address: yohan.lefol@gmail.com.
 
 \item \textbf{Error in DESeqDataSet(se, design = design, ignoreRank): design has a single variable, with all samples having the same value. use instead a design of `~ 1'. estimateSizeFactors, rlog and the VST can then be used}\\

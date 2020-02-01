@@ -6,6 +6,16 @@ if(!require("rlang")){
   library(rlang)
 }
 
+if(!require("calibrate")){
+  install.packages('calibrate')
+  library(calibrate)
+}
+
+if(!require("MASS")){
+  install.packages('MASS')
+  library(MASS)
+}
+
 if(!require(devtools)){
   install.packages("devtools")
   library(devtools)

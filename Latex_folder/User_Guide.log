@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.4)  30 JAN 2020 15:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.4)  1 FEB 2020 14:42
 entering extended mode
 **./User_Guide.tex
 (User_Guide.tex
@@ -995,11 +995,11 @@ Overfull \vbox (1.61752pt too high) has occurred while \output is active []
 
 
 [2]
-<main_app_screen.png, id=135, 724.20563pt x 785.18344pt>
+<main_app_screen.png, id=135, 719.68875pt x 779.91376pt>
 File: main_app_screen.png Graphic file (type png)
 <use main_app_screen.png>
 Package pdftex.def Info: main_app_screen.png  used on input line 100.
-(pdftex.def)             Requested size: 262.4377pt x 284.53485pt.
+(pdftex.def)             Requested size: 262.55792pt x 284.5293pt.
 
 Overfull \vbox (1.61752pt too high) has occurred while \output is active []
 
@@ -1042,77 +1042,75 @@ Overfull \vbox (1.61752pt too high) has occurred while \output is active []
 
 
 [5]
-<connect_DB.png, id=189, 724.20563pt x 784.43062pt>
+<connect_DB.png, id=189, 719.68875pt x 781.41937pt>
 File: connect_DB.png Graphic file (type png)
 <use connect_DB.png>
-Package pdftex.def Info: connect_DB.png  used on input line 165.
-(pdftex.def)             Requested size: 262.6808pt x 284.52536pt.
+Package pdftex.def Info: connect_DB.png  used on input line 167.
+(pdftex.def)             Requested size: 262.05276pt x 284.53009pt.
 
 Overfull \vbox (1.61752pt too high) has occurred while \output is active []
 
 
 [6 <./connect_DB.png>]
-<deseq2_screen.png, id=212, 719.68875pt x 780.66656pt>
+<deseq2_screen.png, id=210, 721.94719pt x 781.41937pt>
 File: deseq2_screen.png Graphic file (type png)
 <use deseq2_screen.png>
-Package pdftex.def Info: deseq2_screen.png  used on input line 182.
-(pdftex.def)             Requested size: 262.30534pt x 284.52997pt.
-<data_format_deseq2.PNG, id=220, 482.55281pt x 72.27pt>
-File: data_format_deseq2.PNG Graphic file (type png)
-<use data_format_deseq2.PNG>
-Package pdftex.def Info: data_format_deseq2.PNG  used on input line 194.
-(pdftex.def)             Requested size: 426.80518pt x 63.92088pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<dese2_excel_data_format.png, id=225, 460.72125pt x 109.1578pt>
-File: dese2_excel_data_format.png Graphic file (type png)
-<use dese2_excel_data_format.png>
-Package pdftex.def Info: dese2_excel_data_format.png  used on input line 203.
-(pdftex.def)             Requested size: 426.78615pt x 101.11761pt.
+Package pdftex.def Info: deseq2_screen.png  used on input line 184.
+(pdftex.def)             Requested size: 262.8751pt x 284.53009pt.
 
 Overfull \vbox (1.61752pt too high) has occurred while \output is active []
 
 
 [7 <./deseq2_screen.png>]
+<data_format_deseq2.PNG, id=227, 482.55281pt x 72.27pt>
+File: data_format_deseq2.PNG Graphic file (type png)
+<use data_format_deseq2.PNG>
+Package pdftex.def Info: data_format_deseq2.PNG  used on input line 196.
+(pdftex.def)             Requested size: 426.80518pt x 63.92088pt.
+<dese2_excel_data_format.png, id=232, 460.72125pt x 109.1578pt>
+File: dese2_excel_data_format.png Graphic file (type png)
+<use dese2_excel_data_format.png>
+Package pdftex.def Info: dese2_excel_data_format.png  used on input line 205.
+(pdftex.def)             Requested size: 426.78615pt x 101.11761pt.
+
 Overfull \vbox (1.61752pt too high) has occurred while \output is active []
 
 
 [8 <./data_format_deseq2.PNG> <./dese2_excel_data_format.png>]
-Overfull \hbox (2.72464pt too wide) in paragraph at lines 220--222
+Overfull \hbox (2.72464pt too wide) in paragraph at lines 222--224
 \OT1/cmr/m/n/10.95 A dif-fer-en-tial ex-pres-sion file, this is a file that wil
 l con-tain the base-Mean, log2FoldChange,
  []
 
-<gene_list_analysis.png, id=257, 721.94719pt x 782.925pt>
-File: gene_list_analysis.png Graphic file (type png)
-<use gene_list_analysis.png>
-Package pdftex.def Info: gene_list_analysis.png  used on input line 246.
-(pdftex.def)             Requested size: 262.36838pt x 284.5288pt.
 
 Overfull \vbox (1.61752pt too high) has occurred while \output is active []
 
 
 [9]
+<gene_list_analysis.png, id=263, 721.19438pt x 781.41937pt>
+File: gene_list_analysis.png Graphic file (type png)
+<use gene_list_analysis.png>
+Package pdftex.def Info: gene_list_analysis.png  used on input line 248.
+(pdftex.def)             Requested size: 262.601pt x 284.53009pt.
+
 Overfull \vbox (1.61752pt too high) has occurred while \output is active []
 
 
 [10 <./gene_list_analysis.png>]
-<KEGG_Mapper.png, id=286, 721.19438pt x 549.55313pt>
+<KEGG_Mapper.png, id=284, 721.19438pt x 549.55313pt>
 File: KEGG_Mapper.png Graphic file (type png)
 <use KEGG_Mapper.png>
-Package pdftex.def Info: KEGG_Mapper.png  used on input line 266.
+Package pdftex.def Info: KEGG_Mapper.png  used on input line 268.
 (pdftex.def)             Requested size: 373.40558pt x 284.5366pt.
 
 Overfull \vbox (1.61752pt too high) has occurred while \output is active []
 
 
 [11 <./KEGG_Mapper.png>]
-<MERAV.png, id=307, 721.94719pt x 782.17218pt>
+<MERAV.png, id=305, 721.94719pt x 782.17218pt>
 File: MERAV.png Graphic file (type png)
 <use MERAV.png>
-Package pdftex.def Info: MERAV.png  used on input line 293.
+Package pdftex.def Info: MERAV.png  used on input line 295.
 (pdftex.def)             Requested size: 262.62173pt x 284.52971pt.
 
 
@@ -1123,11 +1121,11 @@ Overfull \vbox (1.61752pt too high) has occurred while \output is active []
 
 
 [12]
-<results_tab.png, id=327, 724.20563pt x 784.43062pt>
+<results_tab.png, id=326, 718.93594pt x 781.41937pt>
 File: results_tab.png Graphic file (type png)
 <use results_tab.png>
-Package pdftex.def Info: results_tab.png  used on input line 317.
-(pdftex.def)             Requested size: 262.6808pt x 284.52536pt.
+Package pdftex.def Info: results_tab.png  used on input line 319.
+(pdftex.def)             Requested size: 261.77866pt x 284.53009pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1137,24 +1135,24 @@ Overfull \vbox (1.61752pt too high) has occurred while \output is active []
 
 
 [13 <./MERAV.png>]
-<custom_volcano_tab.png, id=344, 724.20563pt x 784.43062pt>
+<custom_volcano_tab.png, id=343, 724.20563pt x 784.43062pt>
 File: custom_volcano_tab.png Graphic file (type png)
 <use custom_volcano_tab.png>
-Package pdftex.def Info: custom_volcano_tab.png  used on input line 330.
+Package pdftex.def Info: custom_volcano_tab.png  used on input line 332.
 (pdftex.def)             Requested size: 262.6808pt x 284.52536pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<maplot.png, id=345, 2509.375pt x 2007.5pt>
+<maplot.png, id=344, 2509.375pt x 2007.5pt>
 File: maplot.png Graphic file (type png)
 <use maplot.png>
-Package pdftex.def Info: maplot.png  used on input line 340.
+Package pdftex.def Info: maplot.png  used on input line 342.
 (pdftex.def)             Requested size: 199.60895pt x 159.68433pt.
-<volcano.png, id=346, 1204.5pt x 1003.75pt>
+<volcano.png, id=345, 1204.5pt x 1003.75pt>
 File: volcano.png Graphic file (type png)
 <use volcano.png>
-Package pdftex.def Info: volcano.png  used on input line 346.
+Package pdftex.def Info: volcano.png  used on input line 348.
 (pdftex.def)             Requested size: 199.60895pt x 166.33145pt.
 
 Overfull \vbox (1.61752pt too high) has occurred while \output is active []
@@ -1165,49 +1163,42 @@ Overfull \vbox (1.61752pt too high) has occurred while \output is active []
 
 
 [15 <./custom_volcano_tab.png>]) (User_Guide.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 372.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 374.
 
 Overfull \vbox (1.61752pt too high) has occurred while \output is active []
 
 
 [16 <./maplot.png> <./volcano.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 372.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 374.
  (User_Guide.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 372.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 372.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 374.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 374.
 Package rerunfilecheck Info: File `User_Guide.out' has not changed.
 (rerunfilecheck)             Checksum: BA24D3921D5338AB95C127CB9992C942;1383.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 372.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 374.
  ) 
 Here is how much of TeX's memory you used:
- 26808 strings out of 492452
- 476324 string characters out of 3120064
- 898778 words of memory out of 3000000
- 30697 multiletter control sequences out of 15000+200000
+ 26806 strings out of 492452
+ 476301 string characters out of 3120064
+ 898702 words of memory out of 3000000
+ 30696 multiletter control sequences out of 15000+200000
  540386 words of font info for 53 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  52i,10n,97p,1018b,1192s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{figure.13} has been referenced but does not exist
-, replaced by a fixed one
-
+<C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmbx10.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmbx12.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/yohan/AppData/Local/Program
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/yohan/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/yo
+han/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb>
 <C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmbx10.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmbx12.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/yohan/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/yohan/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/yoha
-n/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C
-:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmti10.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on User_Guide.pdf (16 pages, 1126164 bytes).
+m/cmsy10.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmti10.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on User_Guide.pdf (16 pages, 1123488 bytes).
 PDF statistics:
- 447 PDF objects out of 1000 (max. 8388607)
- 94 named destinations out of 1000 (max. 500000)
+ 446 PDF objects out of 1000 (max. 8388607)
+ 93 named destinations out of 1000 (max. 500000)
  247 words of extra memory for PDF output out of 10000 (max. 10000000)
 

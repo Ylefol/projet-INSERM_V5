@@ -346,7 +346,7 @@ custom_MA_plot <- function (fig_file, sig_pval=0.05, labelsig=FALSE, textcx=1,us
   with(subset(file_to_plot, padj<sig_pval), points(baseMean, log2FoldChange, col=sig_color, pch=20, cex=1.5))
   if (labelsig) {
     require(calibrate)
-    with(subset(file_to_plot, padj<sig_pval), textxy(baseMean, log2FoldChange, labs=Gene, cex=textcx, col=2))
+    with(subset(file_to_plot, padj<sig_pval), textxy(baseMean, log2FoldChange, labs=Genes, cex=textcx, col=2))
   }
   
 }
@@ -376,7 +376,7 @@ custom_Volcano_plot <- function (fig_file, lfcthresh=1, sigthresh=0.05, main="Vo
   with(subset(file_to_plot, padj<sigthresh & abs(log2FoldChange)>lfcthresh), points(log2FoldChange, -log10(pvalue), pch=20, col=sig_both_color, ...))
   if (labelsig) {
     require(calibrate)
-    with(subset(file_to_plot, padj<sigthresh & abs(log2FoldChange)>lfcthresh), textxy(log2FoldChange, -log10(pvalue), labs=Gene, cex=textcx, ...))
+    with(subset(file_to_plot, padj<sigthresh & abs(log2FoldChange)>lfcthresh), textxy(log2FoldChange, -log10(pvalue), labs=Genes, cex=textcx, ...))
   }
   legend(legendpos, xjust=1, yjust=1, legend=c(paste("FDR<",sigthresh,sep=""), paste("|LogFC|>",lfcthresh,sep=""), "both"), pch=20, col=c(sig_padj_color,sig_lfc_color,sig_both_color))
   
