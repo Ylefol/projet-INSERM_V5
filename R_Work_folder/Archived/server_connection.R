@@ -4,15 +4,10 @@ if(!require(RMySQL)){
   library(RMySQL)
 }
 
-if(!require(config)){
-  install.packages("config")
-  library(config)
-}
 getwd()
 setwd("C:/Users/yohan/Desktop/projet-INSERM_V5/R_Work_folder/Archived")
-dw <- config::get("datawarehouse")
 
-DB <- dbConnect(RMySQL::MySQL(), user=dw$uid, host=dw$server,password=dw$pwd, dbname=dw$database)
+DB <- dbConnect(RMySQL::MySQL(), user="cellomet1", host="sql10413.webmo.fr",password="cellomet1", dbname="cellomet1")
 
 dbGetQuery(DB, "show GRANTS;")
 
