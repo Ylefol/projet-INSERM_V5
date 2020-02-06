@@ -4,8 +4,17 @@ if(!require(RMySQL)){
   library(RMySQL)
 }
 
-getwd()
-setwd("C:/Users/yohan/Desktop/projet-INSERM_V5/R_Work_folder/Archived")
+
+library(DBI)
+library(pool)
+
+
+pool <- dbPool(drv = RMySQL::MySQL(), dbname = "cellomet1", host = "sql10413.webmo.fr", username = "cellomet1", password = "cellomet1", port = 3306)#, unix.sock = "/var/run/mysqld/mysqld.sock")
+df <- dbGetQuery(pool, "SELECT * FROM questionnaire;")
+
+
+
+
 
 DB <- dbConnect(RMySQL::MySQL(), user="cellomet1", host="sql10413.webmo.fr",password="cellomet1", dbname="cellomet1")
 
