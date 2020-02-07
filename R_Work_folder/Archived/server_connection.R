@@ -9,7 +9,7 @@ library(DBI)
 library(pool)
 
 
-pool <- dbPool(drv = RMySQL::MySQL(), dbname = "cellomet1", host = "sql10413.webmo.fr", username = "cellomet1", password = "cellomet1", port = 3306)#, unix.sock = "/var/run/mysqld/mysqld.sock")
+pool <- dbPool(drv = RMySQL::MySQL(), dbname = "cellomet1", host = "sqlgold.webmo.fr:50413", username = "cellomet1", password = "cellomet1", port = 3306)#, unix.sock = "/var/run/mysqld/mysqld.sock")
 df <- dbGetQuery(pool, "SELECT * FROM questionnaire;")
 
 
