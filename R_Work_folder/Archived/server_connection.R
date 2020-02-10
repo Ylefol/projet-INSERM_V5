@@ -5,18 +5,7 @@ if(!require(RMySQL)){
 }
 
 
-library(DBI)
-library(pool)
-
-
-pool <- dbPool(drv = RMySQL::MySQL(), dbname = "cellomet1", host = "sqlgold.webmo.fr:50413", username = "cellomet1", password = "cellomet1", port = 3306)#, unix.sock = "/var/run/mysqld/mysqld.sock")
-df <- dbGetQuery(pool, "SELECT * FROM questionnaire;")
-
-
-
-
-
-DB <- dbConnect(RMySQL::MySQL(), user="cellomet1", host="sql10413.webmo.fr",password="cellomet1", dbname="cellomet1")
+DB <- dbConnect(RMySQL::MySQL(), user="test", host="sql10413.webmo.fr",password="test", dbname="cellomet1")
 
 dbGetQuery(DB, "show GRANTS;")
 
