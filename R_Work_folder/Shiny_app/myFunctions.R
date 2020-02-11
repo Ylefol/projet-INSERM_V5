@@ -221,7 +221,7 @@ Connect_to_database <- function(email="error_occured", type_research="error_occu
   #This will be used to interpret a failure in the database connection
   for (i in 1:3){
     tryCatch({
-      invisible(DB <- dbConnect(RMySQL::MySQL(), user="cellomet1", host="sql 10413.webmo.fr",password="cellomet1", dbname="cellomet1"))
+      invisible(DB <- dbConnect(RMySQL::MySQL(), user="cellomet_user", host="sqlgold.webmo.fr",password="Charly_Mike", dbname="cellomet1",port=50413))
       #Will not run this query if there is an error in the connection
       dbGetQuery(DB, paste0("INSERT INTO `questionnaire` (`Email`, `Type_of_Study`, `Comments`, `submit_date`) VALUES ('",email,"', '",type_research,"', '",comments,"', '",Sys.Date(),"');"))
       break
@@ -265,7 +265,7 @@ Non_canonic_analysis <- function(DB,file_to_analyze,hsa_choice=FALSE)
   #Recharge the connection
   for (i in 1:3){
     tryCatch({
-      invisible(DB <- dbConnect(RMySQL::MySQL(), user="cellomet1", host="sql25.webmo.fr",password="cellomet1", dbname="cellomet1"))
+      invisible(DB <- dbConnect(RMySQL::MySQL(), user="cellomet_user", host="sqlgold.webmo.fr",password="Charly_Mike", dbname="cellomet1",port=50413))
       break
     },error=function(error_message){
       
