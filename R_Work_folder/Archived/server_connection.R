@@ -11,5 +11,5 @@ DB <- dbConnect(RMySQL::MySQL(), user="cellomet_user", host="sqlgold.webmo.fr",p
 #Send the query and return results
 dbGetQuery(DB, "SELECT * from `questionnaire`;")
 
-dbGetQuery(DB, "INSERT INTO `questionnaire` (`Email`, `Type_of_Study`, `Comments`, `submit_date`) VALUES ('yohan.lefol@gmail.com', 'Academic', 'testing_with_cellomet1', '2020-02-11') ")
+
 
