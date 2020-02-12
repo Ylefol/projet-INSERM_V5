@@ -2,9 +2,9 @@
 -- version 4.9.3
 -- https://www.phpmyadmin.net/
 --
--- Hôte : sql25:3306
--- Généré le :  mer. 22 jan. 2020 à 16:27
--- Version du serveur :  10.2.30-MariaDB-10.2.30+maria~stretch-log
+-- Hôte : sql10413.phpnet.org:3306
+-- Généré le :  mer. 12 fév. 2020 à 09:33
+-- Version du serveur :  10.2.31-MariaDB-10.2.31+maria~stretch-log
 -- Version de PHP :  7.0.33-0+deb9u6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -213,7 +213,9 @@ INSERT INTO `refs` (`id_ref`, `Gene_Symbol`, `ref`) VALUES
 (68, 'MAT2A', 'Methionine adenosyltransferase II serves as a transcriptional corepressor of Maf oncoprotein'),
 (69, 'SHMT-1', 'A BRISC-SHMT complex deubiquitinates IFNAR1 and regulates interferon responses'),
 (72, 'MDH2', 'A nucleocytoplasmic malate dehydrogenase regulates p53 transcriptional activity in response to metabolic stress'),
-(73, 'MDH2', 'Studies on energy-yielding reactions in thymus nuclei. 2. Pathways of aerobic carbohydrate catabolism');
+(73, 'MDH2', 'Studies on energy-yielding reactions in thymus nuclei. 2. Pathways of aerobic carbohydrate catabolism'),
+(74, 'aBLARG', 'Y. Lefol - 2020'),
+(75, 'aBLARG', 'Test de ref');
 
 -- --------------------------------------------------------
 
@@ -263,19 +265,19 @@ ALTER TABLE `refs`
 -- AUTO_INCREMENT pour la table `canonic`
 --
 ALTER TABLE `canonic`
-  MODIFY `num_can` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `num_can` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT pour la table `ncanonic`
 --
 ALTER TABLE `ncanonic`
-  MODIFY `num_ncan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `num_ncan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT pour la table `refs`
 --
 ALTER TABLE `refs`
-  MODIFY `id_ref` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
+  MODIFY `id_ref` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
