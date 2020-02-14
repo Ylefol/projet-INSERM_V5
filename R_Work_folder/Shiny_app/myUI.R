@@ -193,12 +193,11 @@ myUI <- dashboardPage(dbHeader,
       tabItem(tabName = "res",
               h2("Results tab"),
               
-              
               tabsetPanel(id="results_tabs",type="tabs",
-                          tabPanel("Significant Genes", DT::dataTableOutput("sig_genes",width = 'auto',height = 500)),
-                          tabPanel("Non_Canonic", DT::dataTableOutput("Ncan",width = 'auto',height = 500)),
-                          tabPanel("Canonic", DT::dataTableOutput("Can",width = 'auto',height = 500)),
-                          tabPanel("References", DT::dataTableOutput("refs",width = 'auto',height = 500))
+                          tabPanel("Significant Genes", dataTableOutput("sig_genes",width = 'auto',height = 500)),
+                          tabPanel("Non_Canonic", dataTableOutput("Ncan",width = 'auto',height = 500)),
+                          tabPanel("Canonic", dataTableOutput("Can",width = 'auto',height = 500)),
+                          tabPanel("References", dataTableOutput("refs",width = 'auto',height = 500))
               ),
               textOutput("results_status")
       ),

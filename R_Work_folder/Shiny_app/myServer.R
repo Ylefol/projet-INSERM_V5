@@ -17,23 +17,29 @@ myserver <- function(input, output, session) {
   #The function is declared here as it contains server specific objects (output), thus it can only be declared within the server
   show_results <- function(List_of_results)
   {
+    
+
     if (nrow(List_of_results[["sig_genes"]])>0){
       output$sig_genes <- DT::renderDataTable({
         DT::datatable(data=List_of_results[["sig_genes"]], options=list(scrollX = TRUE,scrollY=TRUE,paging=FALSE),class = 'cell-border stripe', rownames = FALSE, fillContainer = TRUE)
       })
+      
       if(nrow(List_of_results[["ncan"]])>0) {
+        
         output$Ncan <- DT::renderDataTable({
           DT::datatable(data=List_of_results[["ncan"]], options=list(scrollX = TRUE,scrollY=TRUE,paging=FALSE),class = 'cell-border stripe', rownames = FALSE, fillContainer = TRUE)
-          output$results_status<- renderText("")
         })
+        output$results_status<- renderText("")
+        
         output$Can <- DT::renderDataTable({
           DT::datatable(data=List_of_results[["can"]], options=list(scrollX = TRUE,scrollY=TRUE,paging=FALSE),class = 'cell-border stripe', rownames = FALSE, fillContainer = TRUE)
-          output$results_status<- renderText("")
         })
+        output$results_status<- renderText("")
+        
         output$refs <- DT::renderDataTable({
           DT::datatable(data=List_of_results[["refs"]], options=list(scrollX = TRUE,scrollY=TRUE,paging=FALSE),class = 'cell-border stripe', rownames = FALSE, fillContainer = TRUE)
-          output$results_status<- renderText("")
         })
+        output$results_status<- renderText("")
       }else{
         output$results_status<- renderText("No non-canonical genes were found")
       } 

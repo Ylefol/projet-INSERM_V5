@@ -204,7 +204,7 @@ DESeq2_pre_processing <- function(File_1, File_2, variable_condition_1, variable
     return_message <- paste("Error, please check the 'Error_and_Warning_Log.txt' located here:",getwd())
   }
   )
-  
+  remove_Rplots(getwd())
   return_list <- list("message"=return_message,"file"=pre_processed_file_short)
   return (return_list)
 }
@@ -313,9 +313,9 @@ Non_canonic_analysis <- function(DB,file_to_analyze,hsa_choice=FALSE)
   
   #Kill the connection after every use
   killDbConnections()
+  DB=NULL
 
   #Store each dataframe in a list for return
-  
   my_results_list <- list("sig_genes"=file_to_analyze,"ncan"=non_canonic_results,"can"=canonic_results,"refs"=ref_results)
   
   if(nrow(my_results_list[["ncan"]])>0){
