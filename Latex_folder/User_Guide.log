@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.4)  1 FEB 2020 14:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.12.4)  15 FEB 2020 15:50
 entering extended mode
 **./User_Guide.tex
 (User_Guide.tex
@@ -834,7 +834,7 @@ Package: glossary-tree 2019/12/06 v4.44 (NLCT)
 \glo@acronym@file=\write5
 \openout5 = `User_Guide.acn'.
 
-Package glossaries Info: Writing glossary file User_Guide.acn on input line 50.
+Package glossaries Info: Writing glossary file User_Guide.acn on input line 49.
 
 
 ("C:\Users\yohan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1.
@@ -1196,7 +1196,7 @@ han/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb>
 m/cmsy10.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmti10.pfb><C:/Users/yohan/AppData/Local/Programs/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on User_Guide.pdf (16 pages, 1123488 bytes).
+Output written on User_Guide.pdf (16 pages, 1123725 bytes).
 PDF statistics:
  446 PDF objects out of 1000 (max. 8388607)
  93 named destinations out of 1000 (max. 500000)

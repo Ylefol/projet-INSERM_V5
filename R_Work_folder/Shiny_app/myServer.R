@@ -166,8 +166,6 @@ myserver <- function(input, output, session) {
       enable_disable_MA_plot(FALSE)
       x <-read.csv(file = input$file_custom_MA$datapath,check.names=FALSE)
       x <-subset(x, padj<input$p_value_thresh_MA)
-      #Remove an unecessary row
-      x<-x[,-1]
       write.csv(x,file)
       
       #Re-enables MA buttons
@@ -296,8 +294,7 @@ myserver <- function(input, output, session) {
       #Reads the data file, then filters it for significant data
       x <-read.csv(file = input$file_custom_Volcano$datapath,check.names=FALSE)
       x <-subset(x, padj<input$p_value_thresh_Volcano & abs(log2FoldChange)>input$lfc_value_thresh)
-      #Remove an unecessary row
-      x<-x[,-1]
+
       write.csv(x,file)
       
       #Re-enables the volcano's buttons
