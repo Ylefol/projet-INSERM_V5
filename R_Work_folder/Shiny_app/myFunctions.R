@@ -113,7 +113,7 @@ DESeq2_pre_processing <- function(File_1, File_2, variable_condition_1, variable
         with(subset(res, padj<thresh), points(baseMean, log2FoldChange, col="red", pch=20, cex=1.5))
         if (labelsig) {
           require(calibrate)
-          with(subset(res, padj<thresh), textxy(baseMean, log2FoldChange, labs=Gene, cex=textcx, col=2))
+          with(subset(res, padj<thresh), textxy(baseMean, log2FoldChange, labs=Genes, cex=textcx, col=2))
         }
       },error=function(error_message){
       })
@@ -142,7 +142,8 @@ DESeq2_pre_processing <- function(File_1, File_2, variable_condition_1, variable
         with(subset(res, padj<sigthresh & abs(log2FoldChange)>lfcthresh), points(log2FoldChange, -log10(pvalue), pch=20, col="green", ...))
         if (labelsig) {
           require(calibrate)
-          with(subset(res, padj<sigthresh & abs(log2FoldChange)>lfcthresh), textxy(log2FoldChange, -log10(pvalue), labs=Gene, cex=textcx, ...))
+          print("i'm, in here")
+          with(subset(res, padj<sigthresh & abs(log2FoldChange)>lfcthresh), textxy(log2FoldChange, -log10(pvalue), labs=Genes, cex=textcx, col=2 ))
         }
         legend(legendpos, xjust=1, yjust=1, legend=c(paste("FDR<",sigthresh,sep=""), paste("|LogFC|>",lfcthresh,sep=""), "both"), pch=20, col=c("red","orange","green"))
       },error=function(error_message){
@@ -157,7 +158,7 @@ DESeq2_pre_processing <- function(File_1, File_2, variable_condition_1, variable
     }
     
     
-    ## Volcano plot with "significant" genes in green with no text active_reformed
+    ## Volcano plot with "significant" genes in green with no text
     ###################################################################################################################################
     #Sets up the function
     volcanoplot_no_text <- function (res, lfcthresh=2, sigthresh=0.05, main="Volcano Plot", legendpos="bottomright", labelsig=TRUE, textcx=1, ...) {
@@ -376,7 +377,7 @@ custom_Volcano_plot <- function (fig_file, lfcthresh=1, sigthresh=0.05, main="Vo
   with(subset(file_to_plot, padj<sigthresh & abs(log2FoldChange)>lfcthresh), points(log2FoldChange, -log10(pvalue), pch=20, col=sig_both_color, ...))
   if (labelsig) {
     require(calibrate)
-    with(subset(file_to_plot, padj<sigthresh & abs(log2FoldChange)>lfcthresh), textxy(log2FoldChange, -log10(pvalue), labs=Genes, cex=textcx, ...))
+    with(subset(file_to_plot, padj<sigthresh & abs(log2FoldChange)>lfcthresh), textxy(log2FoldChange, -log10(pvalue), labs=Genes, cex=textcx, col=2))
   }
   legend(legendpos, xjust=1, yjust=1, legend=c(paste("FDR<",sigthresh,sep=""), paste("|LogFC|>",lfcthresh,sep=""), "both"), pch=20, col=c(sig_padj_color,sig_lfc_color,sig_both_color))
   

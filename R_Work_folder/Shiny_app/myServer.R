@@ -217,7 +217,7 @@ myserver <- function(input, output, session) {
                                                   sigthresh = input$p_value_thresh_Volcano,
                                                   main=input$title_of_Volcano_plot,
                                                   legendpos=input$legend_position,
-                                                  labelsig = input$text_choice_MA,
+                                                  labelsig = input$text_choice_Volcano,
                                                   use_alternate_colors = input$alternate_color_scheme_Volcano))})
     
     #enables the buttons
@@ -259,7 +259,7 @@ myserver <- function(input, output, session) {
                                                     sigthresh = input$p_value_thresh_Volcano,
                                                     main=input$title_of_Volcano_plot,
                                                     legendpos=input$legend_position,
-                                                    labelsig = input$text_choice_MA,
+                                                    labelsig = input$text_choice_Volcano,
                                                     use_alternate_colors = input$alternate_color_scheme_Volcano))})
       #Removes the plot that was just created as it has been saved and is no longer necessary.
       dev.off()
